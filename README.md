@@ -9,7 +9,7 @@ Josipa Meštrović | jmestrovi@foi.hr | 0016139334 | jmestrovi
 Mateo Radman | mradman@foi.hr | 0016135377 | mradman2000
 
 ## Opis domene
-Ovu aplikaciju smo zamislili kao aplikaciju koja služi za pomoć svakodnevnom radu i vođenju restorana. Mnogi restorani gube vrijeme i energiju osoblja zbog spore i neefikasne komunikacije te ćemo ovom aplikacijom taj proces pokušati ubrzati.
+Ovu aplikaciju smo zamislili kao aplikaciju koja služi za pomoć svakodnevnom radu i vođenju restorana. Mnogi restorani gube vrijeme i energiju osoblja zbog spore i neefikasne komunikacije te ćemo ovom aplikacijom taj proces ubrzati.
 
 ## Specifikacija projekta
 
@@ -27,7 +27,7 @@ F08 |  Pregled podataka o zaposleniku | Admin pregledava i uređuje podatke o za
 F09 |  Evidencija smjena | Admin kreira i uređuje podatke o smjenama zaposlenika | Mateo Radman
 
 ## Tehnologije i oprema
-Visual Studio 2019 - IDE okruženje, C#.NET
+Visual Studio 2019 - IDE okruženje, C#.NET \n
 MySQL, SQL Server Express - kreiranje lokalne baze podataka
 GitHub, GitHub Classroom - okruženje za razvoj softwera i za komunikaciju 
 Word, Visual Paradigm - dokumentacija
