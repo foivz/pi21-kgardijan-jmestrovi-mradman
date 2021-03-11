@@ -16,7 +16,7 @@ Ovu aplikaciju smo zamislili kao aplikaciju koja služi za pomoć svakodnevnom r
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Prijava | Za pristup aplikaciji potrebna je prijavakorisnika | Josipa Meštrović
+F01 | Prijava | Za pristup aplikaciji potrebna je prijava korisnika putem profila admin ili zaposlenik | Josipa Meštrović
 F02 |  Kreiranje narudžbe | Zaposlenik stvara novu narudžbu gosta te ju proslijeđuje kuhinji | Karlo Gardijan
 F03 |  Pregled narudžbi | Zaposlenik ima mogućnost pregleda svih narudžbi te dodjeljivanja statusa pojedine narudžbe | Karlo Gardijan
 F04 |  Kreiranje i izdavanje računa | Zaposlenik kreira i izdaje račun gostu | Karlo Gardijan
