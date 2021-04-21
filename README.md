@@ -19,16 +19,16 @@ Oznaka | Naziv | Kratki opis | Odgovorni član tima
 F01 | Prijava | Za pristup aplikaciji potrebna je prijava korisnika putem profila admin ili zaposlenik | Josipa Meštrović
 F02 |  Kreiranje narudžbe | Zaposlenik stvara novu narudžbu gosta te ju proslijeđuje kuhinji | Karlo Gardijan
 F03 |  Pregled narudžbi | Zaposlenik ima mogućnost pregleda svih narudžbi te dodjeljivanja statusa pojedine narudžbe | Karlo Gardijan
-F04 |  Kreiranje i izdavanje računa | Zaposlenik kreira i izdaje račun gostu s QR kodom. Slanje računa u PDF obliku na mail  | Karlo Gardijan
-F05 |  Pregled jelovnika | Zaposlenik i admin imaju mogućnost pregleda jelovnika | Mateo Radman
+F04 |  Kreiranje i izdavanje računa | Zaposlenik kreira i izdaje račun gostu s QR kodom. Slanje računa u PDF obliku na e-mail.  | Karlo Gardijan
+F05 |  Pregled jelovnika | Zaposlenik i admin imaju mogućnost pregleda jelovnika. Ispis jelovnika u PDF obliku | Mateo Radman
 F06 |  Izmjena jelovnika | Admin ima mogućnost izmjene jelovnika | Mateo Radman
-F07 |  Pregled i dodavanje rezervacije | Zaposlenik i admin pregledavaju i upravljaju rezervacijama gostiju | Josipa Meštrović
+F07 |  Pregled i dodavanje rezervacije | Zaposlenik i admin pregledavaju i upravljaju rezervacijama gostiju. Slanje obavijesti o rezervaciji korisniku dan prije. | Josipa Meštrović
 F08 |  Pregled podataka o zaposleniku | Admin pregledava i uređuje podatke o zaposlenicima te kreira podatke za prijavu zaposlenika | Josipa Meštrović
 F09 |  Evidencija smjena | Admin kreira i uređuje podatke o smjenama zaposlenika | Mateo Radman
 
 ## Tehnologije i oprema
 Visual Studio 2019 - IDE okruženje, C#.NET                                                                                                                                       
-MySQL, SQL Server Express - kreiranje lokalne baze podataka                                                                                                                       
+MSSQL, SQL Server Express - kreiranje lokalne baze podataka                                                                                                                       
 GitHub, GitHub Classroom - okruženje za razvoj softwera i za komunikaciju                                                                                                         
 Word, Visual Paradigm - dokumentacija                                                
 
