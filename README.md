@@ -19,7 +19,7 @@ Oznaka | Naziv | Kratki opis | Odgovorni član tima
 F01 | Prijava | Za pristup aplikaciji potrebna je prijava korisnika putem profila admin ili zaposlenik | Josipa Meštrović
 F02 |  Kreiranje narudžbe | Zaposlenik stvara novu narudžbu gosta te ju proslijeđuje kuhinji | Karlo Gardijan
 F03 |  Pregled narudžbi | Zaposlenik ima mogućnost pregleda svih narudžbi te dodjeljivanja statusa pojedine narudžbe | Karlo Gardijan
-F04 |  Kreiranje i izdavanje računa | Zaposlenik kreira i izdaje račun gostu | Karlo Gardijan
+F04 |  Kreiranje i izdavanje računa | Zaposlenik kreira i izdaje račun gostu s QR kodom. Slanje računa u PDF obliku na mail  | Karlo Gardijan
 F05 |  Pregled jelovnika | Zaposlenik i admin imaju mogućnost pregleda jelovnika | Mateo Radman
 F06 |  Izmjena jelovnika | Admin ima mogućnost izmjene jelovnika | Mateo Radman
 F07 |  Pregled i dodavanje rezervacije | Zaposlenik i admin pregledavaju i upravljaju rezervacijama gostiju | Josipa Meštrović
