@@ -27,8 +27,8 @@ F08 |  Pregled podataka o zaposleniku | Admin pregledava i uređuje podatke o za
 F09 |  Evidencija smjena | Admin kreira i uređuje podatke o smjenama zaposlenika | Mateo Radman
 
 ## Tehnologije i oprema
-Visual Studio 2019 - IDE okruženje, C#.NET                                                                                                                                       
-MSSQL, SQL Server Express - kreiranje lokalne baze podataka                                                                                                                       
+Visual Studio 2019 - IDE okruženje, C#, .NET                                                                                                                                     
+MSSQL, SQL Server Express - kreiranje lokalne baze podataka                                                                                                                      
 GitHub, GitHub Classroom - okruženje za razvoj softwera i za komunikaciju                                                                                                         
 Word, Visual Paradigm - dokumentacija                                                
 
