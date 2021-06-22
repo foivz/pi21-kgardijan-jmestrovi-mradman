@@ -1,0 +1,144 @@
+﻿
+namespace Funkcionalnost_prijave
+{
+    partial class FormPrijavljenSuperadmin
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.dataGridViewRestorani = new System.Windows.Forms.DataGridView();
+            this.buttonDodajRestoran = new System.Windows.Forms.Button();
+            this.buttonPregledajAdmine = new System.Windows.Forms.Button();
+            this.dataGridViewAdmin = new System.Windows.Forms.DataGridView();
+            this.buttonDodajAdmina = new System.Windows.Forms.Button();
+            this.buttonObrisiAdmina = new System.Windows.Forms.Button();
+            this.buttonObrisiRestoran = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRestorani)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmin)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridViewRestorani
+            // 
+            this.dataGridViewRestorani.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRestorani.Location = new System.Drawing.Point(25, 38);
+            this.dataGridViewRestorani.Name = "dataGridViewRestorani";
+            this.dataGridViewRestorani.RowHeadersWidth = 51;
+            this.dataGridViewRestorani.RowTemplate.Height = 24;
+            this.dataGridViewRestorani.Size = new System.Drawing.Size(358, 243);
+            this.dataGridViewRestorani.TabIndex = 0;
+            // 
+            // buttonDodajRestoran
+            // 
+            this.buttonDodajRestoran.Location = new System.Drawing.Point(314, 305);
+            this.buttonDodajRestoran.Name = "buttonDodajRestoran";
+            this.buttonDodajRestoran.Size = new System.Drawing.Size(119, 34);
+            this.buttonDodajRestoran.TabIndex = 1;
+            this.buttonDodajRestoran.Text = "Dodaj restoran";
+            this.buttonDodajRestoran.UseVisualStyleBackColor = true;
+            this.buttonDodajRestoran.Click += new System.EventHandler(this.buttonDodajRestoran_Click);
+            // 
+            // buttonPregledajAdmine
+            // 
+            this.buttonPregledajAdmine.Location = new System.Drawing.Point(25, 305);
+            this.buttonPregledajAdmine.Name = "buttonPregledajAdmine";
+            this.buttonPregledajAdmine.Size = new System.Drawing.Size(130, 34);
+            this.buttonPregledajAdmine.TabIndex = 2;
+            this.buttonPregledajAdmine.Text = "Pregledaj admine";
+            this.buttonPregledajAdmine.UseVisualStyleBackColor = true;
+            this.buttonPregledajAdmine.Click += new System.EventHandler(this.buttonPregledajAdmine_Click);
+            // 
+            // dataGridViewAdmin
+            // 
+            this.dataGridViewAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAdmin.Location = new System.Drawing.Point(25, 382);
+            this.dataGridViewAdmin.Name = "dataGridViewAdmin";
+            this.dataGridViewAdmin.RowHeadersWidth = 51;
+            this.dataGridViewAdmin.RowTemplate.Height = 24;
+            this.dataGridViewAdmin.Size = new System.Drawing.Size(553, 233);
+            this.dataGridViewAdmin.TabIndex = 3;
+            // 
+            // buttonDodajAdmina
+            // 
+            this.buttonDodajAdmina.Location = new System.Drawing.Point(459, 644);
+            this.buttonDodajAdmina.Name = "buttonDodajAdmina";
+            this.buttonDodajAdmina.Size = new System.Drawing.Size(119, 34);
+            this.buttonDodajAdmina.TabIndex = 4;
+            this.buttonDodajAdmina.Text = "Dodaj admina";
+            this.buttonDodajAdmina.UseVisualStyleBackColor = true;
+            this.buttonDodajAdmina.Click += new System.EventHandler(this.buttonDodajAdmina_Click);
+            // 
+            // buttonObrisiAdmina
+            // 
+            this.buttonObrisiAdmina.Location = new System.Drawing.Point(314, 644);
+            this.buttonObrisiAdmina.Name = "buttonObrisiAdmina";
+            this.buttonObrisiAdmina.Size = new System.Drawing.Size(119, 34);
+            this.buttonObrisiAdmina.TabIndex = 5;
+            this.buttonObrisiAdmina.Text = "Obriši admina";
+            this.buttonObrisiAdmina.UseVisualStyleBackColor = true;
+            this.buttonObrisiAdmina.Click += new System.EventHandler(this.buttonObrisiAdmina_Click);
+            // 
+            // buttonObrisiRestoran
+            // 
+            this.buttonObrisiRestoran.Location = new System.Drawing.Point(170, 305);
+            this.buttonObrisiRestoran.Name = "buttonObrisiRestoran";
+            this.buttonObrisiRestoran.Size = new System.Drawing.Size(128, 34);
+            this.buttonObrisiRestoran.TabIndex = 6;
+            this.buttonObrisiRestoran.Text = "Obriši  restoran";
+            this.buttonObrisiRestoran.UseVisualStyleBackColor = true;
+            this.buttonObrisiRestoran.Click += new System.EventHandler(this.buttonObrisiRestoran_Click);
+            // 
+            // FormPrijavljenSuperadmin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(626, 730);
+            this.Controls.Add(this.buttonObrisiRestoran);
+            this.Controls.Add(this.buttonObrisiAdmina);
+            this.Controls.Add(this.buttonDodajAdmina);
+            this.Controls.Add(this.dataGridViewAdmin);
+            this.Controls.Add(this.buttonPregledajAdmine);
+            this.Controls.Add(this.buttonDodajRestoran);
+            this.Controls.Add(this.dataGridViewRestorani);
+            this.Name = "FormPrijavljenSuperadmin";
+            this.Text = "Naslovnica";
+            this.Load += new System.EventHandler(this.FormPrijavljenSuperadmin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRestorani)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmin)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridView dataGridViewRestorani;
+        private System.Windows.Forms.Button buttonDodajRestoran;
+        private System.Windows.Forms.Button buttonPregledajAdmine;
+        private System.Windows.Forms.DataGridView dataGridViewAdmin;
+        private System.Windows.Forms.Button buttonDodajAdmina;
+        private System.Windows.Forms.Button buttonObrisiAdmina;
+        private System.Windows.Forms.Button buttonObrisiRestoran;
+    }
+}
