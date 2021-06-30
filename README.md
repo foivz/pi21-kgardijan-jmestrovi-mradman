@@ -21,7 +21,7 @@ F02 | Kreiranje narudžbe | Zaposlenik stvara novu narudžbu gosta te ju proslij
 F03 | Pregled narudžbi | Zaposlenik ima mogućnost pregleda svih narudžbi te dodjeljivanja statusa pojedine narudžbe | Karlo Gardijan
 F04 | Kreiranje i izdavanje računa | Zaposlenik kreira i izdaje račun gostu s QR kodom. Slanje računa u PDF obliku na e-mail.  | Karlo Gardijan
 F05 | Pregled i izmjena jelovnika | Zaposlenik i admin imaju mogućnost pregleda jelovnika. Admin ima mogućnost izmjene jelovnika. Ispis jelovnika u PDF obliku | Mateo Radman
-F06 | Generiranje statistike za restoran | Generiranje statistike te njeno automatsko slanje na e-mail vlasniku restorana. | Mateo Radman
+F06 | Generiranje statistike za narudžbe | Generiranje statistike te njeno automatsko slanje na e-mail vlasniku restorana. | Mateo Radman
 F07 | Pregled i dodavanje rezervacije | Zaposlenik i admin pregledavaju i upravljaju rezervacijama gostiju. Slanje obavijesti o rezervaciji korisniku dan prije. | Josipa Meštrović
 F08 | Pregled podataka o zaposleniku | Admin pregledava i uređuje podatke o zaposlenicima te kreira podatke za prijavu zaposlenika | Josipa Meštrović
 F09 | Evidencija smjena | Admin kreira i uređuje podatke o smjenama zaposlenika | Mateo Radman
