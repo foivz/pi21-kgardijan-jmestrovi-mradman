@@ -17,14 +17,15 @@ Ovu aplikaciju smo zamislili kao aplikaciju koja služi za pomoć svakodnevnom r
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
 F01 | Prijava | Za pristup aplikaciji potrebna je prijava korisnika putem uloge admin, superadmin ili zaposlenik | Josipa Meštrović
-F02 |  Kreiranje narudžbe | Zaposlenik stvara novu narudžbu gosta te ju proslijeđuje kuhinji | Karlo Gardijan
-F03 |  Pregled narudžbi | Zaposlenik ima mogućnost pregleda svih narudžbi te dodjeljivanja statusa pojedine narudžbe | Karlo Gardijan
-F04 |  Kreiranje i izdavanje računa | Zaposlenik kreira i izdaje račun gostu s QR kodom. Slanje računa u PDF obliku na e-mail.  | Karlo Gardijan
-F05 |  Pregled i izmjena jelovnika | Zaposlenik i admin imaju mogućnost pregleda jelovnika. Admin ima mogućnost izmjene jelovnika. Ispis jelovnika u PDF obliku | Mateo Radman
-F06 |  Prikaz statistike za restoran | Prikaz statistike restorana u obliku grafova i tablica. Automatsko slanje statistike na e-mail vlasniku. | Mateo Radman
-F07 |  Pregled i dodavanje rezervacije | Zaposlenik i admin pregledavaju i upravljaju rezervacijama gostiju. Slanje obavijesti o rezervaciji korisniku dan prije. | Josipa Meštrović
-F08 |  Pregled podataka o zaposleniku | Admin pregledava i uređuje podatke o zaposlenicima te kreira podatke za prijavu zaposlenika | Josipa Meštrović
-F09 |  Evidencija smjena | Admin kreira i uređuje podatke o smjenama zaposlenika | Mateo Radman
+F02 | Kreiranje narudžbe | Zaposlenik stvara novu narudžbu gosta te ju proslijeđuje kuhinji | Karlo Gardijan
+F03 | Pregled narudžbi | Zaposlenik ima mogućnost pregleda svih narudžbi te dodjeljivanja statusa pojedine narudžbe | Karlo Gardijan
+F04 | Kreiranje i izdavanje računa | Zaposlenik kreira i izdaje račun gostu s QR kodom. Slanje računa u PDF obliku na e-mail.  | Karlo Gardijan
+F05 | Pregled i izmjena jelovnika | Zaposlenik i admin imaju mogućnost pregleda jelovnika. Admin ima mogućnost izmjene jelovnika. Ispis jelovnika u PDF obliku | Mateo Radman
+F06 | Generiranje statistike za narudžbe | Generiranje statistike te njeno automatsko slanje na e-mail vlasniku restorana. | Mateo Radman
+F07 | Pregled i dodavanje rezervacije | Zaposlenik i admin pregledavaju i upravljaju rezervacijama gostiju. Slanje obavijesti o rezervaciji korisniku dan prije. | Josipa Meštrović
+F08 | Pregled podataka o zaposleniku | Admin pregledava i uređuje podatke o zaposlenicima te kreira podatke za prijavu zaposlenika | Josipa Meštrović
+F09 | Evidencija smjena | Admin kreira i uređuje podatke o smjenama zaposlenika | Mateo Radman
+F10 | Pregled restorana i upravljanje adminima | Superadmin ima potpuno vlasništvo nad aplikacijom te omogućava dodavanje ili brisanje restorana te admina za određeni restoran | Josipa Meštrović
 
 ## Tehnologije i oprema
 * Visual Studio 2019 - IDE okruženje, C#, .NET
