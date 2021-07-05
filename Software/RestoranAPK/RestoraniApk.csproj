@@ -78,6 +78,33 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportingServices.BuildProcess, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <HintPath>..\packages\ReportingServices.14.0.1016.247\lib\net46\Microsoft.ReportingServices.BuildProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportingServices.Designer.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <HintPath>..\packages\ReportingServices.14.0.1016.247\lib\net46\Microsoft.ReportingServices.Designer.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportingServices.Designer.RdlDowngrade, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <HintPath>..\packages\ReportingServices.14.0.1016.247\lib\net46\Microsoft.ReportingServices.Designer.RdlDowngrade.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportingServices.Diagnostics, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <HintPath>..\packages\ReportingServices.14.0.1016.247\lib\net46\Microsoft.ReportingServices.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportingServices.Interfaces, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <HintPath>..\packages\ReportingServices.14.0.1016.247\lib\net46\Microsoft.ReportingServices.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportingServices.ProcessingCore, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <HintPath>..\packages\ReportingServices.14.0.1016.247\lib\net46\Microsoft.ReportingServices.ProcessingCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportingServices.RdlObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <HintPath>..\packages\ReportingServices.14.0.1016.247\lib\net46\Microsoft.ReportingServices.RdlObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportingServices.ReportDesign.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <HintPath>..\packages\ReportingServices.14.0.1016.247\lib\net46\Microsoft.ReportingServices.ReportDesign.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportingServices.RsClient, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <HintPath>..\packages\ReportingServices.14.0.1016.247\lib\net46\Microsoft.ReportingServices.RsClient.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -425,6 +452,11 @@
     <Compile Include="User_Type.cs">
       <DependentUpon>ModelStatistika.tt</DependentUpon>
     </Compile>
+    <Compile Include="_PI21_54_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_PI21_54_DBDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormDodajJelo.resx">
       <DependentUpon>FormDodajJelo.cs</DependentUpon>
     </EmbeddedResource>
@@ -486,6 +518,7 @@
       <DependentUpon>FormZaposleniciPopis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Izvjestaj.rdlc" />
+    <EmbeddedResource Include="Izvjestaj2.rdlc" />
     <EmbeddedResource Include="MyReport.resx">
       <DependentUpon>MyReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -561,6 +594,17 @@
     <None Include="Shift.datasource" />
     <None Include="User.datasource" />
     <None Include="User_Type.datasource" />
+    <None Include="_PI21_54_DBDataSet.xsc">
+      <DependentUpon>_PI21_54_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_PI21_54_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_PI21_54_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_PI21_54_DBDataSet.xss">
+      <DependentUpon>_PI21_54_DBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
