@@ -41,19 +41,21 @@ namespace Funkcionalnost_prijave
                     FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(LogiraniKorisnik);
                     this.Hide();
                     form.ShowDialog();
-                    
+                    this.Show();
                 }
                 else if (LogiraniKorisnik.Type == "admin")
                 {
                     FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorisnik);
                     this.Hide();
                     form.ShowDialog();
+                    this.Show();
                 }
                 else if (LogiraniKorisnik.Type == "superadmin")
                 {
                     FormPrijavljenSuperadmin form = new FormPrijavljenSuperadmin();
                     this.Hide();
                     form.ShowDialog();
+                    this.Show();
                 }
             }
         }

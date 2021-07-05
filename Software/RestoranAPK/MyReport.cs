@@ -23,15 +23,14 @@ namespace Funkcionalnost_prijave
     {
         EntitiesStatistika entities = new EntitiesStatistika();
         private Order order;
+        public User LogiranKorisnik { get; set; }
 
-        public MyReport()
-        {
-            InitializeComponent();
-        }
-        public MyReport(Order order)
+    
+        public MyReport(Order order, User kor)
         {
             InitializeComponent();
             this.order = order;
+            LogiranKorisnik = kor;
         }
 
 
@@ -99,6 +98,7 @@ namespace Funkcionalnost_prijave
         //---------------------------------------------
         private void PosaljiMail()
         {
+            string mail = DohvatiMail();
             using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587))
             {
                 client.EnableSsl = true;
@@ -106,12 +106,28 @@ namespace Funkcionalnost_prijave
                 client.UseDefaultCredentials = false;
                 client.Credentials = new NetworkCredential("piprojektmail@gmail.com", "piprojekttest123");
                 MailMessage msg = new MailMessage();
-                msg.To.Add("piprojektmail@gmail.com");
+                msg.To.Add(mail);
                 msg.From = new MailAddress("piprojekttest123@gmail.com");
                 msg.Subject = "Racun";
                 msg.Body = "Poštovani, ovim putem Vam u privitku šaljemo Vaš račun. Veselimo se Vašem ponovnom dolasku!";
                 msg.Attachments.Add(new Attachment("Izvjestaj.pdf"));
                 client.Send(msg);
+            }
+        }
+
+        private string DohvatiMail()
+        {
+            using (var context = new EntitiesBills())
+            {
+                string br = "";
+                foreach (var item in context.Restaurants)
+                {
+                    if (item.ID == LogiranKorisnik.Restaurant)
+                    {
+                        br = item.Owner_Email;
+                    }
+                }
+                return br;
             }
         }
         //---------------------------------------------

@@ -33,8 +33,8 @@ namespace Funkcionalnost_prijave
 
         private void buttonDodaj_Click(object sender, EventArgs e)
         {
-            
-            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmail.Text) == "")
+            string poruka =ProvjeriRezervaciju();
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmail.Text) == "" || poruka =="")
             {
                 using (var context = new EntitiesReservations())
                 {
@@ -75,11 +75,33 @@ namespace Funkcionalnost_prijave
             }
             else
             {
-                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmail.Text));
-                
+                MessageBox.Show(poruka + BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmail.Text));
             }
 
         }
+
+        private string ProvjeriRezervaciju()
+        {
+            string poruka = "";
+            using (var context = new EntitiesBills())
+            {
+                foreach (var item in context.Reservations)
+                {
+                    if (item.BrojStola == textBoxBrStola.Text && item.DatumVrijeme.Date == TimePickerVrijeme.Value.Date)
+                    {
+                        if (item.DatumVrijeme.Hour + 2 >= TimePickerVrijeme.Value.Hour && item.DatumVrijeme.Hour - 2 <= TimePickerVrijeme.Value.Hour)
+                        {
+                            poruka = "Stol je već rezerviran. ";
+                        }
+
+                    }
+                }
+                return poruka;
+            }
+           
+        }
+
+     
 
         private void PosaljiMail()
         {
