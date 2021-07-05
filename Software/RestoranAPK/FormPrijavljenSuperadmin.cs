@@ -22,6 +22,7 @@ namespace Funkcionalnost_prijave
         private void FormPrijavljenSuperadmin_Load(object sender, EventArgs e)
         {
             OsvjeziRestorane();
+            OsvjeziAdmine();
         }
 
         private List<Restaurant> DohvatiRestorane()
@@ -52,11 +53,6 @@ namespace Funkcionalnost_prijave
                 }
                 return ListaKorisnika;
             }
-        }
-
-        private void buttonPregledajAdmine_Click(object sender, EventArgs e)
-        {
-            OsvjeziAdmine();
         }
 
         private void buttonDodajRestoran_Click(object sender, EventArgs e)
@@ -146,8 +142,13 @@ namespace Funkcionalnost_prijave
         private void buttonOdjava_Click(object sender, EventArgs e)
         {
             FormPrijava form = new FormPrijava();
-            this.Hide();
             form.ShowDialog();
+            this.Close();
+        }
+
+        private void dataGridViewRestorani_SelectionChanged(object sender, EventArgs e)
+        {
+            OsvjeziAdmine();
         }
     }
 }

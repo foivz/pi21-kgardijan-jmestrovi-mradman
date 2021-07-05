@@ -133,6 +133,7 @@ namespace Funkcionalnost_prijave
             this.Name = "FormDodajZaposlenika";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj zaposlenika";
+            this.Load += new System.EventHandler(this.FormDodajZaposlenika_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

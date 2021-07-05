@@ -31,7 +31,6 @@ namespace Funkcionalnost_prijave
         {
             this.dataGridViewRestorani = new System.Windows.Forms.DataGridView();
             this.buttonDodajRestoran = new System.Windows.Forms.Button();
-            this.buttonPregledajAdmine = new System.Windows.Forms.Button();
             this.dataGridViewAdmin = new System.Windows.Forms.DataGridView();
             this.buttonDodajAdmina = new System.Windows.Forms.Button();
             this.buttonObrisiAdmina = new System.Windows.Forms.Button();
@@ -52,10 +51,11 @@ namespace Funkcionalnost_prijave
             this.dataGridViewRestorani.RowTemplate.Height = 24;
             this.dataGridViewRestorani.Size = new System.Drawing.Size(283, 274);
             this.dataGridViewRestorani.TabIndex = 0;
+            this.dataGridViewRestorani.SelectionChanged += new System.EventHandler(this.dataGridViewRestorani_SelectionChanged);
             // 
             // buttonDodajRestoran
             // 
-            this.buttonDodajRestoran.Location = new System.Drawing.Point(368, 343);
+            this.buttonDodajRestoran.Location = new System.Drawing.Point(224, 343);
             this.buttonDodajRestoran.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDodajRestoran.Name = "buttonDodajRestoran";
             this.buttonDodajRestoran.Size = new System.Drawing.Size(144, 38);
@@ -63,17 +63,6 @@ namespace Funkcionalnost_prijave
             this.buttonDodajRestoran.Text = "Dodaj restoran";
             this.buttonDodajRestoran.UseVisualStyleBackColor = true;
             this.buttonDodajRestoran.Click += new System.EventHandler(this.buttonDodajRestoran_Click);
-            // 
-            // buttonPregledajAdmine
-            // 
-            this.buttonPregledajAdmine.Location = new System.Drawing.Point(28, 343);
-            this.buttonPregledajAdmine.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonPregledajAdmine.Name = "buttonPregledajAdmine";
-            this.buttonPregledajAdmine.Size = new System.Drawing.Size(146, 38);
-            this.buttonPregledajAdmine.TabIndex = 2;
-            this.buttonPregledajAdmine.Text = "Pregledaj admine";
-            this.buttonPregledajAdmine.UseVisualStyleBackColor = true;
-            this.buttonPregledajAdmine.Click += new System.EventHandler(this.buttonPregledajAdmine_Click);
             // 
             // dataGridViewAdmin
             // 
@@ -111,7 +100,7 @@ namespace Funkcionalnost_prijave
             // 
             // buttonObrisiRestoran
             // 
-            this.buttonObrisiRestoran.Location = new System.Drawing.Point(195, 343);
+            this.buttonObrisiRestoran.Location = new System.Drawing.Point(48, 343);
             this.buttonObrisiRestoran.Margin = new System.Windows.Forms.Padding(4);
             this.buttonObrisiRestoran.Name = "buttonObrisiRestoran";
             this.buttonObrisiRestoran.Size = new System.Drawing.Size(144, 38);
@@ -140,7 +129,6 @@ namespace Funkcionalnost_prijave
             this.Controls.Add(this.buttonObrisiAdmina);
             this.Controls.Add(this.buttonDodajAdmina);
             this.Controls.Add(this.dataGridViewAdmin);
-            this.Controls.Add(this.buttonPregledajAdmine);
             this.Controls.Add(this.buttonDodajRestoran);
             this.Controls.Add(this.dataGridViewRestorani);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,7 +147,6 @@ namespace Funkcionalnost_prijave
 
         private System.Windows.Forms.DataGridView dataGridViewRestorani;
         private System.Windows.Forms.Button buttonDodajRestoran;
-        private System.Windows.Forms.Button buttonPregledajAdmine;
         private System.Windows.Forms.DataGridView dataGridViewAdmin;
         private System.Windows.Forms.Button buttonDodajAdmina;
         private System.Windows.Forms.Button buttonObrisiAdmina;

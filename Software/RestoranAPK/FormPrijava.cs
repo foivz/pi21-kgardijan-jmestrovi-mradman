@@ -41,6 +41,7 @@ namespace Funkcionalnost_prijave
                     FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(LogiraniKorisnik);
                     this.Hide();
                     form.ShowDialog();
+                    
                 }
                 else if (LogiraniKorisnik.Type == "admin")
                 {
@@ -53,7 +54,6 @@ namespace Funkcionalnost_prijave
                     FormPrijavljenSuperadmin form = new FormPrijavljenSuperadmin();
                     this.Hide();
                     form.ShowDialog();
-
                 }
             }
         }
@@ -64,6 +64,11 @@ namespace Funkcionalnost_prijave
             {
                 return context.Users.ToList();
             }
+        }
+
+        private void FormPrijava_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

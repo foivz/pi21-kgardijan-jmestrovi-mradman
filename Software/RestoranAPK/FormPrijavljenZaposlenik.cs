@@ -53,22 +53,22 @@ namespace Funkcionalnost_prijave
         private void buttonNarudzbe_Click(object sender, EventArgs e)
         {
             FormNarudzbe form = new FormNarudzbe(LogiranKorisnik);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void buttonJelovnik_Click(object sender, EventArgs e)
         {
             FormJelovnikZaposlenik form = new FormJelovnikZaposlenik(LogiranKorisnik);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void buttonOdjava_Click(object sender, EventArgs e)
         {
             FormPrijava form = new FormPrijava();
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void labelRestoran_Click(object sender, EventArgs e)

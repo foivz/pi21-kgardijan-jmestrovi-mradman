@@ -61,15 +61,15 @@ namespace Funkcionalnost_prijave
         private void buttonIzdajRacun_Click(object sender, EventArgs e)
         {
             FormIzdavanjeRacuna form = new FormIzdavanjeRacuna(OdabranaNarudzba, LogiraniKorisnik, UkupnaCijena);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void buttonPovratak_Click(object sender, EventArgs e)
         {
             FormNarudzbe form = new FormNarudzbe(LogiraniKorisnik);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
     }
 }
