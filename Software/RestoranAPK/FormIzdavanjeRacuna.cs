@@ -251,13 +251,27 @@ namespace Funkcionalnost_prijave
 
         private string QRTekst()
         {
-            
-            string Kod = "Racun broj " + BrojRacuna + " je uspjesno izdan u " + textBoxVrijeme.Text +
-                ". Zaposlenik: " + Zaposlenik.Name +
-                ". Broj narudzbe: " + OdabranaNarudzba.ID +
-                ". Ukupna cijena: " + UkupnaCijena +
-                ". Vrsta placanja: " + comboBoxVrstaPlacanja.SelectedItem;
+            string imeRestorana = dohvatiImeRestorana();
+            string Kod = $"HRVHUB30\nHRK\n{int.Parse(textBoxUkupno.Text)*100} \n\n \n \n {imeRestorana} \n Julija Merlica 9 \n 42000 Varaždin \n HR1023800413290547670 \n HR00 \n\n COST \n Racun {BrojRacuna}";
+                          
+                
+
             return Kod;
+        }
+
+        private string dohvatiImeRestorana()
+        {
+            using (var context = new EntitiesBills())
+            {
+                foreach (var item in context.Restaurants)
+                {
+                    if(item.ID== Zaposlenik.Restaurant)
+                    {
+                        return item.Name;
+                    }
+                }
+                return null;
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)

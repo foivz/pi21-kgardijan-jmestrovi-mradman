@@ -56,7 +56,7 @@ namespace Funkcionalnost_prijave
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnStat = new System.Windows.Forms.Button();
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).BeginInit();
             this.orderBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
@@ -66,7 +66,7 @@ namespace Funkcionalnost_prijave
             // buttonPovratak2
             // 
             this.buttonPovratak2.Location = new System.Drawing.Point(40, 36);
-            this.buttonPovratak2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonPovratak2.Margin = new System.Windows.Forms.Padding(5);
             this.buttonPovratak2.Name = "buttonPovratak2";
             this.buttonPovratak2.Size = new System.Drawing.Size(113, 32);
             this.buttonPovratak2.TabIndex = 10;
@@ -101,7 +101,7 @@ namespace Funkcionalnost_prijave
             this.orderBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.orderBindingNavigator.Name = "orderBindingNavigator";
             this.orderBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.orderBindingNavigator.Size = new System.Drawing.Size(1145, 27);
+            this.orderBindingNavigator.Size = new System.Drawing.Size(1145, 31);
             this.orderBindingNavigator.TabIndex = 12;
             this.orderBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -111,7 +111,7 @@ namespace Funkcionalnost_prijave
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // orderBindingSource
@@ -219,11 +219,11 @@ namespace Funkcionalnost_prijave
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.dataStat.DataSource = this.orderBindingSource;
-            this.dataStat.Location = new System.Drawing.Point(40, 95);
-            this.dataStat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataStat.Location = new System.Drawing.Point(40, 111);
+            this.dataStat.Margin = new System.Windows.Forms.Padding(4);
             this.dataStat.Name = "dataStat";
             this.dataStat.RowHeadersWidth = 51;
-            this.dataStat.Size = new System.Drawing.Size(1053, 457);
+            this.dataStat.Size = new System.Drawing.Size(1053, 441);
             this.dataStat.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
@@ -289,7 +289,7 @@ namespace Funkcionalnost_prijave
             // btnStat
             // 
             this.btnStat.Location = new System.Drawing.Point(962, 579);
-            this.btnStat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStat.Margin = new System.Windows.Forms.Padding(4);
             this.btnStat.Name = "btnStat";
             this.btnStat.Size = new System.Drawing.Size(131, 38);
             this.btnStat.TabIndex = 13;
@@ -297,26 +297,26 @@ namespace Funkcionalnost_prijave
             this.btnStat.UseVisualStyleBackColor = true;
             this.btnStat.Click += new System.EventHandler(this.btnStat_Click);
             // 
-            // comboBoxStatus
+            // label1
             // 
-            this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Location = new System.Drawing.Point(57, 560);
-            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(5);
-            this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(179, 24);
-            this.comboBoxStatus.TabIndex = 11;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 17);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Prikaz svih narudžbi:";
             // 
             // FormStatistika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 689);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStat);
             this.Controls.Add(this.dataStat);
             this.Controls.Add(this.orderBindingNavigator);
-            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.buttonPovratak2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormStatistika";
             this.Text = "FormStatistika";
             this.Load += new System.EventHandler(this.FormStatistika_Load);
@@ -356,6 +356,6 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.Button btnStat;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.Label label1;
     }
 }
