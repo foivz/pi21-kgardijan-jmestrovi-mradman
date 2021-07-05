@@ -222,7 +222,7 @@ namespace Funkcionalnost_prijave
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "Output.pdf";
+                sfd.FileName = "Jelovnik.pdf";
                 bool fileError = false;
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
