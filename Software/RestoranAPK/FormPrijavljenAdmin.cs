@@ -49,43 +49,43 @@ namespace Funkcionalnost_prijave
         private void buttonZaposlenici_Click(object sender, EventArgs e)
         {
             FormZaposleniciPopis form = new FormZaposleniciPopis(LogiraniKorniski);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void buttonRezervacije_Click(object sender, EventArgs e)
         {
             FormRezervacija form = new FormRezervacija(LogiraniKorniski);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void buttonJelovnik_Click(object sender, EventArgs e)
         {
             FormJelovnikAdmin form = new FormJelovnikAdmin(LogiraniKorniski);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void buttonSmjene_Click(object sender, EventArgs e)
         {
             FormSmjeneRada form = new FormSmjeneRada(LogiraniKorniski);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             FormPrijava form = new FormPrijava();
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void buttonStatistika_Click(object sender, EventArgs e)
         {
             FormStatistika form = new FormStatistika(LogiraniKorniski);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
     }
 }

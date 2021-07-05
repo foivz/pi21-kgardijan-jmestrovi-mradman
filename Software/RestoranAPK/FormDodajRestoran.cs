@@ -55,5 +55,10 @@ namespace Funkcionalnost_prijave
                 context.SaveChanges();
             }
         }
+
+        private void FormDodajRestoran_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

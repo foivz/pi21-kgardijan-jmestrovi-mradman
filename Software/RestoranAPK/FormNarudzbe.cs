@@ -103,8 +103,8 @@ namespace Funkcionalnost_prijave
         private void buttonPovratak_Click(object sender, EventArgs e)
         {
             FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(LogiranKorisnik);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void buttonPromijeniStatus_Click(object sender, EventArgs e)
@@ -135,8 +135,8 @@ namespace Funkcionalnost_prijave
         {
             OdabranaNarudzba = dataGridViewNarudzbe.CurrentRow.DataBoundItem as Order;
             FormPrikaziNarudzbu form = new FormPrikaziNarudzbu(LogiranKorisnik, OdabranaNarudzba);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
     }
 }

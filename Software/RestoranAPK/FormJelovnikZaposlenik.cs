@@ -76,8 +76,8 @@ namespace Funkcionalnost_prijave
         private void buttonPovratak_Click(object sender, EventArgs e)
         {
             FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(LogiraniKorisnik);
-            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
     }
 }

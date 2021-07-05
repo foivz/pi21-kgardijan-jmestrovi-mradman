@@ -83,6 +83,11 @@ namespace Funkcionalnost_prijave
             {
                 MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriKorisnickoIme(textBoxUsername.Text) + BibliotekeVanjske.ValidacijaUnosa.ProvjeriLozinku(textBoxLozinka.Text));
             }
-        } 
+        }
+
+        private void FormDodajZaposlenika_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

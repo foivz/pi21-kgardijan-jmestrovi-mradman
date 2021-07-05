@@ -111,6 +111,7 @@ namespace Funkcionalnost_prijave
             this.Name = "FormDodajRestoran";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj restoran";
+            this.Load += new System.EventHandler(this.FormDodajRestoran_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
