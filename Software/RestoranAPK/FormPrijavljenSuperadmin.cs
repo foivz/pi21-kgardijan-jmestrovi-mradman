@@ -22,7 +22,7 @@ namespace Funkcionalnost_prijave
         private void FormPrijavljenSuperadmin_Load(object sender, EventArgs e)
         {
             OsvjeziRestorane();
-            OsvjeziAdmine();
+            //OsvjeziAdmine();
         }
 
         private List<Restaurant> DohvatiRestorane()
