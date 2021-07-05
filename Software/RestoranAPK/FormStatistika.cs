@@ -39,29 +39,7 @@ namespace Funkcionalnost_prijave
             entities.Orders.Load();
             orderBindingSource.DataSource = entities.Orders.Local;
             
-            
-
-            
-            
         }
-
-        //private object DohvatiNarudzbe()
-        //{
-        //    using (var context = new EntitiesOrder())
-        //    {
-        //        ListaNarudzbi = new List<Order>();
-        //        foreach (var item in context.Orders)
-        //        {
-        //            if (item.Status != "Zavrseno")
-        //            {
-        //                ListaNarudzbi.Add(item);
-        //            }
-
-        //        }
-        //        return ListaNarudzbi;
-        //    }
-        //}
-
        
 
         private void btnStat_Click(object sender, EventArgs e)

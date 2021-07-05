@@ -4,18 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QRCoder;
-using iTextSharp.text.pdf;
-using iTextSharp.text;
-using System.Net.Mail;
-using System.Net;
-
-using System.Diagnostics;
 
 namespace Funkcionalnost_prijave
 {
@@ -42,78 +34,24 @@ namespace Funkcionalnost_prijave
 
             var rds = new ReportDataSource("DataSetOrder", orders);
             var rds2 = new ReportDataSource("DataSetCart", order.Carts);
-            
+            //var rds2 = new ReportDataSource("DTBill", bill);
+            //var rds3 = new ReportDataSource("DTCart", cart);
 
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.LocalReport.DataSources.Add(rds2);
-            
+            //this.reportViewer1.LocalReport.DataSources.Add(rds2);
+            //this.reportViewer1.LocalReport.DataSources.Add(rds3);
 
 
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter("CurrentTime", DateTime.Now.ToString()));
             this.reportViewer1.RefreshReport();
 
-
-            ExportToPDF();
-            PosaljiMail();
-
         }
-        //---------------------------------------------
-        private void ExportToPDF()
+
+        private void reportViewer1_Load(object sender, EventArgs e)
         {
-            List<Order> orders2 = new List<Order>();
-            orders2.Add(order);
-
-            string deviceInfo = "";
-            string[] streamIDs;
-            Warning[] warnings;
-
-            string mimeType = string.Empty;
-            string encoding = string.Empty;
-            string extension = string.Empty;
-
-            ReportViewer viewer = new ReportViewer();
-            viewer.ProcessingMode = ProcessingMode.Local;
-            viewer.LocalReport.ReportPath = "Izvjestaj2.rdlc";
-            viewer.LocalReport.DataSources.Clear();
-            viewer.LocalReport.DataSources.Add(new ReportDataSource("DTOrder", orders2));
-            viewer.LocalReport.DataSources.Add(new ReportDataSource("DTCart", order.Carts));
-            viewer.RefreshReport();
-
-            var bytes = viewer.LocalReport.Render("PDF", deviceInfo, out mimeType, out encoding,
-                out extension, out streamIDs, out warnings
-                );
-
-
-            string fileName = "Izvjestaj.pdf";
-            if (fileName == "Izvjestaj.pdf")
-            {
-                File.Delete("Izvjestaj.pdf");
-            }
-            File.WriteAllBytes(fileName, bytes);
-            //System.Diagnostics.Process.Start(fileName);
 
         }
-
-
-        //---------------------------------------------
-        private void PosaljiMail()
-        {
-            using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587))
-            {
-                client.EnableSsl = true;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential("piprojektmail@gmail.com", "piprojekttest123");
-                MailMessage msg = new MailMessage();
-                msg.To.Add("piprojektmail@gmail.com");
-                msg.From = new MailAddress("piprojekttest123@gmail.com");
-                msg.Subject = "Racun";
-                msg.Body = "Poštovani, ovim putem Vam u privitku šaljemo Vaš račun. Veselimo se Vašem ponovnom dolasku!";
-                msg.Attachments.Add(new Attachment("Izvjestaj.pdf"));
-                client.Send(msg);
-            }
-        }
-        //---------------------------------------------
     }
 }
