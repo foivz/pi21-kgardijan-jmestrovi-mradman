@@ -106,7 +106,7 @@ namespace Funkcionalnost_prijave
             dataGridViewAdmin.Columns["Restaurant"].Visible = false;
             dataGridViewAdmin.Columns["Type"].Visible = false;
             dataGridViewAdmin.Columns["Username"].HeaderText = "Korisničko ime";
-            dataGridViewAdmin.Columns["Password"].HeaderText = "Lozinka";
+            dataGridViewAdmin.Columns["Password"].Visible = false;
             dataGridViewAdmin.Columns["Name"].HeaderText = "Ime i prezime";
             dataGridViewAdmin.Columns["Shifts"].Visible = false;
             dataGridViewAdmin.Columns["Orders"].Visible = false;
