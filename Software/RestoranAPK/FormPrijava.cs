@@ -38,24 +38,30 @@ namespace Funkcionalnost_prijave
             {
                 if (LogiraniKorisnik.Type == "zaposlenik")
                 {
-                    FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(LogiraniKorisnik);
-                    this.Hide();
-                    form.ShowDialog();
-                    this.Show();
+                    Hide();
+                    using(var forma = new FormPrijavljenZaposlenik(LogiraniKorisnik))
+                    {
+                        forma.ShowDialog();
+                    }
+                    Show();
                 }
                 else if (LogiraniKorisnik.Type == "admin")
                 {
-                    FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorisnik);
-                    this.Hide();
-                    form.ShowDialog();
-                    this.Show();
+                    Hide();
+                    using (var forma = new FormPrijavljenAdmin(LogiraniKorisnik))
+                    {
+                        forma.ShowDialog();
+                    }
+                    Show();
                 }
                 else if (LogiraniKorisnik.Type == "superadmin")
                 {
-                    FormPrijavljenSuperadmin form = new FormPrijavljenSuperadmin();
-                    this.Hide();
-                    form.ShowDialog();
-                    this.Show();
+                    Hide();
+                    using (var forma = new FormPrijavljenSuperadmin())
+                    {
+                        forma.ShowDialog();
+                    }
+                    Show();
                 }
             }
         }
