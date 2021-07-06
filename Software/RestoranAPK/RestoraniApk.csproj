@@ -690,13 +690,13 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\MailService\WindowsServiceCS\WindowsServiceCS.csproj">
-      <Project>{a83430c4-a230-4cf5-817a-38dbe150be7e}</Project>
-      <Name>WindowsServiceCS</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BibliotekeVanjske\BibliotekeVanjske.csproj">
       <Project>{6b75eb99-3dab-441a-913e-edbe96510a38}</Project>
       <Name>BibliotekeVanjske</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MailService\WindowsServiceCS\WindowsServiceCS.csproj">
+      <Project>{a83430c4-a230-4cf5-817a-38dbe150be7e}</Project>
+      <Name>WindowsServiceCS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

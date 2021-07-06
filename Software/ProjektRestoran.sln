@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestoraniApk", "RestoranAPK
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotekeVanjske", "BibliotekeVanjske\BibliotekeVanjske.csproj", "{6B75EB99-3DAB-441A-913E-EDBE96510A38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceCS", "..\..\..\Desktop\MailService\WindowsServiceCS\WindowsServiceCS.csproj", "{A83430C4-A230-4CF5-817A-38DBE150BE7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceCS", "MailService\WindowsServiceCS\WindowsServiceCS.csproj", "{A83430C4-A230-4CF5-817A-38DBE150BE7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
