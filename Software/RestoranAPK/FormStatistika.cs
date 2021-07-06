@@ -40,11 +40,8 @@ namespace Funkcionalnost_prijave
             orderBindingSource.DataSource = entities.Orders.Local;
             
         }
-<<<<<<< HEAD
-       
-=======
->>>>>>> Rezervacije_SLanje_Maila
 
+       
         private void btnStat_Click(object sender, EventArgs e)
         {
             MyReport report = new MyReport(orderBindingSource.Current as Order,LogiraniKorniski);
@@ -53,9 +50,12 @@ namespace Funkcionalnost_prijave
 
         private void buttonPovratak2_Click(object sender, EventArgs e)
         {
-            FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorniski);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using( FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorniski))
+            {
+                form.ShowDialog();
+            }
+            Close();
         }
     }
 }

@@ -82,9 +82,13 @@ namespace Funkcionalnost_prijave
 
         private void ButtonClose_Click(object sender, EventArgs e)
         {
-            FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(Zaposlenik);
-            this.Hide();
-            form.ShowDialog();
+
+            Hide();
+            using (var forma = new FormPrijavljenZaposlenik(Zaposlenik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonIzdajRacun_Click(object sender, EventArgs e)

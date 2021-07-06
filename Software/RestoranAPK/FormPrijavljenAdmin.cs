@@ -12,17 +12,17 @@ namespace Funkcionalnost_prijave
 {
     public partial class FormPrijavljenAdmin : Form
     {
-        public User LogiraniKorniski { get; set; }
+        public User LogiraniKorisnik { get; set; }
         public Restaurant Restoran { get; set; }
         public FormPrijavljenAdmin(User korisnik)
         {
             InitializeComponent();
-            LogiraniKorniski = korisnik;
+            LogiraniKorisnik = korisnik;
         }
 
         private void FormPrijavljenAdmin_Load(object sender, EventArgs e)
         {
-            labelKorisnik.Text ="Prijavljen:" + LogiraniKorniski.Name;
+            labelKorisnik.Text ="Prijavljen:" + LogiraniKorisnik.Name;
             Restoran = NadiRestoran();
             labelRestoran.Text = "Restoran" + Restoran.Name;
             
@@ -35,7 +35,7 @@ namespace Funkcionalnost_prijave
             {
                 foreach (var obj in context.Restaurants )
                 {
-                    if(obj.ID ==LogiraniKorniski.Restaurant)
+                    if(obj.ID ==LogiraniKorisnik.Restaurant)
                     {
                         restoran = obj;
                         break;
@@ -48,44 +48,62 @@ namespace Funkcionalnost_prijave
 
         private void buttonZaposlenici_Click(object sender, EventArgs e)
         {
-            FormZaposleniciPopis form = new FormZaposleniciPopis(LogiraniKorniski);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormZaposleniciPopis(LogiraniKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonRezervacije_Click(object sender, EventArgs e)
         {
-            FormRezervacija form = new FormRezervacija(LogiraniKorniski);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormRezervacija(LogiraniKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonJelovnik_Click(object sender, EventArgs e)
         {
-            FormJelovnikAdmin form = new FormJelovnikAdmin(LogiraniKorniski);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormJelovnikAdmin(LogiraniKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonSmjene_Click(object sender, EventArgs e)
         {
-            FormSmjeneRada form = new FormSmjeneRada(LogiraniKorniski);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormSmjeneRada(LogiraniKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormPrijava form = new FormPrijava();
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormPrijava())
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonStatistika_Click(object sender, EventArgs e)
         {
-            FormStatistika form = new FormStatistika(LogiraniKorniski);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormStatistika(LogiraniKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
     }
 }

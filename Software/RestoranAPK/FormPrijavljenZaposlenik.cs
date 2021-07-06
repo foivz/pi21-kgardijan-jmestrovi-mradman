@@ -21,7 +21,7 @@ namespace Funkcionalnost_prijave
 
         private void FormPrijavljenZaposlenik_Load(object sender, EventArgs e)
         {
-            labelRestoran.Text = "Restoran" + NadiRestoran().Name;
+            labelRestoran.Text = "Restoran " + NadiRestoran().Name;
             labelKorisnik.Text = "Prijavljen: " + LogiranKorisnik.Name;
         }
 
@@ -45,30 +45,42 @@ namespace Funkcionalnost_prijave
 
         private void buttonRezervacije_Click(object sender, EventArgs e)
         {
-            FormRezervacija form = new FormRezervacija(LogiranKorisnik);
-            this.Hide();
-            form.ShowDialog();
+            Hide();
+            using (var forma = new FormRezervacija(LogiranKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonNarudzbe_Click(object sender, EventArgs e)
         {
-            FormNarudzbe form = new FormNarudzbe(LogiranKorisnik);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormNarudzbe(LogiranKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonJelovnik_Click(object sender, EventArgs e)
         {
-            FormJelovnikZaposlenik form = new FormJelovnikZaposlenik(LogiranKorisnik);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormJelovnikZaposlenik(LogiranKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonOdjava_Click(object sender, EventArgs e)
         {
-            FormPrijava form = new FormPrijava();
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormPrijava())
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void labelRestoran_Click(object sender, EventArgs e)

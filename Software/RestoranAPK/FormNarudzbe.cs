@@ -102,9 +102,12 @@ namespace Funkcionalnost_prijave
 
         private void buttonPovratak_Click(object sender, EventArgs e)
         {
-            FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(LogiranKorisnik);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormPrijavljenZaposlenik(LogiranKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonPromijeniStatus_Click(object sender, EventArgs e)
@@ -134,9 +137,12 @@ namespace Funkcionalnost_prijave
         private void buttonPrikaziNarudzbu_Click(object sender, EventArgs e)
         {
             OdabranaNarudzba = dataGridViewNarudzbe.CurrentRow.DataBoundItem as Order;
-            FormPrikaziNarudzbu form = new FormPrikaziNarudzbu(LogiranKorisnik, OdabranaNarudzba);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormPrikaziNarudzbu(LogiranKorisnik,OdabranaNarudzba))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
     }
 }

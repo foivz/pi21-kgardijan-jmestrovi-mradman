@@ -58,15 +58,21 @@ namespace Funkcionalnost_prijave
         {
             if (LogiraniK.Type == "admin")
             {
-                FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniK);
-                form.ShowDialog();
-                this.Close();
+                Hide();
+                using (var forma = new FormPrijavljenAdmin(LogiraniK))
+                {
+                    forma.ShowDialog();
+                }
+                Close();
             }
             else if(LogiraniK.Type== "zaposlenik")
             {
-                FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(LogiraniK);
-                form.ShowDialog();
-                this.Close();
+                Hide();
+                using (var forma = new FormPrijavljenZaposlenik(LogiraniK))
+                {
+                    forma.ShowDialog();
+                }
+                Close();
             }
         }
 
@@ -87,7 +93,7 @@ namespace Funkcionalnost_prijave
         {
             FormDodajRezervaciju form = new FormDodajRezervaciju(LogiraniK);
             form.ShowDialog();
-            this.Close();
+            
         }
     }
 }

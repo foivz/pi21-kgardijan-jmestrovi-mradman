@@ -38,12 +38,12 @@ namespace Funkcionalnost_prijave
             {
                 if (LogiraniKorisnik.Type == "zaposlenik")
                 {
-                    Hide();
+                   Hide();
                     using(var forma = new FormPrijavljenZaposlenik(LogiraniKorisnik))
                     {
                         forma.ShowDialog();
                     }
-                    Show();
+                    Close();
                 }
                 else if (LogiraniKorisnik.Type == "admin")
                 {
@@ -52,7 +52,7 @@ namespace Funkcionalnost_prijave
                     {
                         forma.ShowDialog();
                     }
-                    Show();
+                    Close();
                 }
                 else if (LogiraniKorisnik.Type == "superadmin")
                 {
@@ -61,7 +61,7 @@ namespace Funkcionalnost_prijave
                     {
                         forma.ShowDialog();
                     }
-                    Show();
+                    Close();
                 }
             }
         }

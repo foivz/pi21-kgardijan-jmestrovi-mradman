@@ -90,7 +90,7 @@ namespace Funkcionalnost_prijave
             this.buttonPovratak.Name = "buttonPovratak";
             this.buttonPovratak.Size = new System.Drawing.Size(94, 31);
             this.buttonPovratak.TabIndex = 4;
-            this.buttonPovratak.Text = "< Povratak";
+            this.buttonPovratak.Text = "< ";
             this.buttonPovratak.UseVisualStyleBackColor = true;
             this.buttonPovratak.Click += new System.EventHandler(this.buttonPovratak_Click);
             // 

@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,15 +48,51 @@ namespace Funkcionalnost_prijave
 
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter("CurrentTime", DateTime.Now.ToString()));
             this.reportViewer1.RefreshReport();
+            ExportToPDF();
+            PosaljiMail();
 
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
+        private void ExportToPDF()
         {
-<<<<<<< HEAD
+            List<Order> orders = new List<Order>();
+            orders.Add(order);
+
+            string deviceInfo = "";
+            string[] streamIDs;
+            Warning[] warnings;
+
+            string mimeType = string.Empty;
+            string encoding = string.Empty;
+            string extension = string.Empty;
+
+            ReportViewer viewer = new ReportViewer();
+            viewer.ProcessingMode = ProcessingMode.Local;
+            //viewer.LocalReport.ReportPath = "IzvjestajStudent.rdlc";
+            viewer.LocalReport.ReportPath = "Izvjestaj2.rdlc";
+            //viewer.LocalReport.DataSources.Add(new ReportDataSource("StudentDS", GetStudentsData()));
+            viewer.LocalReport.DataSources.Clear();
+            viewer.LocalReport.DataSources.Add(new ReportDataSource("DTOrder", orders));
+            viewer.LocalReport.DataSources.Add(new ReportDataSource("DTCart", order.Carts));
+            viewer.RefreshReport();
+
+            var bytes = viewer.LocalReport.Render("PDF", deviceInfo, out mimeType, out encoding,
+                out extension, out streamIDs, out warnings
+                );
+
+
+            string fileName = "Izvjestaj.pdf";
+            if (fileName == "Izvjestaj.pdf")
+            {
+                File.Delete("Izvjestaj.pdf");
+            }
+            File.WriteAllBytes(fileName, bytes);
+            //System.Diagnostics.Process.Start(fileName);
 
         }
-=======
+
+        private void PosaljiMail() 
+        { 
             string mail = DohvatiMail();
             using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587))
             {
@@ -86,7 +125,6 @@ namespace Funkcionalnost_prijave
                 return br;
             }
         }
-        //---------------------------------------------
->>>>>>> Rezervacije_SLanje_Maila
+
     }
 }

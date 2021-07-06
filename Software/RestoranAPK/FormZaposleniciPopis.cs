@@ -43,9 +43,12 @@ namespace Funkcionalnost_prijave
 
         private void buttonPovratak_Click(object sender, EventArgs e)
         {
-            FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiranK);
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormPrijavljenAdmin(LogiranK))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
     

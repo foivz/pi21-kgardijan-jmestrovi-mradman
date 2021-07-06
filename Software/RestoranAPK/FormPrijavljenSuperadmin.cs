@@ -22,7 +22,6 @@ namespace Funkcionalnost_prijave
         private void FormPrijavljenSuperadmin_Load(object sender, EventArgs e)
         {
             OsvjeziRestorane();
-            //OsvjeziAdmine();
         }
 
         private List<Restaurant> DohvatiRestorane()
@@ -58,14 +57,21 @@ namespace Funkcionalnost_prijave
         private void buttonDodajRestoran_Click(object sender, EventArgs e)
         {
             int brojRestorana = dataGridViewRestorani.RowCount;
-            FormDodajRestoran form = new FormDodajRestoran(brojRestorana);
-            form.ShowDialog();
+            using (var forma = new FormDodajRestoran(brojRestorana))
+            {
+                forma.ShowDialog();
+            }
+            
         }
 
         private void buttonDodajAdmina_Click(object sender, EventArgs e)
         {
-            FormDodajAdmina form = new FormDodajAdmina(OdabraniRestoran);
-            form.ShowDialog();
+            
+            using (var forma = new FormDodajAdmina(OdabraniRestoran))
+            {
+                forma.ShowDialog();
+            }
+          
             OsvjeziAdmine();
         }
 
@@ -141,9 +147,12 @@ namespace Funkcionalnost_prijave
 
         private void buttonOdjava_Click(object sender, EventArgs e)
         {
-            FormPrijava form = new FormPrijava();
-            form.ShowDialog();
-            this.Close();
+            Hide();
+            using (var forma = new FormPrijava())
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void dataGridViewRestorani_SelectionChanged(object sender, EventArgs e)
