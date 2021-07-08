@@ -39,6 +39,7 @@ namespace Funkcionalnost_prijave
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBrStola = new System.Windows.Forms.TextBox();
             this.buttonKreirajNarudzbu = new System.Windows.Forms.Button();
+            this.buttonOdustani = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKosarica)).BeginInit();
             this.SuspendLayout();
@@ -146,11 +147,23 @@ namespace Funkcionalnost_prijave
             this.buttonKreirajNarudzbu.UseVisualStyleBackColor = true;
             this.buttonKreirajNarudzbu.Click += new System.EventHandler(this.buttonKreirajNarudzbu_Click);
             // 
+            // buttonOdustani
+            // 
+            this.buttonOdustani.Location = new System.Drawing.Point(684, 469);
+            this.buttonOdustani.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonOdustani.Name = "buttonOdustani";
+            this.buttonOdustani.Size = new System.Drawing.Size(137, 44);
+            this.buttonOdustani.TabIndex = 10;
+            this.buttonOdustani.Text = "Odustani";
+            this.buttonOdustani.UseVisualStyleBackColor = true;
+            this.buttonOdustani.Click += new System.EventHandler(this.buttonOdustani_Click);
+            // 
             // FormDodajNarudzbu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 542);
+            this.Controls.Add(this.buttonOdustani);
             this.Controls.Add(this.buttonKreirajNarudzbu);
             this.Controls.Add(this.textBoxBrStola);
             this.Controls.Add(this.label3);
@@ -186,5 +199,6 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxBrStola;
         private System.Windows.Forms.Button buttonKreirajNarudzbu;
+        private System.Windows.Forms.Button buttonOdustani;
     }
 }

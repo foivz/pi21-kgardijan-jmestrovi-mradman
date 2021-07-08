@@ -84,7 +84,7 @@ namespace Funkcionalnost_prijave
         {
 
             Hide();
-            using (var forma = new FormPrijavljenZaposlenik(Zaposlenik))
+            using (var forma = new FormNarudzbe(Zaposlenik))
             {
                 forma.ShowDialog();
             }

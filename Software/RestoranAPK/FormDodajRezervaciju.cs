@@ -89,7 +89,7 @@ namespace Funkcionalnost_prijave
                 {
                     if (item.BrojStola == textBoxBrStola.Text && item.DatumVrijeme.Date == TimePickerVrijeme.Value.Date)
                     {
-                        if (item.DatumVrijeme.Hour + 2 >= TimePickerVrijeme.Value.Hour && item.DatumVrijeme.Hour - 2 <= TimePickerVrijeme.Value.Hour)
+                        if (item.DatumVrijeme.Hour + 2 >= TimePickerVrijeme.Value.Hour && item.DatumVrijeme.Hour <= TimePickerVrijeme.Value.Hour)
                         {
                             poruka = "Stol je već rezerviran. ";
                         }

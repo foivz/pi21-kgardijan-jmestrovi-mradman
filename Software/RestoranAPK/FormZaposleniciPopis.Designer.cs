@@ -112,6 +112,7 @@ namespace Funkcionalnost_prijave
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popis zaposlenika";
             this.Load += new System.EventHandler(this.FormZaposleniciPopis_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormZaposleniciPopis_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPopisZaposlenika)).EndInit();
             this.ResumeLayout(false);
 

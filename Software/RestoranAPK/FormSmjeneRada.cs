@@ -26,7 +26,7 @@ namespace Funkcionalnost_prijave
         {
             OsvjeziPrvuSmjenu();
             OsvjeziDruguSmjenu();
-            Pomoc();
+            
         }
         private void Pomoc()
         {
@@ -142,6 +142,11 @@ namespace Funkcionalnost_prijave
         private void dataGridViewPrva_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void FormSmjeneRada_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }

@@ -39,8 +39,8 @@ namespace Funkcionalnost_prijave
             {
                 if (LogiraniKorisnik.Type == "zaposlenik")
                 {
-                   Hide();
-                    using(var forma = new FormPrijavljenZaposlenik(LogiraniKorisnik))
+                    Hide();
+                    using (var forma = new FormPrijavljenZaposlenik(LogiraniKorisnik))
                     {
                         forma.ShowDialog();
                     }
@@ -69,16 +69,10 @@ namespace Funkcionalnost_prijave
 
         private List<User> DohvatiKorisnike()
         {
-            using (var context = new PI21_54_DBEntities ())
+            using (var context = new PI21_54_DBEntities())
             {
                 return context.Users.ToList();
             }
-        }
-
-        private void FormPrijava_Load(object sender, EventArgs e)
-        {
-<<<<<<< HEAD
-           
         }
 
 
@@ -93,11 +87,6 @@ namespace Funkcionalnost_prijave
            (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
             helpProvider1.HelpNamespace = help;
             Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Prijava");
-=======
-                  string help= Path.Combine(new Uri(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
-                  helpProvider1.HelpNamespace = help;
-                  Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Prijava");
->>>>>>> 4178a5850b9572af8846ce3044257ee9010197a9
         }
     }
 }

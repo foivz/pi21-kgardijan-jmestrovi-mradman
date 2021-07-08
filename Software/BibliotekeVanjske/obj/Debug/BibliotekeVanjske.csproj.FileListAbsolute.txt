@@ -5,7 +5,6 @@ C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVan
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.xml
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csprojAssemblyReference.cache
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.CoreCompileInputs.cache
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.CopyComplete
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.dll
@@ -22,3 +21,5 @@ C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVan
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.CopyComplete
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.dll
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.pdb
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.AssemblyReference.cache
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\BouncyCastle.Crypto.dll

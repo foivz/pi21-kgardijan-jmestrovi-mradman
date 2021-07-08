@@ -97,7 +97,15 @@ namespace BibliotekeVanjske
             }
             return povratnaPoruka;
         }
+        public static string ProvjeriOdabirReda(string red)
+        {
+            string povratnaPoruka = "";
+            if (red =="")
+            {
+                povratnaPoruka = "Molimo odaberite redak u tablici";
+            }
+            return povratnaPoruka;
+        }
 
-    
     }
 }

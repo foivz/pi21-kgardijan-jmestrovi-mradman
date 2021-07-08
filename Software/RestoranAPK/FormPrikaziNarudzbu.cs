@@ -38,8 +38,6 @@ namespace Funkcionalnost_prijave
             dataGridViewNarudzba.Columns["Order"].Visible = false;
 
             textBoxUkupno.Text = UkupnaCijena.ToString();
-
-            Pomoc();
         }
         private void Pomoc()
         {
@@ -85,6 +83,11 @@ namespace Funkcionalnost_prijave
             }
             Close();
             
+        }
+
+        private void FormPrikaziNarudzbu_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }

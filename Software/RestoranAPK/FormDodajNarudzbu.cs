@@ -190,5 +190,31 @@ namespace Funkcionalnost_prijave
             }
             Close();
         }
+
+        private void buttonOdustani_Click(object sender, EventArgs e)
+        {
+            Order odabrana = NovaNarudzba;
+            using (var context = new EntitiesOrder())
+            {
+                foreach (var item in context.Carts)
+                {
+                    if (item.Narudzba == odabrana.ID)
+                    {
+                        context.Carts.Remove(item);
+                    }
+                }
+                foreach (var item in context.Orders)
+                {
+                    if (item.ID == odabrana.ID)
+                    {
+                        context.Orders.Remove(item);
+                    }
+                }
+                context.SaveChanges();
+            }
+            Close();
+
+
+        }
     }
 }

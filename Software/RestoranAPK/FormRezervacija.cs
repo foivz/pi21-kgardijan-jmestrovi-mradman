@@ -14,6 +14,7 @@ namespace Funkcionalnost_prijave
     public partial class FormRezervacija : Form
     {
         public User LogiraniK { get; set; }
+        public string provjera;
         public List<Reservation> ListaRezervacija { get; set; }
         public FormRezervacija(User korisnik)
         {
@@ -87,15 +88,32 @@ namespace Funkcionalnost_prijave
 
         private void buttonObriši_Click(object sender, EventArgs e)
         {
-            Reservation odabranaRezervacija = dataGridViewRezervacije.CurrentRow.DataBoundItem as Reservation;
-            using (var context = new EntitiesReservations())
+            if (dataGridViewRezervacije.CurrentRow == null)
             {
-                context.Reservations.Attach(odabranaRezervacija);
-                context.Reservations.Remove(odabranaRezervacija);
-                context.SaveChanges();
+                provjera = "";
+            }
+            else
+            {
+                provjera = dataGridViewRezervacije.CurrentRow.ToString();
             }
 
-            Osvjezi();
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(provjera) == "")
+            {
+                Reservation odabranaRezervacija = dataGridViewRezervacije.CurrentRow.DataBoundItem as Reservation;
+                using (var context = new EntitiesReservations())
+                {
+                    context.Reservations.Attach(odabranaRezervacija);
+                    context.Reservations.Remove(odabranaRezervacija);
+                    context.SaveChanges();
+                }
+
+                Osvjezi();
+            }
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(provjera));
+            }
+                
         }
 
         private void buttonDodaj_Click(object sender, EventArgs e)

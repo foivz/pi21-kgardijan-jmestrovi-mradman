@@ -321,6 +321,7 @@ namespace Funkcionalnost_prijave
             this.Name = "FormStatistika";
             this.Text = "FormStatistika";
             this.Load += new System.EventHandler(this.FormStatistika_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormStatistika_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).EndInit();
             this.orderBindingNavigator.ResumeLayout(false);
             this.orderBindingNavigator.PerformLayout();

@@ -27,6 +27,7 @@ namespace Funkcionalnost_prijave
         public DateTime VrijemeDatum { get; set; }
         public string ImeRestorana { get; set; }
         public string Osoba { get; set; }
+        public string provjera;
         public FormJelovnikAdmin(User korisnik)
         {
             InitializeComponent();
@@ -185,21 +186,38 @@ namespace Funkcionalnost_prijave
 
         private void buttonObrisi_Click(object sender, EventArgs e)
         {
-            Meal odabrano=dataGridViewJela.CurrentRow.DataBoundItem as Meal;
-
-            using (var context = new EntitiesBills())
+            if (dataGridViewJela.CurrentRow == null)
             {
-                foreach (var item in context.Meals)
-                {
-                    if(item.IDJela == odabrano.IDJela)
-                    {
-                        context.Meals.Remove(item);
-                    }
-                }
-                context.SaveChanges();
+                provjera = "";
             }
-            OsvjeziJela();
-            OsvjeziJela2();
+            else
+            {
+                provjera = dataGridViewJela.CurrentRow.ToString();
+            }
+
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(provjera) == "")
+            {
+                Meal odabrano = dataGridViewJela.CurrentRow.DataBoundItem as Meal;
+
+                using (var context = new EntitiesBills())
+                {
+                    foreach (var item in context.Meals)
+                    {
+                        if (item.IDJela == odabrano.IDJela)
+                        {
+                            context.Meals.Remove(item);
+                        }
+                    }
+                    context.SaveChanges();
+                }
+                OsvjeziJela();
+                OsvjeziJela2();
+            }
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(provjera));
+            }
+               
 
         }
 

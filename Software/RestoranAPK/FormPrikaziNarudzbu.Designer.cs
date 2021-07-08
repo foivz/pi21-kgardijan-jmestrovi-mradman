@@ -186,6 +186,7 @@ namespace Funkcionalnost_prijave
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prikaži narudžbu";
             this.Load += new System.EventHandler(this.FormPrikaziNarudzbu_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormPrikaziNarudzbu_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNarudzba)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

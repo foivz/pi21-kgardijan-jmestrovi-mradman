@@ -150,6 +150,7 @@ namespace Funkcionalnost_prijave
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Narudžbe";
             this.Load += new System.EventHandler(this.FormNarudzbe_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormNarudzbe_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNarudzbe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

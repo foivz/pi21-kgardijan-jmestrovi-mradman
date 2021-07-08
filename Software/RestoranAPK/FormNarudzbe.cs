@@ -29,8 +29,6 @@ namespace Funkcionalnost_prijave
             comboBoxStatus.DataSource = ListaStatusa;
 
             Osvjezi();
-
-            Pomoc();
         }
 
         private void Pomoc()
@@ -154,6 +152,11 @@ namespace Funkcionalnost_prijave
                 forma.ShowDialog();
             }
             Close();
+        }
+
+        private void FormNarudzbe_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }

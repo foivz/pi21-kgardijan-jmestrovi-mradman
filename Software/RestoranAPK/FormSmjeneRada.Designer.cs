@@ -141,6 +141,7 @@ namespace Funkcionalnost_prijave
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Smjene rada";
             this.Load += new System.EventHandler(this.FormSmjeneRada_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormSmjeneRada_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDruga)).EndInit();
             this.ResumeLayout(false);

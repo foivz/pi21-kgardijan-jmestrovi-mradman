@@ -39,7 +39,6 @@ namespace Funkcionalnost_prijave
             
             entities.Orders.Load();
             orderBindingSource.DataSource = entities.Orders.Local;
-            Pomoc();
             
         }
         private void Pomoc()
@@ -65,6 +64,11 @@ namespace Funkcionalnost_prijave
                 form.ShowDialog();
             }
             Close();
+        }
+
+        private void FormStatistika_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }
