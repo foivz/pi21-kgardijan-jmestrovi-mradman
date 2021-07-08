@@ -117,6 +117,7 @@ namespace Funkcionalnost_prijave
             this.Name = "FormPrijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormPrijava_HelpButtonClicked);
             this.Load += new System.EventHandler(this.FormPrijava_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -144,6 +144,7 @@ namespace Funkcionalnost_prijave
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Naslovnica";
             this.Load += new System.EventHandler(this.FormPrijavljenAdmin_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormPrijavljenAdmin_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -123,6 +123,18 @@ namespace Funkcionalnost_prijave
 
         private void buttonUrediZaposlenika_Click(object sender, EventArgs e)
         {
+         
+        }
+
+        private void dataGridViewPopisZaposlenika_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FormUrediZaposlenika form = new FormUrediZaposlenika(dataGridViewPopisZaposlenika.CurrentRow.DataBoundItem as User);
+            form.ShowDialog();
+            Osvjezi();
+        }
+
+        private void buttonUredi_Click(object sender, EventArgs e)
+        {
             FormUrediZaposlenika form = new FormUrediZaposlenika(dataGridViewPopisZaposlenika.CurrentRow.DataBoundItem as User);
             form.ShowDialog();
             Osvjezi();

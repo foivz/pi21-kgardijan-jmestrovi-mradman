@@ -24,7 +24,6 @@ namespace Funkcionalnost_prijave
         {
             labelRestoran.Text = "Restoran " + NadiRestoran().Name;
             labelKorisnik.Text = "Prijavljen: " + LogiranKorisnik.Name;
-            Pomoc();
         }
 
         private void Pomoc()
@@ -96,6 +95,11 @@ namespace Funkcionalnost_prijave
         private void labelRestoran_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormPrijavljenZaposlenik_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }

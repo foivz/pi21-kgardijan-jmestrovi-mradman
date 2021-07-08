@@ -23,7 +23,6 @@ namespace Funkcionalnost_prijave
         private void FormPrijavljenSuperadmin_Load(object sender, EventArgs e)
         {
             OsvjeziRestorane();
-            Pomoc();
         }
         private void Pomoc()
         {
@@ -167,6 +166,11 @@ namespace Funkcionalnost_prijave
         private void dataGridViewRestorani_SelectionChanged(object sender, EventArgs e)
         {
             OsvjeziAdmine();
+        }
+
+        private void FormPrijavljenSuperadmin_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }

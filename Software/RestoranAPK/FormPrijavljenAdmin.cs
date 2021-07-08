@@ -26,7 +26,7 @@ namespace Funkcionalnost_prijave
             labelKorisnik.Text ="Prijavljen:" + LogiraniKorisnik.Name;
             Restoran = NadiRestoran();
             labelRestoran.Text = "Restoran" + Restoran.Name;
-            Pomoc();
+            
         }
 
         private void Pomoc()
@@ -113,6 +113,11 @@ namespace Funkcionalnost_prijave
                 forma.ShowDialog();
             }
             Close();
+        }
+
+        private void FormPrijavljenAdmin_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
         }
     }
 }

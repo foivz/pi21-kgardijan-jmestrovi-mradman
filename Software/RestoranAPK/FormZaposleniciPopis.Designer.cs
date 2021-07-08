@@ -32,9 +32,9 @@ namespace Funkcionalnost_prijave
             this.dataGridViewPopisZaposlenika = new System.Windows.Forms.DataGridView();
             this.buttonDodajZaposlenika = new System.Windows.Forms.Button();
             this.buttonObrišiZaposlenika = new System.Windows.Forms.Button();
-            this.buttonUrediZaposlenika = new System.Windows.Forms.Button();
             this.buttonPovratak = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.buttonUredi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPopisZaposlenika)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,6 +50,7 @@ namespace Funkcionalnost_prijave
             this.dataGridViewPopisZaposlenika.Size = new System.Drawing.Size(536, 253);
             this.dataGridViewPopisZaposlenika.TabIndex = 0;
             this.dataGridViewPopisZaposlenika.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPopisZaposlenika_CellContentClick);
+            this.dataGridViewPopisZaposlenika.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPopisZaposlenika_CellContentDoubleClick);
             // 
             // buttonDodajZaposlenika
             // 
@@ -64,7 +65,7 @@ namespace Funkcionalnost_prijave
             // 
             // buttonObrišiZaposlenika
             // 
-            this.buttonObrišiZaposlenika.Location = new System.Drawing.Point(25, 335);
+            this.buttonObrišiZaposlenika.Location = new System.Drawing.Point(65, 335);
             this.buttonObrišiZaposlenika.Margin = new System.Windows.Forms.Padding(4);
             this.buttonObrišiZaposlenika.Name = "buttonObrišiZaposlenika";
             this.buttonObrišiZaposlenika.Size = new System.Drawing.Size(143, 58);
@@ -72,17 +73,6 @@ namespace Funkcionalnost_prijave
             this.buttonObrišiZaposlenika.Text = "Obriši";
             this.buttonObrišiZaposlenika.UseVisualStyleBackColor = true;
             this.buttonObrišiZaposlenika.Click += new System.EventHandler(this.buttonObrišiZaposlenika_Click);
-            // 
-            // buttonUrediZaposlenika
-            // 
-            this.buttonUrediZaposlenika.Location = new System.Drawing.Point(202, 335);
-            this.buttonUrediZaposlenika.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonUrediZaposlenika.Name = "buttonUrediZaposlenika";
-            this.buttonUrediZaposlenika.Size = new System.Drawing.Size(143, 58);
-            this.buttonUrediZaposlenika.TabIndex = 3;
-            this.buttonUrediZaposlenika.Text = "Uredi";
-            this.buttonUrediZaposlenika.UseVisualStyleBackColor = true;
-            this.buttonUrediZaposlenika.Click += new System.EventHandler(this.buttonUrediZaposlenika_Click);
             // 
             // buttonPovratak
             // 
@@ -95,13 +85,24 @@ namespace Funkcionalnost_prijave
             this.buttonPovratak.UseVisualStyleBackColor = true;
             this.buttonPovratak.Click += new System.EventHandler(this.buttonPovratak_Click);
             // 
+            // buttonUredi
+            // 
+            this.buttonUredi.Location = new System.Drawing.Point(236, 335);
+            this.buttonUredi.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonUredi.Name = "buttonUredi";
+            this.buttonUredi.Size = new System.Drawing.Size(143, 58);
+            this.buttonUredi.TabIndex = 5;
+            this.buttonUredi.Text = "Uredi";
+            this.buttonUredi.UseVisualStyleBackColor = true;
+            this.buttonUredi.Click += new System.EventHandler(this.buttonUredi_Click);
+            // 
             // FormZaposleniciPopis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 418);
+            this.Controls.Add(this.buttonUredi);
             this.Controls.Add(this.buttonPovratak);
-            this.Controls.Add(this.buttonUrediZaposlenika);
             this.Controls.Add(this.buttonObrišiZaposlenika);
             this.Controls.Add(this.buttonDodajZaposlenika);
             this.Controls.Add(this.dataGridViewPopisZaposlenika);
@@ -121,8 +122,8 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.DataGridView dataGridViewPopisZaposlenika;
         private System.Windows.Forms.Button buttonDodajZaposlenika;
         private System.Windows.Forms.Button buttonObrišiZaposlenika;
-        private System.Windows.Forms.Button buttonUrediZaposlenika;
         private System.Windows.Forms.Button buttonPovratak;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Button buttonUredi;
     }
 }

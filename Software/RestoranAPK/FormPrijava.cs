@@ -77,10 +77,21 @@ namespace Funkcionalnost_prijave
 
         private void FormPrijava_Load(object sender, EventArgs e)
         {
-                        string help= Path.Combine(new Uri(Path.GetDirectoryName
-            (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
-                       helpProvider1.HelpNamespace = help;
-                        Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Prijava");
+           
+        }
+
+
+        private void FormPrijava_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Pomoc();
+        }
+
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Prijava");
         }
     }
 }

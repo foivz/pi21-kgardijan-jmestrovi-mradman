@@ -138,6 +138,7 @@ namespace Funkcionalnost_prijave
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Naslovnica";
             this.Load += new System.EventHandler(this.FormPrijavljenSuperadmin_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormPrijavljenSuperadmin_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRestorani)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmin)).EndInit();
             this.ResumeLayout(false);
