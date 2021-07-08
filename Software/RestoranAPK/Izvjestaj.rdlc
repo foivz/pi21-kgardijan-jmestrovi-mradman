@@ -92,7 +92,6 @@
         <ReportItems>
           <Line Name="Line1">
             <Top>1.74307cm</Top>
-            <Left>0cm</Left>
             <Height>0cm</Height>
             <Width>20.98146cm</Width>
             <Style>
@@ -516,7 +515,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Naziv jela</Value>
+                                  <Value>Naziv stavke</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
