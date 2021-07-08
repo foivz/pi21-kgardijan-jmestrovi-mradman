@@ -10,3 +10,15 @@ C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVan
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.CopyComplete
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.dll
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.pdb
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\BibliotekeVanjske.dll.config
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\BibliotekeVanjske.dll
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\BibliotekeVanjske.pdb
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.dll
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.xml
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.AssemblyReference.cache
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.CoreCompileInputs.cache
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.CopyComplete
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.dll
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.pdb
