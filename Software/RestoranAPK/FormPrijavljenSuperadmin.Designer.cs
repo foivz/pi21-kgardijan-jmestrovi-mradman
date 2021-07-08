@@ -36,6 +36,7 @@ namespace Funkcionalnost_prijave
             this.buttonObrisiAdmina = new System.Windows.Forms.Button();
             this.buttonObrisiRestoran = new System.Windows.Forms.Button();
             this.buttonOdjava = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRestorani)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmin)).BeginInit();
             this.SuspendLayout();
@@ -152,5 +153,6 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Button buttonObrisiAdmina;
         private System.Windows.Forms.Button buttonObrisiRestoran;
         private System.Windows.Forms.Button buttonOdjava;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

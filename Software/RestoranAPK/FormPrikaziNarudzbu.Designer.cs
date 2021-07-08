@@ -41,6 +41,7 @@ namespace Funkcionalnost_prijave
             this.textBoxUkupno = new System.Windows.Forms.TextBox();
             this.buttonIzdajRacun = new System.Windows.Forms.Button();
             this.buttonPovratak = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNarudzba)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,5 +206,6 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.TextBox textBoxUkupno;
         private System.Windows.Forms.Button buttonIzdajRacun;
         private System.Windows.Forms.Button buttonPovratak;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

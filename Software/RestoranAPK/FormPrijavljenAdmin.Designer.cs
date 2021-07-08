@@ -37,6 +37,7 @@ namespace Funkcionalnost_prijave
             this.buttonStatistika = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labelKorisnik = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // buttonJelovnik
@@ -78,7 +79,7 @@ namespace Funkcionalnost_prijave
             this.labelRestoran.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRestoran.Location = new System.Drawing.Point(425, 29);
             this.labelRestoran.Name = "labelRestoran";
-            this.labelRestoran.Size = new System.Drawing.Size(79, 20);
+            this.labelRestoran.Size = new System.Drawing.Size(96, 25);
             this.labelRestoran.TabIndex = 3;
             this.labelRestoran.Text = "Restoran:";
             // 
@@ -120,13 +121,13 @@ namespace Funkcionalnost_prijave
             this.labelKorisnik.AutoSize = true;
             this.labelKorisnik.Location = new System.Drawing.Point(27, 250);
             this.labelKorisnik.Name = "labelKorisnik";
-            this.labelKorisnik.Size = new System.Drawing.Size(41, 15);
+            this.labelKorisnik.Size = new System.Drawing.Size(46, 18);
             this.labelKorisnik.TabIndex = 8;
             this.labelKorisnik.Text = "label2";
             // 
             // FormPrijavljenAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 292);
             this.Controls.Add(this.labelKorisnik);
@@ -158,5 +159,6 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Button buttonStatistika;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelKorisnik;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

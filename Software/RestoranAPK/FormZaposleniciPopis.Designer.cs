@@ -34,6 +34,7 @@ namespace Funkcionalnost_prijave
             this.buttonObrišiZaposlenika = new System.Windows.Forms.Button();
             this.buttonUrediZaposlenika = new System.Windows.Forms.Button();
             this.buttonPovratak = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPopisZaposlenika)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,5 +123,6 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Button buttonObrišiZaposlenika;
         private System.Windows.Forms.Button buttonUrediZaposlenika;
         private System.Windows.Forms.Button buttonPovratak;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

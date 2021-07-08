@@ -37,7 +37,6 @@ namespace Funkcionalnost_prijave
             this.buttonPrva = new System.Windows.Forms.Button();
             this.buttonDruga = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.helpProvider2 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDruga)).BeginInit();
             this.SuspendLayout();
@@ -122,7 +121,7 @@ namespace Funkcionalnost_prijave
             // 
             // helpProvider1
             // 
-            this.helpProvider1.HelpNamespace = "C:\\Users\\karlo\\Desktop\\Aplikacija\\RestaurantHelp.chm";
+            this.helpProvider1.HelpNamespace = "";
             // 
             // FormSmjeneRada
             // 
@@ -139,7 +138,6 @@ namespace Funkcionalnost_prijave
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSmjeneRada";
-            this.helpProvider2.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Smjene rada";
             this.Load += new System.EventHandler(this.FormSmjeneRada_Load);
@@ -160,6 +158,5 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Button buttonPrva;
         private System.Windows.Forms.Button buttonDruga;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.HelpProvider helpProvider2;
     }
 }

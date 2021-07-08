@@ -36,6 +36,7 @@ namespace Funkcionalnost_prijave
             this.buttonJelovnik = new System.Windows.Forms.Button();
             this.buttonOdjava = new System.Windows.Forms.Button();
             this.labelKorisnik = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label1
@@ -145,5 +146,6 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Button buttonJelovnik;
         private System.Windows.Forms.Button buttonOdjava;
         private System.Windows.Forms.Label labelKorisnik;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

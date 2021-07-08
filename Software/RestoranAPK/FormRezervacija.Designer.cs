@@ -84,11 +84,11 @@ namespace Funkcionalnost_prijave
             // 
             // helpProvider1
             // 
-            this.helpProvider1.HelpNamespace = "C:\\Users\\Mateo\\Desktop\\Aplikacija\\Aplikacija\\RestaurantHelp.chm";
+            this.helpProvider1.HelpNamespace = "";
             // 
             // FormRezervacija
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 506);
             this.Controls.Add(this.buttonObriši);

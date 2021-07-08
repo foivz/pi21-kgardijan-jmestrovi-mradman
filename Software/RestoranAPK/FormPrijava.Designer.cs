@@ -35,6 +35,7 @@ namespace Funkcionalnost_prijave
             this.textBoxKorisnickoIme = new System.Windows.Forms.TextBox();
             this.textBoxLozinka = new System.Windows.Forms.TextBox();
             this.ButtonPrijava = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label1
@@ -96,6 +97,10 @@ namespace Funkcionalnost_prijave
             this.ButtonPrijava.UseVisualStyleBackColor = true;
             this.ButtonPrijava.Click += new System.EventHandler(this.ButtonPrijava_Click);
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\mestr\\Documents\\pi21-kgardijan-jmestrovi-mradman\\Software\\help.chm";
+            // 
             // FormPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -126,6 +131,7 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.TextBox textBoxKorisnickoIme;
         private System.Windows.Forms.TextBox textBoxLozinka;
         private System.Windows.Forms.Button ButtonPrijava;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 

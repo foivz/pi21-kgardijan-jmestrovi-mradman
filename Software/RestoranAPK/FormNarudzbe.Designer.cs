@@ -38,7 +38,6 @@ namespace Funkcionalnost_prijave
             this.buttonPovratak = new System.Windows.Forms.Button();
             this.buttonPrikaziNarudzbu = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.helpProvider2 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNarudzbe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,7 +129,7 @@ namespace Funkcionalnost_prijave
             // 
             // helpProvider1
             // 
-            this.helpProvider1.HelpNamespace = "C:\\Users\\karlo\\Desktop\\Aplikacija\\RestaurantHelp.chm";
+            this.helpProvider1.HelpNamespace = "";
             // 
             // FormNarudzbe
             // 
@@ -148,7 +147,6 @@ namespace Funkcionalnost_prijave
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormNarudzbe";
-            this.helpProvider2.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Narudžbe";
             this.Load += new System.EventHandler(this.FormNarudzbe_Load);
@@ -169,6 +167,5 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Button buttonPovratak;
         private System.Windows.Forms.Button buttonPrikaziNarudzbu;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.HelpProvider helpProvider2;
     }
 }

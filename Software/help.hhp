@@ -1,0 +1,11 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=help.chm
+Contents file=Prijava.hhc
+Display compile progress=No
+Index file=IndexHelp.hhk
+Language=0x101a Croatian (Bosnia & Herzegovina)
+
+
+[INFOTYPES]
+

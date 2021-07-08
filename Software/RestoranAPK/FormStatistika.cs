@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,10 +39,18 @@ namespace Funkcionalnost_prijave
             
             entities.Orders.Load();
             orderBindingSource.DataSource = entities.Orders.Local;
+            Pomoc();
             
         }
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Statistika");
+        }
 
-       
+
         private void btnStat_Click(object sender, EventArgs e)
         {
             MyReport report = new MyReport(orderBindingSource.Current as Order,LogiraniKorniski);
