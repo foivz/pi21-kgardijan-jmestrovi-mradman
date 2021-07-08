@@ -348,3 +348,4 @@ C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\o
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\RestoraniApk.csproj.CopyComplete
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost prijave.exe
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost prijave.pdb
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\bin\Debug\WindowsServiceCS.pdb

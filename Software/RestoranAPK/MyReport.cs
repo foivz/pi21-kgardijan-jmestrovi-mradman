@@ -36,15 +36,10 @@ namespace Funkcionalnost_prijave
 
             var rds = new ReportDataSource("DataSetOrder", orders);
             var rds2 = new ReportDataSource("DataSetCart", order.Carts);
-            //var rds2 = new ReportDataSource("DTBill", bill);
-            //var rds3 = new ReportDataSource("DTCart", cart);
 
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.LocalReport.DataSources.Add(rds2);
-            //this.reportViewer1.LocalReport.DataSources.Add(rds2);
-            //this.reportViewer1.LocalReport.DataSources.Add(rds3);
-
 
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter("CurrentTime", DateTime.Now.ToString()));
             this.reportViewer1.RefreshReport();
@@ -58,7 +53,9 @@ namespace Funkcionalnost_prijave
             List<Order> orders = new List<Order>();
             orders.Add(order);
 
-            string deviceInfo = "";
+            string deviceInfo = "<DeviceInfo>" + 
+                    "  <EmbedFonts>None</EmbedFonts>" +
+                    "</DeviceInfo>";
             string[] streamIDs;
             Warning[] warnings;
 
@@ -68,9 +65,7 @@ namespace Funkcionalnost_prijave
 
             ReportViewer viewer = new ReportViewer();
             viewer.ProcessingMode = ProcessingMode.Local;
-            //viewer.LocalReport.ReportPath = "IzvjestajStudent.rdlc";
             viewer.LocalReport.ReportPath = "Izvjestaj2.rdlc";
-            //viewer.LocalReport.DataSources.Add(new ReportDataSource("StudentDS", GetStudentsData()));
             viewer.LocalReport.DataSources.Clear();
             viewer.LocalReport.DataSources.Add(new ReportDataSource("DTOrder", orders));
             viewer.LocalReport.DataSources.Add(new ReportDataSource("DTCart", order.Carts));
@@ -104,7 +99,7 @@ namespace Funkcionalnost_prijave
                 msg.To.Add(mail);
                 msg.From = new MailAddress("piprojekttest123@gmail.com");
                 msg.Subject = "Racun";
-                msg.Body = "Poštovani, ovim putem Vam u privitku šaljemo Vaš račun. Veselimo se Vašem ponovnom dolasku!";
+                msg.Body = "Poštovani, u privitku Vam šaljemo izvještaj narudžbe!";
                 msg.Attachments.Add(new Attachment("Izvjestaj.pdf"));
                 client.Send(msg);
             }

@@ -16,7 +16,6 @@ C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVan
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.xml
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.AssemblyReference.cache
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.CoreCompileInputs.cache
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.csproj.CopyComplete
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\BibliotekeVanjske\obj\Debug\BibliotekeVanjske.dll
