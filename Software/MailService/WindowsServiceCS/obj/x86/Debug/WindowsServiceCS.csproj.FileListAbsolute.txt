@@ -48,4 +48,3 @@ C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\W
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.csproj.CopyComplete
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.exe
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.pdb
-C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.csproj.AssemblyReference.cache

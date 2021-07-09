@@ -181,11 +181,6 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
-        {
-            
-
-        }
 
         private void buttonObrisi_Click(object sender, EventArgs e)
         {

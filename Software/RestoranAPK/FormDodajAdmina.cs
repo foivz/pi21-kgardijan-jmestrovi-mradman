@@ -112,9 +112,5 @@ namespace Funkcionalnost_prijave
             Close();
         }
 
-        private void labelDodajAdmina_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

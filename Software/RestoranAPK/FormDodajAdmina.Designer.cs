@@ -152,7 +152,6 @@ namespace Funkcionalnost_prijave
             this.labelDodajAdmina.Size = new System.Drawing.Size(230, 45);
             this.labelDodajAdmina.TabIndex = 11;
             this.labelDodajAdmina.Text = "Dodaj admina";
-            this.labelDodajAdmina.Click += new System.EventHandler(this.labelDodajAdmina_Click);
             // 
             // labelClose
             // 

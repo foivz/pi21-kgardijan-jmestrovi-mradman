@@ -247,7 +247,7 @@ namespace Funkcionalnost_prijave
         private string QRTekst()
         {
             string imeRestorana = dohvatiImeRestorana();
-            string Kod = $"HRVHUB30\nHRK\n{int.Parse(textBoxUkupno.Text)*100} \n\n \n \n {imeRestorana} \n Julija Merlica 9 \n 42000 Varaždin \n HR1023800413290547670 \n HR00 \n\n COST \n Racun {BrojRacuna}";
+            string Kod = $"HRVHUB30\nHRK\n{int.Parse(textBoxUkupno.Text)*100} \n\n \n \n {imeRestorana} \n Julija Merlica 9 \n 42000 Varaždin \n HR1023900013290447659 \n HR00 \n\n COST \n Racun {BrojRacuna}";
             return Kod;
         }
 
