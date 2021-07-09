@@ -136,7 +136,7 @@ namespace Funkcionalnost_prijave
             string help = Path.Combine(new Uri(Path.GetDirectoryName
            (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
             helpProvider1.HelpNamespace = help;
-            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Rezervacije");
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Rezervacija");
         }
 
         private void labelClose_Click(object sender, EventArgs e)
