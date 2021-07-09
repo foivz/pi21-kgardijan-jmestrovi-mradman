@@ -31,7 +31,6 @@ namespace Funkcionalnost_prijave
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStatistika));
-            this.buttonPovratak2 = new System.Windows.Forms.Button();
             this.orderBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -58,22 +57,16 @@ namespace Funkcionalnost_prijave
             this.btnStat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).BeginInit();
             this.orderBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataStat)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonPovratak2
-            // 
-            this.buttonPovratak2.Location = new System.Drawing.Point(40, 36);
-            this.buttonPovratak2.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonPovratak2.Name = "buttonPovratak2";
-            this.buttonPovratak2.Size = new System.Drawing.Size(113, 32);
-            this.buttonPovratak2.TabIndex = 10;
-            this.buttonPovratak2.Text = "<";
-            this.buttonPovratak2.UseVisualStyleBackColor = true;
-            this.buttonPovratak2.Click += new System.EventHandler(this.buttonPovratak2_Click);
             // 
             // orderBindingNavigator
             // 
@@ -102,7 +95,7 @@ namespace Funkcionalnost_prijave
             this.orderBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.orderBindingNavigator.Name = "orderBindingNavigator";
             this.orderBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.orderBindingNavigator.Size = new System.Drawing.Size(1145, 27);
+            this.orderBindingNavigator.Size = new System.Drawing.Size(933, 27);
             this.orderBindingNavigator.TabIndex = 12;
             this.orderBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -122,7 +115,7 @@ namespace Funkcionalnost_prijave
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -132,7 +125,7 @@ namespace Funkcionalnost_prijave
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -141,7 +134,7 @@ namespace Funkcionalnost_prijave
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -150,13 +143,13 @@ namespace Funkcionalnost_prijave
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -171,7 +164,7 @@ namespace Funkcionalnost_prijave
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -179,7 +172,7 @@ namespace Funkcionalnost_prijave
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -188,13 +181,13 @@ namespace Funkcionalnost_prijave
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // orderBindingNavigatorSaveItem
             // 
@@ -202,7 +195,7 @@ namespace Funkcionalnost_prijave
             this.orderBindingNavigatorSaveItem.Enabled = false;
             this.orderBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("orderBindingNavigatorSaveItem.Image")));
             this.orderBindingNavigatorSaveItem.Name = "orderBindingNavigatorSaveItem";
-            this.orderBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.orderBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.orderBindingNavigatorSaveItem.Text = "Save Data";
             // 
             // dataStat
@@ -220,11 +213,11 @@ namespace Funkcionalnost_prijave
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.dataStat.DataSource = this.orderBindingSource;
-            this.dataStat.Location = new System.Drawing.Point(40, 111);
+            this.dataStat.Location = new System.Drawing.Point(46, 188);
             this.dataStat.Margin = new System.Windows.Forms.Padding(4);
             this.dataStat.Name = "dataStat";
             this.dataStat.RowHeadersWidth = 51;
-            this.dataStat.Size = new System.Drawing.Size(1053, 441);
+            this.dataStat.Size = new System.Drawing.Size(854, 211);
             this.dataStat.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
@@ -289,10 +282,12 @@ namespace Funkcionalnost_prijave
             // 
             // btnStat
             // 
-            this.btnStat.Location = new System.Drawing.Point(962, 579);
+            this.btnStat.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnStat.Location = new System.Drawing.Point(736, 429);
             this.btnStat.Margin = new System.Windows.Forms.Padding(4);
             this.btnStat.Name = "btnStat";
-            this.btnStat.Size = new System.Drawing.Size(131, 38);
+            this.btnStat.Size = new System.Drawing.Size(164, 38);
             this.btnStat.TabIndex = 13;
             this.btnStat.Text = "Prikaži izvještaj";
             this.btnStat.UseVisualStyleBackColor = true;
@@ -301,22 +296,74 @@ namespace Funkcionalnost_prijave
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 87);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(43, 158);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 17);
+            this.label1.Size = new System.Drawing.Size(188, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "Prikaz svih narudžbi:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(933, 100);
+            this.panel1.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(31, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 35);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "<";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(862, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 35);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(340, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(273, 65);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "STATISTIKA";
             // 
             // FormStatistika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 689);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
+            this.ClientSize = new System.Drawing.Size(933, 503);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStat);
             this.Controls.Add(this.dataStat);
             this.Controls.Add(this.orderBindingNavigator);
-            this.Controls.Add(this.buttonPovratak2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormStatistika";
             this.Text = "FormStatistika";
@@ -327,13 +374,14 @@ namespace Funkcionalnost_prijave
             this.orderBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataStat)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonPovratak2;
         private System.Windows.Forms.BindingSource orderBindingSource;
         private System.Windows.Forms.BindingNavigator orderBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -360,5 +408,9 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Button btnStat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

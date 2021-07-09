@@ -173,14 +173,7 @@ namespace Funkcionalnost_prijave
 
         private void buttonPovratak_Click(object sender, EventArgs e)
         {
-            Hide();
-            using (var forma = new FormPrijavljenAdmin(LogiranKorisnik))
-            {
-                forma.ShowDialog();
-            }
-            Close();
-            OsvjeziJela();
-            OsvjeziJela2();
+            
 
         }
 
@@ -325,6 +318,36 @@ namespace Funkcionalnost_prijave
             {
                 MessageBox.Show("Nema podataka za eksport! ", "Info");
             }
+        }
+
+        private void FormJelovnikAdmin_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Naslovnica");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (var forma = new FormPrijavljenAdmin(LogiranKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
+            OsvjeziJela();
+            OsvjeziJela2();
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.IO;
 
 namespace Funkcionalnost_prijave
 {
@@ -34,55 +35,62 @@ namespace Funkcionalnost_prijave
         private void buttonDodaj_Click(object sender, EventArgs e)
         {
             string poruka =ProvjeriRezervaciju();
-            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmail.Text) == "" || poruka =="")
+            if (poruka == "")
             {
-                using (var context = new EntitiesReservations())
+                if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmail.Text) == "")
                 {
-                    int brRezervacije = 0;
-                    foreach (var item in context.Reservations)
+                    using (var context = new EntitiesReservations())
                     {
-                        if (item.BrojRezervacije > brRezervacije)
+                        int brRezervacije = 0;
+                        foreach (var item in context.Reservations)
                         {
-                            brRezervacije = item.BrojRezervacije;
+                            if (item.BrojRezervacije > brRezervacije)
+                            {
+                                brRezervacije = item.BrojRezervacije;
+                            }
                         }
+
+                        string gost = textBoxIme.Text;
+                        string mail = textBoxEmail.Text;
+                        string osobe = textBoxBrOsoba.Text;
+                        string stol = textBoxBrStola.Text;
+                        DateTime date = TimePickerVrijeme.Value;
+                        int restoran = (int)LogiranKorisnik.Restaurant;
+
+
+
+                        Reservation novaRezervacija = new Reservation
+                        {
+                            BrojRezervacije = brRezervacije + 1,
+                            ImeGosta = gost,
+                            EmailGosta = mail,
+                            BrojOsoba = osobe,
+                            BrojStola = stol,
+                            DatumVrijeme = date,
+                            Restoran = restoran
+
+                        };
+                        context.Reservations.Add(novaRezervacija);
+                        context.SaveChanges();
+                        PosaljiMail();
+                        Close();
                     }
-
-                    string gost = textBoxIme.Text;
-                    string mail = textBoxEmail.Text;
-                    string osobe = textBoxBrOsoba.Text;
-                    string stol = textBoxBrStola.Text;
-                    DateTime date = TimePickerVrijeme.Value;
-                    int restoran = (int)LogiranKorisnik.Restaurant;
-
-
-
-                    Reservation novaRezervacija = new Reservation
-                    {
-                        BrojRezervacije = brRezervacije + 1,
-                        ImeGosta = gost,
-                        EmailGosta = mail,
-                        BrojOsoba = osobe,
-                        BrojStola = stol,
-                        DatumVrijeme = date,
-                        Restoran = restoran
-
-                    };
-                    context.Reservations.Add(novaRezervacija);
-                    context.SaveChanges();
-                    PosaljiMail();
-                    Close();
+                }
+                else
+                {
+                    MessageBox.Show( BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmail.Text));
                 }
             }
             else
             {
-                MessageBox.Show(poruka + BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmail.Text));
+                MessageBox.Show(poruka);
             }
 
         }
 
         private string ProvjeriRezervaciju()
         {
-            string poruka = "";
+            string  poruka = "";
             using (var context = new EntitiesBills())
             {
                 foreach (var item in context.Reservations)
@@ -120,11 +128,6 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -133,6 +136,23 @@ namespace Funkcionalnost_prijave
         private void FormDodajRezervaciju_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormDodajRezervaciju_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Rezervacije");
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

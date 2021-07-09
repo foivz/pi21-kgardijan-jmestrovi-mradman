@@ -101,5 +101,10 @@ namespace Funkcionalnost_prijave
         {
             Pomoc();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

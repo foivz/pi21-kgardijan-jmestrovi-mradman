@@ -25,7 +25,6 @@ namespace Funkcionalnost_prijave
         private void FormRezervacija_Load(object sender, EventArgs e)
         {
             Osvjezi();
-            Pomoc();
         }
         private void Pomoc()
         {
@@ -66,24 +65,7 @@ namespace Funkcionalnost_prijave
 
         private void buttonPovratak_Click(object sender, EventArgs e)
         {
-            if (LogiraniK.Type == "admin")
-            {
-                Hide();
-                using (var forma = new FormPrijavljenAdmin(LogiraniK))
-                {
-                    forma.ShowDialog();
-                }
-                Close();
-            }
-            else if(LogiraniK.Type== "zaposlenik")
-            {
-                Hide();
-                using (var forma = new FormPrijavljenZaposlenik(LogiraniK))
-                {
-                    forma.ShowDialog();
-                }
-                Close();
-            }
+           
         }
 
         private void buttonObriši_Click(object sender, EventArgs e)
@@ -120,7 +102,40 @@ namespace Funkcionalnost_prijave
         {
             FormDodajRezervaciju form = new FormDodajRezervaciju(LogiraniK);
             form.ShowDialog();
+            Osvjezi();
             
+        }
+
+        private void FormRezervacija_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (LogiraniK.Type == "admin")
+            {
+                Hide();
+                using (var forma = new FormPrijavljenAdmin(LogiraniK))
+                {
+                    forma.ShowDialog();
+                }
+                Close();
+            }
+            else if (LogiraniK.Type == "zaposlenik")
+            {
+                Hide();
+                using (var forma = new FormPrijavljenZaposlenik(LogiraniK))
+                {
+                    forma.ShowDialog();
+                }
+                Close();
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

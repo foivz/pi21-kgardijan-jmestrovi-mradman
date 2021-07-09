@@ -69,6 +69,7 @@ namespace Funkcionalnost_prijave
             {
                 forma.ShowDialog();
             }
+            OsvjeziRestorane();
             
         }
 
@@ -171,6 +172,16 @@ namespace Funkcionalnost_prijave
         private void FormPrijavljenSuperadmin_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             Pomoc();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

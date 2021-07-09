@@ -37,44 +37,58 @@ namespace Funkcionalnost_prijave
             this.textBoxImePrezime = new System.Windows.Forms.TextBox();
             this.textBoxLozinka = new System.Windows.Forms.TextBox();
             this.textBoxKorisnickoIme = new System.Windows.Forms.TextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 26);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(52, 230);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 18);
+            this.label1.Size = new System.Drawing.Size(134, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ime i prezime:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 205);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(52, 374);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 18);
+            this.label2.Size = new System.Drawing.Size(82, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Lozinka:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 106);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(52, 305);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 18);
+            this.label3.Size = new System.Drawing.Size(143, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Korisničko ime:";
             // 
             // buttonUredi
             // 
-            this.buttonUredi.Location = new System.Drawing.Point(116, 289);
+            this.buttonUredi.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUredi.Location = new System.Drawing.Point(170, 460);
             this.buttonUredi.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUredi.Name = "buttonUredi";
-            this.buttonUredi.Size = new System.Drawing.Size(85, 32);
+            this.buttonUredi.Size = new System.Drawing.Size(99, 38);
             this.buttonUredi.TabIndex = 3;
             this.buttonUredi.Text = "Uredi";
             this.buttonUredi.UseVisualStyleBackColor = true;
@@ -82,10 +96,11 @@ namespace Funkcionalnost_prijave
             // 
             // buttonOdustani
             // 
-            this.buttonOdustani.Location = new System.Drawing.Point(13, 289);
+            this.buttonOdustani.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOdustani.Location = new System.Drawing.Point(57, 460);
             this.buttonOdustani.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOdustani.Name = "buttonOdustani";
-            this.buttonOdustani.Size = new System.Drawing.Size(85, 32);
+            this.buttonOdustani.Size = new System.Drawing.Size(105, 38);
             this.buttonOdustani.TabIndex = 4;
             this.buttonOdustani.Text = "Odustani";
             this.buttonOdustani.UseVisualStyleBackColor = true;
@@ -93,33 +108,80 @@ namespace Funkcionalnost_prijave
             // 
             // textBoxImePrezime
             // 
-            this.textBoxImePrezime.Location = new System.Drawing.Point(18, 63);
+            this.textBoxImePrezime.Location = new System.Drawing.Point(56, 259);
             this.textBoxImePrezime.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxImePrezime.Name = "textBoxImePrezime";
-            this.textBoxImePrezime.Size = new System.Drawing.Size(166, 24);
+            this.textBoxImePrezime.Size = new System.Drawing.Size(213, 24);
             this.textBoxImePrezime.TabIndex = 5;
             // 
             // textBoxLozinka
             // 
-            this.textBoxLozinka.Location = new System.Drawing.Point(18, 243);
+            this.textBoxLozinka.Location = new System.Drawing.Point(57, 403);
             this.textBoxLozinka.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLozinka.Name = "textBoxLozinka";
-            this.textBoxLozinka.Size = new System.Drawing.Size(166, 24);
+            this.textBoxLozinka.Size = new System.Drawing.Size(212, 24);
             this.textBoxLozinka.TabIndex = 6;
             // 
             // textBoxKorisnickoIme
             // 
-            this.textBoxKorisnickoIme.Location = new System.Drawing.Point(18, 151);
+            this.textBoxKorisnickoIme.Location = new System.Drawing.Point(56, 334);
             this.textBoxKorisnickoIme.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKorisnickoIme.Name = "textBoxKorisnickoIme";
-            this.textBoxKorisnickoIme.Size = new System.Drawing.Size(166, 24);
+            this.textBoxKorisnickoIme.Size = new System.Drawing.Size(213, 24);
             this.textBoxKorisnickoIme.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(351, 100);
+            this.panel1.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(12, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(286, 45);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Uredi zaposlenika";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(312, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 35);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "X";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Funkcionalnost_prijave.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(73, 129);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // FormUrediZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(236, 353);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
+            this.ClientSize = new System.Drawing.Size(351, 530);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxKorisnickoIme);
             this.Controls.Add(this.textBoxLozinka);
             this.Controls.Add(this.textBoxImePrezime);
@@ -129,11 +191,17 @@ namespace Funkcionalnost_prijave
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormUrediZaposlenika";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uredi ";
             this.Load += new System.EventHandler(this.FormUrediZaposlenika_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormUrediZaposlenika_HelpRequested);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +217,10 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.TextBox textBoxImePrezime;
         private System.Windows.Forms.TextBox textBoxLozinka;
         private System.Windows.Forms.TextBox textBoxKorisnickoIme;
+        private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

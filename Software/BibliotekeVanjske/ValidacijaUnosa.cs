@@ -107,5 +107,15 @@ namespace BibliotekeVanjske
             return povratnaPoruka;
         }
 
+        public static string ProvjeriOdabirStola(string stol)
+        {
+            string povratnaPoruka = "";
+            if (stol == "")
+            {
+                povratnaPoruka = "Molimo unesite stol";
+            }
+            return povratnaPoruka;
+        }
+
     }
 }

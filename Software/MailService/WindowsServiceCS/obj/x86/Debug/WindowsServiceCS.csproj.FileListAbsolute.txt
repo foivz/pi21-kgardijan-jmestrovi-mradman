@@ -38,3 +38,14 @@ C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\W
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.exe
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.pdb
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.csproj.AssemblyReference.cache
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\bin\Debug\WindowsServiceCS.exe.config
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\bin\Debug\WindowsServiceCS.exe
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\bin\Debug\WindowsServiceCS.pdb
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.csproj.AssemblyReference.cache
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.ProjectInstaller.resources
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.csproj.GenerateResource.cache
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.csproj.CoreCompileInputs.cache
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.csproj.CopyComplete
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.exe
+C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\MailService\WindowsServiceCS\obj\x86\Debug\WindowsServiceCS.pdb

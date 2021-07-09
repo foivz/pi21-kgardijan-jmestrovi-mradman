@@ -182,5 +182,20 @@ namespace Funkcionalnost_prijave
         {
             Pomoc();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void labelPovratak_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (var forma = new FormPrijavljenAdmin(LogiranK))
+            {
+                forma.ShowDialog();
+            }
+            Close();
+        }
     }
 }

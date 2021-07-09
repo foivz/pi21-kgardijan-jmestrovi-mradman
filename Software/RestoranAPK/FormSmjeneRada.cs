@@ -95,12 +95,7 @@ namespace Funkcionalnost_prijave
 
         private void buttonPovratak_Click(object sender, EventArgs e)
         {
-            Hide();
-            using(FormPrijavljenAdmin forma = new FormPrijavljenAdmin(LogiranAdmin))
-            {
-                forma.ShowDialog();
-            }
-            Close();
+            
         }
 
         private void buttonPrva_Click(object sender, EventArgs e)
@@ -147,6 +142,21 @@ namespace Funkcionalnost_prijave
         private void FormSmjeneRada_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             Pomoc();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void labelPovratak_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (FormPrijavljenAdmin forma = new FormPrijavljenAdmin(LogiranAdmin))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
     }
 }

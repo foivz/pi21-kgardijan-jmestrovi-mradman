@@ -535,6 +535,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="ModelBazaRestorani.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -675,6 +676,20 @@
       <DependentUpon>ModelStatistika.edmx</DependentUpon>
       <LastGenOutput>ModelStatistika.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\fork.png" />
+    <None Include="Resources\forkR.png" />
+    <None Include="Resources\forkR1.png" />
+    <None Include="Resources\dodaj res.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\shift.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\menu1.png" />
+    <None Include="Resources\cooking.png" />
+    <None Include="Resources\reservation.png" />
+    <None Include="Resources\reservation1.png" />
+    <None Include="Resources\tray.png" />
+    <None Include="Resources\tray1.png" />
+    <None Include="Resources\invoice.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

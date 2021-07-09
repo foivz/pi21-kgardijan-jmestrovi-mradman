@@ -30,42 +30,37 @@ namespace Funkcionalnost_prijave
         private void InitializeComponent()
         {
             this.dataGridViewRezervacije = new System.Windows.Forms.DataGridView();
-            this.buttonPovratak = new System.Windows.Forms.Button();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonObriši = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRezervacije)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewRezervacije
             // 
             this.dataGridViewRezervacije.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRezervacije.Location = new System.Drawing.Point(14, 64);
-            this.dataGridViewRezervacije.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewRezervacije.Location = new System.Drawing.Point(159, 127);
+            this.dataGridViewRezervacije.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.dataGridViewRezervacije.Name = "dataGridViewRezervacije";
             this.dataGridViewRezervacije.RowHeadersWidth = 51;
             this.dataGridViewRezervacije.RowTemplate.Height = 24;
-            this.dataGridViewRezervacije.Size = new System.Drawing.Size(997, 311);
+            this.dataGridViewRezervacije.Size = new System.Drawing.Size(756, 314);
             this.dataGridViewRezervacije.TabIndex = 0;
-            // 
-            // buttonPovratak
-            // 
-            this.buttonPovratak.Location = new System.Drawing.Point(14, 14);
-            this.buttonPovratak.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonPovratak.Name = "buttonPovratak";
-            this.buttonPovratak.Size = new System.Drawing.Size(85, 26);
-            this.buttonPovratak.TabIndex = 1;
-            this.buttonPovratak.Text = "<";
-            this.buttonPovratak.UseVisualStyleBackColor = true;
-            this.buttonPovratak.Click += new System.EventHandler(this.buttonPovratak_Click);
             // 
             // buttonDodaj
             // 
-            this.buttonDodaj.Location = new System.Drawing.Point(913, 410);
-            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDodaj.Location = new System.Drawing.Point(785, 465);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(99, 50);
+            this.buttonDodaj.Size = new System.Drawing.Size(130, 69);
             this.buttonDodaj.TabIndex = 2;
             this.buttonDodaj.Text = "Dodaj rezervaciju";
             this.buttonDodaj.UseVisualStyleBackColor = true;
@@ -73,10 +68,10 @@ namespace Funkcionalnost_prijave
             // 
             // buttonObriši
             // 
-            this.buttonObriši.Location = new System.Drawing.Point(765, 410);
-            this.buttonObriši.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonObriši.Location = new System.Drawing.Point(636, 465);
+            this.buttonObriši.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.buttonObriši.Name = "buttonObriši";
-            this.buttonObriši.Size = new System.Drawing.Size(97, 50);
+            this.buttonObriši.Size = new System.Drawing.Size(130, 69);
             this.buttonObriši.TabIndex = 3;
             this.buttonObriši.Text = "Obriši";
             this.buttonObriši.UseVisualStyleBackColor = true;
@@ -86,23 +81,88 @@ namespace Funkcionalnost_prijave
             // 
             this.helpProvider1.HelpNamespace = "";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(951, 100);
+            this.panel1.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(862, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 35);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(339, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(274, 65);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Rezervacije";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(31, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 35);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "<";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Funkcionalnost_prijave.Properties.Resources.reservation;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormRezervacija
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1025, 506);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
+            this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonObriši);
             this.Controls.Add(this.buttonDodaj);
-            this.Controls.Add(this.buttonPovratak);
             this.Controls.Add(this.dataGridViewRezervacije);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "FormRezervacija";
             this.helpProvider1.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rezervacije";
             this.Load += new System.EventHandler(this.FormRezervacija_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormRezervacija_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRezervacije)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,9 +170,13 @@ namespace Funkcionalnost_prijave
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewRezervacije;
-        private System.Windows.Forms.Button buttonPovratak;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonObriši;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

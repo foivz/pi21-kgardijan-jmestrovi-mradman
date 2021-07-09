@@ -119,5 +119,15 @@ namespace Funkcionalnost_prijave
         {
             Pomoc();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void labelRestoran_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

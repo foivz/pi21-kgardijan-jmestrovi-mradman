@@ -58,17 +58,27 @@ namespace Funkcionalnost_prijave
 
         private void buttonPovratak2_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void FormStatistika_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
             Hide();
-            using( FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorniski))
+            using (FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorniski))
             {
                 form.ShowDialog();
             }
             Close();
         }
 
-        private void FormStatistika_HelpRequested(object sender, HelpEventArgs hlpevent)
+        private void label3_Click(object sender, EventArgs e)
         {
-            Pomoc();
+            Close();
         }
     }
 }

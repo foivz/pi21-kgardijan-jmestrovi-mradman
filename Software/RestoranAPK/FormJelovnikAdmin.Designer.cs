@@ -30,56 +30,52 @@ namespace Funkcionalnost_prijave
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonPovratak = new System.Windows.Forms.Button();
             this.dataGridViewJela = new System.Windows.Forms.DataGridView();
             this.comboBoxVrstaJela = new System.Windows.Forms.ComboBox();
             this.Vrsta = new System.Windows.Forms.Label();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonObrisi = new System.Windows.Forms.Button();
             this.DataGridViewMeal = new System.Windows.Forms.DataGridView();
-            this.btnEksport = new System.Windows.Forms.Button();
-            this._PI21_54_DBDataSet = new Funkcionalnost_prijave._PI21_54_DBDataSet();
-            this.mealBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mealTableAdapter = new Funkcionalnost_prijave._PI21_54_DBDataSetTableAdapters.MealTableAdapter();
             this.iDJelaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.restoranDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrstaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._PI21_54_DBDataSet = new Funkcionalnost_prijave._PI21_54_DBDataSet();
+            this.btnEksport = new System.Windows.Forms.Button();
+            this.mealTableAdapter = new Funkcionalnost_prijave._PI21_54_DBDataSetTableAdapters.MealTableAdapter();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewMeal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._PI21_54_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mealBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._PI21_54_DBDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonPovratak
-            // 
-            this.buttonPovratak.Location = new System.Drawing.Point(41, 40);
-            this.buttonPovratak.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonPovratak.Name = "buttonPovratak";
-            this.buttonPovratak.Size = new System.Drawing.Size(85, 26);
-            this.buttonPovratak.TabIndex = 0;
-            this.buttonPovratak.Text = "<";
-            this.buttonPovratak.UseVisualStyleBackColor = true;
-            this.buttonPovratak.Click += new System.EventHandler(this.buttonPovratak_Click);
             // 
             // dataGridViewJela
             // 
             this.dataGridViewJela.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewJela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewJela.Location = new System.Drawing.Point(59, 169);
+            this.dataGridViewJela.Location = new System.Drawing.Point(234, 169);
             this.dataGridViewJela.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewJela.Name = "dataGridViewJela";
             this.dataGridViewJela.RowHeadersWidth = 51;
             this.dataGridViewJela.RowTemplate.Height = 24;
-            this.dataGridViewJela.Size = new System.Drawing.Size(536, 319);
+            this.dataGridViewJela.Size = new System.Drawing.Size(641, 255);
             this.dataGridViewJela.TabIndex = 1;
             // 
             // comboBoxVrstaJela
             // 
             this.comboBoxVrstaJela.FormattingEnabled = true;
-            this.comboBoxVrstaJela.Location = new System.Drawing.Point(115, 121);
+            this.comboBoxVrstaJela.Location = new System.Drawing.Point(297, 135);
             this.comboBoxVrstaJela.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxVrstaJela.Name = "comboBoxVrstaJela";
             this.comboBoxVrstaJela.Size = new System.Drawing.Size(135, 26);
@@ -89,16 +85,19 @@ namespace Funkcionalnost_prijave
             // Vrsta
             // 
             this.Vrsta.AutoSize = true;
-            this.Vrsta.Location = new System.Drawing.Point(56, 121);
+            this.Vrsta.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vrsta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Vrsta.Location = new System.Drawing.Point(229, 136);
             this.Vrsta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Vrsta.Name = "Vrsta";
-            this.Vrsta.Size = new System.Drawing.Size(46, 18);
+            this.Vrsta.Size = new System.Drawing.Size(60, 25);
             this.Vrsta.TabIndex = 3;
             this.Vrsta.Text = "Vrsta:";
             // 
             // buttonDodaj
             // 
-            this.buttonDodaj.Location = new System.Drawing.Point(385, 514);
+            this.buttonDodaj.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDodaj.Location = new System.Drawing.Point(790, 445);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(85, 40);
@@ -109,7 +108,8 @@ namespace Funkcionalnost_prijave
             // 
             // buttonObrisi
             // 
-            this.buttonObrisi.Location = new System.Drawing.Point(512, 514);
+            this.buttonObrisi.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonObrisi.Location = new System.Drawing.Point(653, 445);
             this.buttonObrisi.Margin = new System.Windows.Forms.Padding(4);
             this.buttonObrisi.Name = "buttonObrisi";
             this.buttonObrisi.Size = new System.Drawing.Size(85, 40);
@@ -131,36 +131,12 @@ namespace Funkcionalnost_prijave
             this.restoranDataGridViewTextBoxColumn,
             this.vrstaDataGridViewTextBoxColumn});
             this.DataGridViewMeal.DataSource = this.mealBindingSource;
-            this.DataGridViewMeal.Location = new System.Drawing.Point(272, 29);
+            this.DataGridViewMeal.Location = new System.Drawing.Point(684, 29);
             this.DataGridViewMeal.Name = "DataGridViewMeal";
             this.DataGridViewMeal.RowHeadersWidth = 51;
             this.DataGridViewMeal.RowTemplate.Height = 24;
-            this.DataGridViewMeal.Size = new System.Drawing.Size(335, 118);
+            this.DataGridViewMeal.Size = new System.Drawing.Size(105, 68);
             this.DataGridViewMeal.TabIndex = 6;
-            // 
-            // btnEksport
-            // 
-            this.btnEksport.Location = new System.Drawing.Point(203, 519);
-            this.btnEksport.Name = "btnEksport";
-            this.btnEksport.Size = new System.Drawing.Size(133, 31);
-            this.btnEksport.TabIndex = 7;
-            this.btnEksport.Text = "Eksport u PDF";
-            this.btnEksport.UseVisualStyleBackColor = true;
-            this.btnEksport.Click += new System.EventHandler(this.btnEksport_Click);
-            // 
-            // _PI21_54_DBDataSet
-            // 
-            this._PI21_54_DBDataSet.DataSetName = "_PI21_54_DBDataSet";
-            this._PI21_54_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mealBindingSource
-            // 
-            this.mealBindingSource.DataMember = "Meal";
-            this.mealBindingSource.DataSource = this._PI21_54_DBDataSet;
-            // 
-            // mealTableAdapter
-            // 
-            this.mealTableAdapter.ClearBeforeFill = true;
             // 
             // iDJelaDataGridViewTextBoxColumn
             // 
@@ -210,37 +186,124 @@ namespace Funkcionalnost_prijave
             this.vrstaDataGridViewTextBoxColumn.Name = "vrstaDataGridViewTextBoxColumn";
             this.vrstaDataGridViewTextBoxColumn.Width = 125;
             // 
+            // mealBindingSource
+            // 
+            this.mealBindingSource.DataMember = "Meal";
+            this.mealBindingSource.DataSource = this._PI21_54_DBDataSet;
+            // 
+            // _PI21_54_DBDataSet
+            // 
+            this._PI21_54_DBDataSet.DataSetName = "_PI21_54_DBDataSet";
+            this._PI21_54_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnEksport
+            // 
+            this.btnEksport.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEksport.Location = new System.Drawing.Point(440, 445);
+            this.btnEksport.Name = "btnEksport";
+            this.btnEksport.Size = new System.Drawing.Size(158, 40);
+            this.btnEksport.TabIndex = 7;
+            this.btnEksport.Text = "Eksport u PDF";
+            this.btnEksport.UseVisualStyleBackColor = true;
+            this.btnEksport.Click += new System.EventHandler(this.btnEksport_Click);
+            // 
+            // mealTableAdapter
+            // 
+            this.mealTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.DataGridViewMeal);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(933, 100);
+            this.panel1.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(858, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 35);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(315, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(241, 65);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "JELOVNIK";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(46, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 35);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "<";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Funkcionalnost_prijave.Properties.Resources.menu;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 121);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormJelovnikAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 598);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
+            this.ClientSize = new System.Drawing.Size(933, 530);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEksport);
-            this.Controls.Add(this.DataGridViewMeal);
             this.Controls.Add(this.buttonObrisi);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.Vrsta);
             this.Controls.Add(this.comboBoxVrstaJela);
             this.Controls.Add(this.dataGridViewJela);
-            this.Controls.Add(this.buttonPovratak);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormJelovnikAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jelovnik";
             this.Load += new System.EventHandler(this.FormJelovnikAdmin_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormJelovnikAdmin_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJela)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewMeal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._PI21_54_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mealBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._PI21_54_DBDataSet)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonPovratak;
         private System.Windows.Forms.DataGridView dataGridViewJela;
         private System.Windows.Forms.ComboBox comboBoxVrstaJela;
         private System.Windows.Forms.Label Vrsta;
@@ -257,5 +320,11 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn restoranDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrstaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
