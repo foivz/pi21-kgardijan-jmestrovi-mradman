@@ -147,18 +147,19 @@ namespace Funkcionalnost_prijave
             this.labelDodajAdmina.AutoSize = true;
             this.labelDodajAdmina.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDodajAdmina.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelDodajAdmina.Location = new System.Drawing.Point(49, 28);
+            this.labelDodajAdmina.Location = new System.Drawing.Point(53, 28);
             this.labelDodajAdmina.Name = "labelDodajAdmina";
             this.labelDodajAdmina.Size = new System.Drawing.Size(230, 45);
             this.labelDodajAdmina.TabIndex = 11;
             this.labelDodajAdmina.Text = "Dodaj admina";
+            this.labelDodajAdmina.Click += new System.EventHandler(this.labelDodajAdmina_Click);
             // 
             // labelClose
             // 
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(309, 36);
+            this.labelClose.Location = new System.Drawing.Point(309, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 35);
             this.labelClose.TabIndex = 10;
@@ -197,7 +198,6 @@ namespace Funkcionalnost_prijave
             this.Name = "FormDodajAdmina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj admina";
-           
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdmin)).EndInit();

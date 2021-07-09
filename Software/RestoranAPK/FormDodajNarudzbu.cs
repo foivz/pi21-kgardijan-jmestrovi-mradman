@@ -143,6 +143,7 @@ namespace Funkcionalnost_prijave
 
         private void buttonDodaj_Click(object sender, EventArgs e)
         {
+            
             if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriBrojcanuVrijednost(textBoxKolicina.Text) == "")
             {
                 using (var context = new EntitiesOrder())

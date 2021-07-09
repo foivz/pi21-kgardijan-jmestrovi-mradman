@@ -57,7 +57,7 @@ namespace Funkcionalnost_prijave
             this.labelRestoran.AutoSize = true;
             this.labelRestoran.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRestoran.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelRestoran.Location = new System.Drawing.Point(332, 142);
+            this.labelRestoran.Location = new System.Drawing.Point(359, 163);
             this.labelRestoran.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRestoran.Name = "labelRestoran";
             this.labelRestoran.Size = new System.Drawing.Size(154, 41);
@@ -67,7 +67,7 @@ namespace Funkcionalnost_prijave
             // buttonNarudzbe
             // 
             this.buttonNarudzbe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNarudzbe.Location = new System.Drawing.Point(623, 262);
+            this.buttonNarudzbe.Location = new System.Drawing.Point(635, 278);
             this.buttonNarudzbe.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNarudzbe.Name = "buttonNarudzbe";
             this.buttonNarudzbe.Size = new System.Drawing.Size(127, 89);
@@ -79,7 +79,7 @@ namespace Funkcionalnost_prijave
             // buttonRezervacije
             // 
             this.buttonRezervacije.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRezervacije.Location = new System.Drawing.Point(373, 262);
+            this.buttonRezervacije.Location = new System.Drawing.Point(403, 278);
             this.buttonRezervacije.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRezervacije.Name = "buttonRezervacije";
             this.buttonRezervacije.Size = new System.Drawing.Size(127, 89);
@@ -91,7 +91,7 @@ namespace Funkcionalnost_prijave
             // buttonJelovnik
             // 
             this.buttonJelovnik.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonJelovnik.Location = new System.Drawing.Point(129, 262);
+            this.buttonJelovnik.Location = new System.Drawing.Point(164, 278);
             this.buttonJelovnik.Margin = new System.Windows.Forms.Padding(4);
             this.buttonJelovnik.Name = "buttonJelovnik";
             this.buttonJelovnik.Size = new System.Drawing.Size(127, 89);
@@ -142,7 +142,7 @@ namespace Funkcionalnost_prijave
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(858, 37);
+            this.labelClose.Location = new System.Drawing.Point(891, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 35);
             this.labelClose.TabIndex = 11;

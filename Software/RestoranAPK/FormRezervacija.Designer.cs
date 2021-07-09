@@ -111,7 +111,7 @@ namespace Funkcionalnost_prijave
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(862, 33);
+            this.labelClose.Location = new System.Drawing.Point(909, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 35);
             this.labelClose.TabIndex = 11;
@@ -125,14 +125,14 @@ namespace Funkcionalnost_prijave
             this.labelRezervacije.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelRezervacije.Location = new System.Drawing.Point(341, 23);
             this.labelRezervacije.Name = "labelRezervacije";
-            this.labelRezervacije.Size = new System.Drawing.Size(274, 65);
+            this.labelRezervacije.Size = new System.Drawing.Size(313, 65);
             this.labelRezervacije.TabIndex = 10;
-            this.labelRezervacije.Text = "Rezervacije";
+            this.labelRezervacije.Text = "REZERVACIJE";
             // 
             // pictureBoxRezervacije
             // 
             this.pictureBoxRezervacije.Image = global::Funkcionalnost_prijave.Properties.Resources.reservation;
-            this.pictureBoxRezervacije.Location = new System.Drawing.Point(12, 127);
+            this.pictureBoxRezervacije.Location = new System.Drawing.Point(12, 137);
             this.pictureBoxRezervacije.Name = "pictureBoxRezervacije";
             this.pictureBoxRezervacije.Size = new System.Drawing.Size(140, 126);
             this.pictureBoxRezervacije.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

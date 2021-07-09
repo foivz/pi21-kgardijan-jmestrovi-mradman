@@ -60,7 +60,7 @@ namespace Funkcionalnost_prijave
             this.labelKorIme.AutoSize = true;
             this.labelKorIme.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKorIme.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelKorIme.Location = new System.Drawing.Point(228, 298);
+            this.labelKorIme.Location = new System.Drawing.Point(225, 329);
             this.labelKorIme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelKorIme.Name = "labelKorIme";
             this.labelKorIme.Size = new System.Drawing.Size(143, 25);
@@ -72,7 +72,7 @@ namespace Funkcionalnost_prijave
             this.labelLoz.AutoSize = true;
             this.labelLoz.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLoz.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelLoz.Location = new System.Drawing.Point(289, 344);
+            this.labelLoz.Location = new System.Drawing.Point(286, 387);
             this.labelLoz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLoz.Name = "labelLoz";
             this.labelLoz.Size = new System.Drawing.Size(82, 25);
@@ -81,7 +81,7 @@ namespace Funkcionalnost_prijave
             // 
             // textBoxKorisnickoIme
             // 
-            this.textBoxKorisnickoIme.Location = new System.Drawing.Point(376, 298);
+            this.textBoxKorisnickoIme.Location = new System.Drawing.Point(376, 331);
             this.textBoxKorisnickoIme.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKorisnickoIme.Name = "textBoxKorisnickoIme";
             this.textBoxKorisnickoIme.Size = new System.Drawing.Size(186, 24);
@@ -89,7 +89,7 @@ namespace Funkcionalnost_prijave
             // 
             // textBoxLozinka
             // 
-            this.textBoxLozinka.Location = new System.Drawing.Point(376, 346);
+            this.textBoxLozinka.Location = new System.Drawing.Point(376, 389);
             this.textBoxLozinka.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLozinka.Name = "textBoxLozinka";
             this.textBoxLozinka.Size = new System.Drawing.Size(186, 24);
@@ -99,7 +99,7 @@ namespace Funkcionalnost_prijave
             // ButtonPrijava
             // 
             this.ButtonPrijava.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonPrijava.Location = new System.Drawing.Point(460, 375);
+            this.ButtonPrijava.Location = new System.Drawing.Point(460, 443);
             this.ButtonPrijava.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonPrijava.Name = "ButtonPrijava";
             this.ButtonPrijava.Size = new System.Drawing.Size(102, 40);
@@ -128,7 +128,7 @@ namespace Funkcionalnost_prijave
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI", 15.2F);
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(884, 31);
+            this.labelClose.Location = new System.Drawing.Point(909, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 36);
             this.labelClose.TabIndex = 7;

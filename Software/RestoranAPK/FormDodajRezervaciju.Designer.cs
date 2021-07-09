@@ -166,7 +166,6 @@ namespace Funkcionalnost_prijave
             this.labelDT.Size = new System.Drawing.Size(155, 25);
             this.labelDT.TabIndex = 12;
             this.labelDT.Text = "Datum i vrijeme:";
-           
             // 
             // TimePickerVrijeme
             // 
@@ -193,7 +192,7 @@ namespace Funkcionalnost_prijave
             this.labelDodajRez.AutoSize = true;
             this.labelDodajRez.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDodajRez.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelDodajRez.Location = new System.Drawing.Point(18, 28);
+            this.labelDodajRez.Location = new System.Drawing.Point(37, 32);
             this.labelDodajRez.Name = "labelDodajRez";
             this.labelDodajRez.Size = new System.Drawing.Size(281, 45);
             this.labelDodajRez.TabIndex = 11;
@@ -204,7 +203,7 @@ namespace Funkcionalnost_prijave
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(309, 36);
+            this.labelClose.Location = new System.Drawing.Point(324, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 35);
             this.labelClose.TabIndex = 10;
@@ -247,7 +246,6 @@ namespace Funkcionalnost_prijave
             this.Name = "FormDodajRezervaciju";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj rezervaciju";
-            
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormDodajRezervaciju_HelpRequested);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();

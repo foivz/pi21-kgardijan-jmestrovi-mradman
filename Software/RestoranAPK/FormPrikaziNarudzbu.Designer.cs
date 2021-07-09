@@ -198,7 +198,7 @@ namespace Funkcionalnost_prijave
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(648, 32);
+            this.labelClose.Location = new System.Drawing.Point(665, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 35);
             this.labelClose.TabIndex = 10;
@@ -231,7 +231,7 @@ namespace Funkcionalnost_prijave
             // pictureBoxNarudzba
             // 
             this.pictureBoxNarudzba.Image = global::Funkcionalnost_prijave.Properties.Resources.tray;
-            this.pictureBoxNarudzba.Location = new System.Drawing.Point(12, 125);
+            this.pictureBoxNarudzba.Location = new System.Drawing.Point(16, 113);
             this.pictureBoxNarudzba.Name = "pictureBoxNarudzba";
             this.pictureBoxNarudzba.Size = new System.Drawing.Size(146, 129);
             this.pictureBoxNarudzba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

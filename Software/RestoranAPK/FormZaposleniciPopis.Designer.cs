@@ -55,7 +55,6 @@ namespace Funkcionalnost_prijave
             this.dataGridViewPopisZaposlenika.RowTemplate.Height = 24;
             this.dataGridViewPopisZaposlenika.Size = new System.Drawing.Size(734, 253);
             this.dataGridViewPopisZaposlenika.TabIndex = 0;
-           
             this.dataGridViewPopisZaposlenika.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPopisZaposlenika_CellContentDoubleClick);
             // 
             // buttonDodajZaposlenika
@@ -124,7 +123,7 @@ namespace Funkcionalnost_prijave
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(858, 32);
+            this.labelClose.Location = new System.Drawing.Point(891, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 35);
             this.labelClose.TabIndex = 10;

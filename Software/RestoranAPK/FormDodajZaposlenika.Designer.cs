@@ -134,7 +134,7 @@ namespace Funkcionalnost_prijave
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(369, 139);
+            this.panelTop.Size = new System.Drawing.Size(369, 100);
             this.panelTop.TabIndex = 9;
             // 
             // labelDodajZap
@@ -142,7 +142,7 @@ namespace Funkcionalnost_prijave
             this.labelDodajZap.AutoSize = true;
             this.labelDodajZap.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDodajZap.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelDodajZap.Location = new System.Drawing.Point(12, 47);
+            this.labelDodajZap.Location = new System.Drawing.Point(27, 30);
             this.labelDodajZap.Name = "labelDodajZap";
             this.labelDodajZap.Size = new System.Drawing.Size(294, 45);
             this.labelDodajZap.TabIndex = 11;
@@ -153,7 +153,7 @@ namespace Funkcionalnost_prijave
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(327, 55);
+            this.labelClose.Location = new System.Drawing.Point(327, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 35);
             this.labelClose.TabIndex = 10;

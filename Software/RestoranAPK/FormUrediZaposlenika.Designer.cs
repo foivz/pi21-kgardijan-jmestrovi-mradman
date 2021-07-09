@@ -146,7 +146,7 @@ namespace Funkcionalnost_prijave
             this.labelUrediZap.AutoSize = true;
             this.labelUrediZap.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUrediZap.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelUrediZap.Location = new System.Drawing.Point(12, 28);
+            this.labelUrediZap.Location = new System.Drawing.Point(26, 32);
             this.labelUrediZap.Name = "labelUrediZap";
             this.labelUrediZap.Size = new System.Drawing.Size(286, 45);
             this.labelUrediZap.TabIndex = 11;
@@ -157,7 +157,7 @@ namespace Funkcionalnost_prijave
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(312, 36);
+            this.labelClose.Location = new System.Drawing.Point(309, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 35);
             this.labelClose.TabIndex = 10;

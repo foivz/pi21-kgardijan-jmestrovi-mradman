@@ -162,7 +162,7 @@ namespace Funkcionalnost_prijave
             this.labelDodajStavku.AutoSize = true;
             this.labelDodajStavku.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDodajStavku.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelDodajStavku.Location = new System.Drawing.Point(93, 26);
+            this.labelDodajStavku.Location = new System.Drawing.Point(97, 33);
             this.labelDodajStavku.Name = "labelDodajStavku";
             this.labelDodajStavku.Size = new System.Drawing.Size(215, 45);
             this.labelDodajStavku.TabIndex = 11;
@@ -173,7 +173,7 @@ namespace Funkcionalnost_prijave
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelClose.Location = new System.Drawing.Point(349, 36);
+            this.labelClose.Location = new System.Drawing.Point(366, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(30, 35);
             this.labelClose.TabIndex = 10;
