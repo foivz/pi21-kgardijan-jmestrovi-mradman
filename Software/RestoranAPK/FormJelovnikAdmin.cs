@@ -69,6 +69,8 @@ namespace Funkcionalnost_prijave
         {
             DataGridViewMeal.DataSource = null;
             DataGridViewMeal.DataSource = DohvatiSve();
+
+
         }
 
 
@@ -115,8 +117,10 @@ namespace Funkcionalnost_prijave
             using (var context = new EntitiesOrder())
             {
                 ListaJela = new List<Meal>();
+                Meal jelo = new Meal();
                 foreach (var item in context.Meals)
                 {
+
                     if (item.Restoran == LogiranKorisnik.Restaurant && item.Vrsta == "Predjelo")
                     {
                         ListaJela.Add(item);
@@ -137,6 +141,12 @@ namespace Funkcionalnost_prijave
                     {
                         ListaJela.Add(item);
                     }
+
+
+
+                    //ListaJela.Sort(("Vrsta"));
+
+
                 }
                 return ListaJela;
             }
