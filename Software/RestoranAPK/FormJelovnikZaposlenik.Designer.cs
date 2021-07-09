@@ -61,7 +61,7 @@ namespace Funkcionalnost_prijave
             this.comboBoxVrstaJela.Location = new System.Drawing.Point(340, 142);
             this.comboBoxVrstaJela.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxVrstaJela.Name = "comboBoxVrstaJela";
-            this.comboBoxVrstaJela.Size = new System.Drawing.Size(143, 26);
+            this.comboBoxVrstaJela.Size = new System.Drawing.Size(143, 23);
             this.comboBoxVrstaJela.TabIndex = 2;
             this.comboBoxVrstaJela.SelectedIndexChanged += new System.EventHandler(this.comboBoxVrstaJela_SelectedIndexChanged);
             // 
@@ -73,7 +73,7 @@ namespace Funkcionalnost_prijave
             this.label1.Location = new System.Drawing.Point(272, 140);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 25);
+            this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Vrsta:";
             // 
@@ -96,7 +96,7 @@ namespace Funkcionalnost_prijave
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(46, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 35);
+            this.label3.Size = new System.Drawing.Size(26, 28);
             this.label3.TabIndex = 11;
             this.label3.Text = "<";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -108,7 +108,7 @@ namespace Funkcionalnost_prijave
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(858, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 35);
+            this.label2.Size = new System.Drawing.Size(24, 28);
             this.label2.TabIndex = 10;
             this.label2.Text = "X";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -120,7 +120,7 @@ namespace Funkcionalnost_prijave
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(315, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(241, 65);
+            this.label4.Size = new System.Drawing.Size(191, 51);
             this.label4.TabIndex = 9;
             this.label4.Text = "JELOVNIK";
             // 
@@ -136,7 +136,7 @@ namespace Funkcionalnost_prijave
             // 
             // FormJelovnikZaposlenik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(933, 530);
@@ -146,6 +146,7 @@ namespace Funkcionalnost_prijave
             this.Controls.Add(this.comboBoxVrstaJela);
             this.Controls.Add(this.dataGridViewJela);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormJelovnikZaposlenik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

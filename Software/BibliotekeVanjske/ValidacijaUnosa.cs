@@ -85,7 +85,7 @@ namespace BibliotekeVanjske
             string povratnaPoruka = "";
             if (broj.All(Char.IsDigit) == false)
             {
-                povratnaPoruka += "Ovo polje mora sadrzavati brojacnu vrijednost!\n";
+                povratnaPoruka += "Ovo polje mora sadrzavati brojcanu vrijednost!\n";
             }
             if (broj == "")
             {
@@ -112,7 +112,7 @@ namespace BibliotekeVanjske
             string povratnaPoruka = "";
             if (stol == "")
             {
-                povratnaPoruka = "Molimo unesite stol";
+                povratnaPoruka = "Molimo unesite stol!";
             }
             return povratnaPoruka;
         }

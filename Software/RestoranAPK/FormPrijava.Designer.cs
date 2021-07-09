@@ -51,7 +51,7 @@ namespace Funkcionalnost_prijave
             this.label1.Location = new System.Drawing.Point(369, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 65);
+            this.label1.Size = new System.Drawing.Size(165, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "PRIJAVA";
             // 
@@ -63,7 +63,7 @@ namespace Funkcionalnost_prijave
             this.label2.Location = new System.Drawing.Point(228, 298);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 25);
+            this.label2.Size = new System.Drawing.Size(113, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Korisničko ime:";
             // 
@@ -75,7 +75,7 @@ namespace Funkcionalnost_prijave
             this.label3.Location = new System.Drawing.Point(289, 344);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 25);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Lozinka:";
             // 
@@ -84,7 +84,7 @@ namespace Funkcionalnost_prijave
             this.textBoxKorisnickoIme.Location = new System.Drawing.Point(376, 298);
             this.textBoxKorisnickoIme.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKorisnickoIme.Name = "textBoxKorisnickoIme";
-            this.textBoxKorisnickoIme.Size = new System.Drawing.Size(186, 24);
+            this.textBoxKorisnickoIme.Size = new System.Drawing.Size(186, 21);
             this.textBoxKorisnickoIme.TabIndex = 3;
             // 
             // textBoxLozinka
@@ -92,14 +92,14 @@ namespace Funkcionalnost_prijave
             this.textBoxLozinka.Location = new System.Drawing.Point(376, 346);
             this.textBoxLozinka.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLozinka.Name = "textBoxLozinka";
-            this.textBoxLozinka.Size = new System.Drawing.Size(186, 24);
+            this.textBoxLozinka.Size = new System.Drawing.Size(186, 21);
             this.textBoxLozinka.TabIndex = 4;
             this.textBoxLozinka.UseSystemPasswordChar = true;
             // 
             // ButtonPrijava
             // 
             this.ButtonPrijava.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonPrijava.Location = new System.Drawing.Point(571, 408);
+            this.ButtonPrijava.Location = new System.Drawing.Point(460, 375);
             this.ButtonPrijava.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonPrijava.Name = "ButtonPrijava";
             this.ButtonPrijava.Size = new System.Drawing.Size(102, 40);
@@ -130,7 +130,7 @@ namespace Funkcionalnost_prijave
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(884, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 36);
+            this.label4.Size = new System.Drawing.Size(25, 30);
             this.label4.TabIndex = 7;
             this.label4.Text = "X";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -138,7 +138,7 @@ namespace Funkcionalnost_prijave
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Funkcionalnost_prijave.Properties.Resources.forkR1;
-            this.pictureBox1.Location = new System.Drawing.Point(398, 127);
+            this.pictureBox1.Location = new System.Drawing.Point(389, 135);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(162, 147);
             this.pictureBox1.TabIndex = 1;
@@ -146,7 +146,7 @@ namespace Funkcionalnost_prijave
             // 
             // FormPrijava
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(951, 577);

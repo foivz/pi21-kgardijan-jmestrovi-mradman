@@ -39,7 +39,7 @@ namespace Funkcionalnost_prijave
             this.buttonOdustani = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelDodajAdmina = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -54,7 +54,7 @@ namespace Funkcionalnost_prijave
             this.label1.Location = new System.Drawing.Point(38, 185);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 25);
+            this.label1.Size = new System.Drawing.Size(113, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Korisničko ime:";
             // 
@@ -66,7 +66,7 @@ namespace Funkcionalnost_prijave
             this.label2.Location = new System.Drawing.Point(39, 308);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 25);
+            this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ime i prezime:";
             // 
@@ -78,7 +78,7 @@ namespace Funkcionalnost_prijave
             this.label3.Location = new System.Drawing.Point(39, 246);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 25);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Lozinka:";
             // 
@@ -87,7 +87,7 @@ namespace Funkcionalnost_prijave
             this.textBoxKorisnickoIme.Location = new System.Drawing.Point(41, 207);
             this.textBoxKorisnickoIme.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKorisnickoIme.Name = "textBoxKorisnickoIme";
-            this.textBoxKorisnickoIme.Size = new System.Drawing.Size(238, 24);
+            this.textBoxKorisnickoIme.Size = new System.Drawing.Size(238, 21);
             this.textBoxKorisnickoIme.TabIndex = 3;
             // 
             // textBoxImePrezime
@@ -95,7 +95,7 @@ namespace Funkcionalnost_prijave
             this.textBoxImePrezime.Location = new System.Drawing.Point(41, 330);
             this.textBoxImePrezime.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxImePrezime.Name = "textBoxImePrezime";
-            this.textBoxImePrezime.Size = new System.Drawing.Size(238, 24);
+            this.textBoxImePrezime.Size = new System.Drawing.Size(238, 21);
             this.textBoxImePrezime.TabIndex = 4;
             // 
             // textBoxLozinka
@@ -103,7 +103,7 @@ namespace Funkcionalnost_prijave
             this.textBoxLozinka.Location = new System.Drawing.Point(42, 268);
             this.textBoxLozinka.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLozinka.Name = "textBoxLozinka";
-            this.textBoxLozinka.Size = new System.Drawing.Size(237, 24);
+            this.textBoxLozinka.Size = new System.Drawing.Size(237, 21);
             this.textBoxLozinka.TabIndex = 5;
             // 
             // buttonDodaj
@@ -134,7 +134,7 @@ namespace Funkcionalnost_prijave
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.labelDodajAdmina);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -142,16 +142,16 @@ namespace Funkcionalnost_prijave
             this.panel1.Size = new System.Drawing.Size(351, 100);
             this.panel1.TabIndex = 8;
             // 
-            // label4
+            // labelDodajAdmina
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(50, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(230, 45);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Dodaj admina";
+            this.labelDodajAdmina.AutoSize = true;
+            this.labelDodajAdmina.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDodajAdmina.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelDodajAdmina.Location = new System.Drawing.Point(68, 30);
+            this.labelDodajAdmina.Name = "labelDodajAdmina";
+            this.labelDodajAdmina.Size = new System.Drawing.Size(187, 37);
+            this.labelDodajAdmina.TabIndex = 11;
+            this.labelDodajAdmina.Text = "Dodaj admina";
             // 
             // label5
             // 
@@ -160,7 +160,7 @@ namespace Funkcionalnost_prijave
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Location = new System.Drawing.Point(309, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 35);
+            this.label5.Size = new System.Drawing.Size(24, 28);
             this.label5.TabIndex = 10;
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -177,7 +177,7 @@ namespace Funkcionalnost_prijave
             // 
             // FormDodajAdmina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(351, 450);
@@ -218,7 +218,7 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Button buttonOdustani;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelDodajAdmina;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
