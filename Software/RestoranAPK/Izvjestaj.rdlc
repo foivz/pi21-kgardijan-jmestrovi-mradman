@@ -92,7 +92,6 @@
         <ReportItems>
           <Line Name="Line1">
             <Top>1.74307cm</Top>
-            <Left>0.3937cm</Left>
             <Height>0cm</Height>
             <Width>20.98146cm</Width>
             <Style>
@@ -176,8 +175,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox25</rd:DefaultName>
-            <Top>3.8862cm</Top>
-            <Left>2.2987cm</Left>
+            <Top>4.28456cm</Top>
+            <Left>2.00766cm</Left>
             <Height>0.6cm</Height>
             <Width>3.81135cm</Width>
             <ZIndex>3</ZIndex>
@@ -220,7 +219,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>ID</Value>
+                                  <Value>ID narudžbe</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -250,7 +249,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Br Stola</Value>
+                                  <Value>Zaposlenik</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -280,7 +279,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Zaposlenik</Value>
+                                  <Value>Broj stola</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -368,21 +367,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="BrStola">
+                        <Textbox Name="Zaposlenik1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!BrStola.Value</Value>
+                                  <Value>=Fields!Zaposlenik.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>BrStola</rd:DefaultName>
+                          <rd:DefaultName>Zaposlenik1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -398,21 +397,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Zaposlenik">
+                        <Textbox Name="BrStola">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Zaposlenik.Value</Value>
+                                  <Value>=Fields!BrStola.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Zaposlenik</rd:DefaultName>
+                          <rd:DefaultName>BrStola</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -479,7 +478,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSetOrder</DataSetName>
-            <Top>5.52662cm</Top>
+            <Top>5.06095cm</Top>
             <Left>2.00766cm</Left>
             <Height>4.11042cm</Height>
             <Width>18.46666cm</Width>
@@ -502,12 +501,6 @@
                 <TablixColumn>
                   <Width>2.5cm</Width>
                 </TablixColumn>
-                <TablixColumn>
-                  <Width>4.10239cm</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>4.10239cm</Width>
-                </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
@@ -522,7 +515,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>ID</Value>
+                                  <Value>Naziv stavke</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -552,7 +545,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Narudzba</Value>
+                                  <Value>Količina</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -582,7 +575,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Naziv Jela</Value>
+                                  <Value>Cijena jela</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -603,66 +596,6 @@
                         </Textbox>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Kolicina</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox5">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Cijena</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -670,67 +603,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ID1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!ID.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>ID1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Narudzba">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Narudzba.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Narudzba</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="NazivJela">
+                        <Textbox Name="NazivJela1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -744,7 +617,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>NazivJela</rd:DefaultName>
+                          <rd:DefaultName>NazivJela1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -760,7 +633,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Kolicina">
+                        <Textbox Name="Kolicina1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -774,7 +647,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Kolicina</rd:DefaultName>
+                          <rd:DefaultName>Kolicina1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -790,7 +663,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Cijena">
+                        <Textbox Name="Cijena1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -804,7 +677,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Cijena</rd:DefaultName>
+                          <rd:DefaultName>Cijena1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -827,8 +700,6 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
-                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -844,8 +715,8 @@
             <DataSetName>DataSetCart</DataSetName>
             <Top>10.57487cm</Top>
             <Left>2.00766cm</Left>
-            <Height>3.57067cm</Height>
-            <Width>17.30716cm</Width>
+            <Height>3.57066cm</Height>
+            <Width>9.10239cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -1198,7 +1069,7 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSetCart</DataSetName>
-            <Top>14.97753cm</Top>
+            <Top>14.59653cm</Top>
             <Left>2.00766cm</Left>
             <Height>5cm</Height>
             <Width>7.5cm</Width>
@@ -1219,7 +1090,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>IZVJEŠTAJ </Value>
+                    <Value>IZVJEŠTAJ O NARUDŽBI</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -1227,10 +1098,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>1.0922cm</Top>
-            <Left>1.68487cm</Left>
+            <Top>0.96668cm</Top>
+            <Left>1.13454cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>5.33633cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -1258,7 +1129,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox25</rd:DefaultName>
             <Top>9.86903cm</Top>
-            <Left>2.2987cm</Left>
+            <Left>2.00766cm</Left>
             <Height>0.6cm</Height>
             <Width>5.94918cm</Width>
             <ZIndex>8</ZIndex>

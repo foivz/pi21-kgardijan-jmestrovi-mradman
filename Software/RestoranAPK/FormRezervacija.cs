@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace Funkcionalnost_prijave
     public partial class FormRezervacija : Form
     {
         public User LogiraniK { get; set; }
+        public string provjera;
         public List<Reservation> ListaRezervacija { get; set; }
         public FormRezervacija(User korisnik)
         {
@@ -23,6 +25,14 @@ namespace Funkcionalnost_prijave
         private void FormRezervacija_Load(object sender, EventArgs e)
         {
             Osvjezi();
+        }
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Naslovnica");
+
         }
 
         private void Osvjezi()
@@ -54,33 +64,36 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
-        {
-            if (LogiraniK.Type == "admin")
-            {
-                FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniK);
-                this.Hide();
-                form.ShowDialog();
-            }
-            else if(LogiraniK.Type== "zaposlenik")
-            {
-                FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(LogiraniK);
-                this.Hide();
-                form.ShowDialog();
-            }
-        }
+        
 
         private void buttonObriši_Click(object sender, EventArgs e)
         {
-            Reservation odabranaRezervacija = dataGridViewRezervacije.CurrentRow.DataBoundItem as Reservation;
-            using (var context = new EntitiesReservations())
+            if (dataGridViewRezervacije.CurrentRow == null)
             {
-                context.Reservations.Attach(odabranaRezervacija);
-                context.Reservations.Remove(odabranaRezervacija);
-                context.SaveChanges();
+                provjera = "";
+            }
+            else
+            {
+                provjera = dataGridViewRezervacije.CurrentRow.ToString();
             }
 
-            Osvjezi();
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(provjera) == "")
+            {
+                Reservation odabranaRezervacija = dataGridViewRezervacije.CurrentRow.DataBoundItem as Reservation;
+                using (var context = new EntitiesReservations())
+                {
+                    context.Reservations.Attach(odabranaRezervacija);
+                    context.Reservations.Remove(odabranaRezervacija);
+                    context.SaveChanges();
+                }
+
+                Osvjezi();
+            }
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(provjera));
+            }
+                
         }
 
         private void buttonDodaj_Click(object sender, EventArgs e)
@@ -88,6 +101,39 @@ namespace Funkcionalnost_prijave
             FormDodajRezervaciju form = new FormDodajRezervaciju(LogiraniK);
             form.ShowDialog();
             Osvjezi();
+            
+        }
+
+        private void FormRezervacija_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void labelBack_Click(object sender, EventArgs e)
+        {
+            if (LogiraniK.Type == "admin")
+            {
+                Hide();
+                using (var forma = new FormPrijavljenAdmin(LogiraniK))
+                {
+                    forma.ShowDialog();
+                }
+                Close();
+            }
+            else if (LogiraniK.Type == "zaposlenik")
+            {
+                Hide();
+                using (var forma = new FormPrijavljenZaposlenik(LogiraniK))
+                {
+                    forma.ShowDialog();
+                }
+                Close();
+            }
         }
     }
 }

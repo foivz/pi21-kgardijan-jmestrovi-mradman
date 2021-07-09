@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace Funkcionalnost_prijave
         public List<Order> ListaNarudzbi { get; set; }
         public User LogiranKorisnik { get; set; }
         public Order OdabranaNarudzba { get; set; }
+        public string red;
         public FormNarudzbe(User korisnik)
         {
             InitializeComponent();
@@ -28,6 +30,14 @@ namespace Funkcionalnost_prijave
             comboBoxStatus.DataSource = ListaStatusa;
 
             Osvjezi();
+        }
+
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Narudzbe");
         }
 
         private void Osvjezi()
@@ -78,50 +88,76 @@ namespace Funkcionalnost_prijave
 
         private void buttonObrisiNarudzbu_Click(object sender, EventArgs e)
         {
-            Order odabrana = dataGridViewNarudzbe.CurrentRow.DataBoundItem as Order;
-            using (var context = new EntitiesOrder())
+            if (dataGridViewNarudzbe.CurrentRow == null)
             {
-                foreach (var item in context.Carts)
-                {
-                    if (item.Narudzba == odabrana.ID)
-                    {
-                        context.Carts.Remove(item);
-                    }
-                }
-                foreach (var item in context.Orders)
-                {
-                    if (item.ID == odabrana.ID)
-                    {
-                        context.Orders.Remove(item);
-                    }
-                }
-                context.SaveChanges();
+                red = "";
             }
-            Osvjezi();
+            else
+            {
+                red = dataGridViewNarudzbe.CurrentRow.ToString();
+            }
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(red) == "")
+            {
+                Order odabrana = dataGridViewNarudzbe.CurrentRow.DataBoundItem as Order;
+                using (var context = new EntitiesOrder())
+                {
+                    foreach (var item in context.Carts)
+                    {
+                        if (item.Narudzba == odabrana.ID)
+                        {
+                            context.Carts.Remove(item);
+                        }
+                    }
+                    foreach (var item in context.Orders)
+                    {
+                        if (item.ID == odabrana.ID)
+                        {
+                            context.Orders.Remove(item);
+                        }
+                    }
+                    context.SaveChanges();
+                }
+                Osvjezi();
+            }
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(red));
+            }
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
-        {
-            FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(LogiranKorisnik);
-            this.Hide();
-            form.ShowDialog();
-        }
+       
 
         private void buttonPromijeniStatus_Click(object sender, EventArgs e)
         {
-            Order odabrana = dataGridViewNarudzbe.CurrentRow.DataBoundItem as Order;
-            using (var context = new EntitiesOrder())
+            if (dataGridViewNarudzbe.CurrentRow == null)
             {
-                foreach (var item in context.Orders)
-                {
-                    if(item.ID == odabrana.ID)
-                    {
-                        item.Status = comboBoxStatus.Text;
-                    }
-                }
-                context.SaveChanges();
+                red = "";
             }
-            Osvjezi();
+            else
+            {
+                red = dataGridViewNarudzbe.CurrentRow.ToString();
+            }
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(red) == "")
+            {
+                Order odabrana = dataGridViewNarudzbe.CurrentRow.DataBoundItem as Order;
+                using (var context = new EntitiesOrder())
+                {
+                    foreach (var item in context.Orders)
+                    {
+                        if (item.ID == odabrana.ID)
+                        {
+                            item.Status = comboBoxStatus.Text;
+                        }
+                    }
+                    context.SaveChanges();
+                }
+                Osvjezi();
+            }
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(red));
+            }
+          
         }
 
         private void buttonDodajNarudzbu_Click(object sender, EventArgs e)
@@ -133,10 +169,48 @@ namespace Funkcionalnost_prijave
 
         private void buttonPrikaziNarudzbu_Click(object sender, EventArgs e)
         {
-            OdabranaNarudzba = dataGridViewNarudzbe.CurrentRow.DataBoundItem as Order;
-            FormPrikaziNarudzbu form = new FormPrikaziNarudzbu(LogiranKorisnik, OdabranaNarudzba);
-            this.Hide();
-            form.ShowDialog();
+            if (dataGridViewNarudzbe.CurrentRow == null)
+            {
+                red = "";
+            }
+            else
+            {
+                red = dataGridViewNarudzbe.CurrentRow.ToString();
+            }
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(red) == "")
+            {
+                OdabranaNarudzba = dataGridViewNarudzbe.CurrentRow.DataBoundItem as Order;
+                Hide();
+                using (var forma = new FormPrikaziNarudzbu(LogiranKorisnik, OdabranaNarudzba))
+                {
+                    forma.ShowDialog();
+                }
+                Close();
+            }
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirReda(red));
+            }
+        }
+
+        private void FormNarudzbe_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void labelBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (var forma = new FormPrijavljenZaposlenik(LogiranKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
     }
 }

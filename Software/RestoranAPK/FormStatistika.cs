@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,80 +16,59 @@ namespace Funkcionalnost_prijave
     {
         EntitiesStatistika entities = new EntitiesStatistika(); 
        
-        public User LogiraniKorniski { get; set; }
-        public List<string> ListaStatusa { get; set; }
-        public List<Order> ListaNarudzbi { get; set; }
+        public User LogiraniKorisnik { get; set; }
         public FormStatistika(User korisnik)
         {
             InitializeComponent();
-            LogiraniKorniski = korisnik;
+            LogiraniKorisnik = korisnik;
         }
 
 
-        //private void buttonPovratak2_Click(object sender, EventArgs e)
-        //{
-        //    FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorisnik);
-        //    this.Hide();
-        //    form.ShowDialog();
-        //}
+      
 
 
         private void FormStatistika_Load(object sender, EventArgs e)
         {
-            comboBoxStatus.Visible = false;
+            
             entities.Orders.Load();
             orderBindingSource.DataSource = entities.Orders.Local;
-            DohvatiStatuse();
-            comboBoxStatus.DataSource = ListaStatusa;
-
-            
             
         }
-
-        private object DohvatiNarudzbe()
+        private void Pomoc()
         {
-            using (var context = new EntitiesOrder())
-            {
-                ListaNarudzbi = new List<Order>();
-                foreach (var item in context.Orders)
-                {
-                    if (item.Status != "Zavrseno")
-                    {
-                        ListaNarudzbi.Add(item);
-                    }
-
-                }
-                return ListaNarudzbi;
-            }
-        }
-
-        private void DohvatiStatuse()
-        {
-            ListaStatusa = new List<string>();
-            using (var context = new EntitiesOrder())
-            {
-                foreach (var item in context.OrderStatus)
-                {
-                    if (item.Status != "Zavrseno")
-                    {
-                        ListaStatusa.Add(item.Status.ToString());
-                    }
-                }
-            }
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Statistika");
         }
 
 
         private void btnStat_Click(object sender, EventArgs e)
         {
-            MyReport report = new MyReport(orderBindingSource.Current as Order);
+            FormMyReport report = new FormMyReport(orderBindingSource.Current as Order,LogiraniKorisnik);
             report.ShowDialog();
         }
 
-        private void buttonPovratak2_Click(object sender, EventArgs e)
+       
+
+        private void FormStatistika_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
-            FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorniski);
-            this.Hide();
-            form.ShowDialog();
+            Pomoc();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void labelBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorisnik))
+            {
+                form.ShowDialog();
+            }
+            Close();
         }
     }
 }

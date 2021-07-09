@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace Funkcionalnost_prijave
 {
     public partial class FormDodajRestoran : Form
     {
-        int BrojRestorana { get; set; }
+        public int BrojRestorana { get; set; }
         public int id { get; set; }
         public FormDodajRestoran(int broj)
         {
@@ -27,9 +28,15 @@ namespace Funkcionalnost_prijave
 
         private void buttonDodaj_Click(object sender, EventArgs e)
         {
-            DodajRestoran();
-            FormPrijavljenSuperadmin form = new FormPrijavljenSuperadmin();
-            form.ShowDialog();
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmailVlasnika.Text) == "")
+            {
+                DodajRestoran();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmailVlasnika.Text));
+            }
         }
         private void DodajRestoran()
         {
@@ -54,6 +61,25 @@ namespace Funkcionalnost_prijave
                 context.Restaurants.Add(restaurant);
                 context.SaveChanges();
             }
+        }
+
+     
+
+        private void FormDodajRestoran_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Naslovnica");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

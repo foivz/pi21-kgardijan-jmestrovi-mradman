@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,8 +26,15 @@ namespace Funkcionalnost_prijave
         {
             OsvjeziPrvuSmjenu();
             OsvjeziDruguSmjenu();
+            
         }
-
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Smjene");
+        }
         private void OsvjeziDruguSmjenu()
         {
             dataGridViewDruga.DataSource = null;
@@ -85,12 +93,7 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
-        {
-            FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiranAdmin);
-            this.Hide();
-            form.ShowDialog();
-        }
+       
 
         private void buttonPrva_Click(object sender, EventArgs e)
         {
@@ -128,9 +131,28 @@ namespace Funkcionalnost_prijave
             OsvjeziPrvuSmjenu();
         }
 
-        private void dataGridViewPrva_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        
 
+        private void FormSmjeneRada_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+       
+
+        private void labelPovratak_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (FormPrijavljenAdmin forma = new FormPrijavljenAdmin(LogiranAdmin))
+            {
+                forma.ShowDialog();
+            }
+            Close();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

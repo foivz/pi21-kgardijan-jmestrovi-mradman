@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,9 +38,14 @@ namespace Funkcionalnost_prijave
             dataGridViewNarudzba.Columns["Order"].Visible = false;
 
             textBoxUkupno.Text = UkupnaCijena.ToString();
-
         }
-
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Racun");
+        }
         private object DohvatiNarudzbu()
         {
             using (var context = new EntitiesOrder())
@@ -60,16 +66,34 @@ namespace Funkcionalnost_prijave
 
         private void buttonIzdajRacun_Click(object sender, EventArgs e)
         {
-            FormIzdavanjeRacuna form = new FormIzdavanjeRacuna(OdabranaNarudzba, LogiraniKorisnik, UkupnaCijena);
-            this.Hide();
-            form.ShowDialog();
+            Hide();
+            using (var forma = new FormIzdavanjeRacuna(OdabranaNarudzba,LogiraniKorisnik,UkupnaCijena))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
+       
+
+        private void FormPrikaziNarudzbu_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
-            FormNarudzbe form = new FormNarudzbe(LogiraniKorisnik);
-            this.Hide();
-            form.ShowDialog();
+            Pomoc();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void labelBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (var forma = new FormNarudzbe(LogiraniKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
     }
 }

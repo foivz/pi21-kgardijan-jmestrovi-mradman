@@ -29,30 +29,40 @@ namespace Funkcionalnost_prijave
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelBrnar = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelBrStola = new System.Windows.Forms.Label();
+            this.labelStatus = new System.Windows.Forms.Label();
             this.textBoxBrNarudzbe = new System.Windows.Forms.TextBox();
             this.textBoxStatus = new System.Windows.Forms.TextBox();
             this.textBoxBrStola = new System.Windows.Forms.TextBox();
             this.dataGridViewNarudzba = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelUkupno = new System.Windows.Forms.Label();
             this.textBoxUkupno = new System.Windows.Forms.TextBox();
             this.buttonIzdajRacun = new System.Windows.Forms.Button();
-            this.buttonPovratak = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.labelBack = new System.Windows.Forms.Label();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.labelDetaljiNar = new System.Windows.Forms.Label();
+            this.labelStavke = new System.Windows.Forms.Label();
+            this.pictureBoxNarudzba = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNarudzba)).BeginInit();
+            this.panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNarudzba)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelBrnar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 89);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Br. narudžbe:";
+            this.labelBrnar.AutoSize = true;
+            this.labelBrnar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBrnar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelBrnar.Location = new System.Drawing.Point(217, 113);
+            this.labelBrnar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBrnar.Name = "labelBrnar";
+            this.labelBrnar.Size = new System.Drawing.Size(123, 25);
+            this.labelBrnar.TabIndex = 0;
+            this.labelBrnar.Text = "Br. narudžbe:";
             // 
             // label2
             // 
@@ -63,29 +73,33 @@ namespace Funkcionalnost_prijave
             this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 1;
             // 
-            // label3
+            // labelBrStola
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 187);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Br. stola:";
+            this.labelBrStola.AutoSize = true;
+            this.labelBrStola.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBrStola.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelBrStola.Location = new System.Drawing.Point(542, 113);
+            this.labelBrStola.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBrStola.Name = "labelBrStola";
+            this.labelBrStola.Size = new System.Drawing.Size(84, 25);
+            this.labelBrStola.TabIndex = 2;
+            this.labelBrStola.Text = "Br. stola:";
             // 
-            // label4
+            // labelStatus
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 137);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Status:";
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatus.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelStatus.Location = new System.Drawing.Point(382, 113);
+            this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(69, 25);
+            this.labelStatus.TabIndex = 3;
+            this.labelStatus.Text = "Status:";
             // 
             // textBoxBrNarudzbe
             // 
-            this.textBoxBrNarudzbe.Location = new System.Drawing.Point(127, 89);
+            this.textBoxBrNarudzbe.Location = new System.Drawing.Point(222, 142);
             this.textBoxBrNarudzbe.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBrNarudzbe.Name = "textBoxBrNarudzbe";
             this.textBoxBrNarudzbe.ReadOnly = true;
@@ -94,7 +108,7 @@ namespace Funkcionalnost_prijave
             // 
             // textBoxStatus
             // 
-            this.textBoxStatus.Location = new System.Drawing.Point(127, 137);
+            this.textBoxStatus.Location = new System.Drawing.Point(387, 142);
             this.textBoxStatus.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxStatus.Name = "textBoxStatus";
             this.textBoxStatus.ReadOnly = true;
@@ -103,7 +117,7 @@ namespace Funkcionalnost_prijave
             // 
             // textBoxBrStola
             // 
-            this.textBoxBrStola.Location = new System.Drawing.Point(127, 187);
+            this.textBoxBrStola.Location = new System.Drawing.Point(547, 142);
             this.textBoxBrStola.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBrStola.Name = "textBoxBrStola";
             this.textBoxBrStola.ReadOnly = true;
@@ -114,27 +128,29 @@ namespace Funkcionalnost_prijave
             // 
             this.dataGridViewNarudzba.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewNarudzba.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNarudzba.Location = new System.Drawing.Point(13, 245);
+            this.dataGridViewNarudzba.Location = new System.Drawing.Point(169, 242);
             this.dataGridViewNarudzba.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewNarudzba.Name = "dataGridViewNarudzba";
             this.dataGridViewNarudzba.RowHeadersWidth = 51;
             this.dataGridViewNarudzba.RowTemplate.Height = 24;
-            this.dataGridViewNarudzba.Size = new System.Drawing.Size(490, 229);
+            this.dataGridViewNarudzba.Size = new System.Drawing.Size(509, 229);
             this.dataGridViewNarudzba.TabIndex = 7;
             // 
-            // label5
+            // labelUkupno
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 498);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Ukupno:";
+            this.labelUkupno.AutoSize = true;
+            this.labelUkupno.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUkupno.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelUkupno.Location = new System.Drawing.Point(164, 479);
+            this.labelUkupno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelUkupno.Name = "labelUkupno";
+            this.labelUkupno.Size = new System.Drawing.Size(84, 25);
+            this.labelUkupno.TabIndex = 8;
+            this.labelUkupno.Text = "Ukupno:";
             // 
             // textBoxUkupno
             // 
-            this.textBoxUkupno.Location = new System.Drawing.Point(89, 498);
+            this.textBoxUkupno.Location = new System.Drawing.Point(256, 481);
             this.textBoxUkupno.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUkupno.Name = "textBoxUkupno";
             this.textBoxUkupno.ReadOnly = true;
@@ -143,49 +159,118 @@ namespace Funkcionalnost_prijave
             // 
             // buttonIzdajRacun
             // 
-            this.buttonIzdajRacun.Location = new System.Drawing.Point(399, 488);
+            this.buttonIzdajRacun.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIzdajRacun.Location = new System.Drawing.Point(538, 479);
             this.buttonIzdajRacun.Margin = new System.Windows.Forms.Padding(4);
             this.buttonIzdajRacun.Name = "buttonIzdajRacun";
-            this.buttonIzdajRacun.Size = new System.Drawing.Size(103, 49);
+            this.buttonIzdajRacun.Size = new System.Drawing.Size(121, 49);
             this.buttonIzdajRacun.TabIndex = 10;
             this.buttonIzdajRacun.Text = "Izdaj račun";
             this.buttonIzdajRacun.UseVisualStyleBackColor = true;
             this.buttonIzdajRacun.Click += new System.EventHandler(this.buttonIzdajRacun_Click);
             // 
-            // buttonPovratak
+            // panelTop
             // 
-            this.buttonPovratak.Location = new System.Drawing.Point(16, 26);
-            this.buttonPovratak.Name = "buttonPovratak";
-            this.buttonPovratak.Size = new System.Drawing.Size(75, 23);
-            this.buttonPovratak.TabIndex = 11;
-            this.buttonPovratak.Text = "<";
-            this.buttonPovratak.UseVisualStyleBackColor = true;
-            this.buttonPovratak.Click += new System.EventHandler(this.buttonPovratak_Click);
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panelTop.Controls.Add(this.labelBack);
+            this.panelTop.Controls.Add(this.labelClose);
+            this.panelTop.Controls.Add(this.labelDetaljiNar);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(707, 100);
+            this.panelTop.TabIndex = 12;
+            // 
+            // labelBack
+            // 
+            this.labelBack.AutoSize = true;
+            this.labelBack.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelBack.Location = new System.Drawing.Point(16, 32);
+            this.labelBack.Name = "labelBack";
+            this.labelBack.Size = new System.Drawing.Size(32, 35);
+            this.labelBack.TabIndex = 11;
+            this.labelBack.Text = "<";
+            this.labelBack.Click += new System.EventHandler(this.labelBack_Click);
+            // 
+            // labelClose
+            // 
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelClose.Location = new System.Drawing.Point(665, 9);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(30, 35);
+            this.labelClose.TabIndex = 10;
+            this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
+            // 
+            // labelDetaljiNar
+            // 
+            this.labelDetaljiNar.AutoSize = true;
+            this.labelDetaljiNar.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDetaljiNar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelDetaljiNar.Location = new System.Drawing.Point(136, 20);
+            this.labelDetaljiNar.Name = "labelDetaljiNar";
+            this.labelDetaljiNar.Size = new System.Drawing.Size(461, 65);
+            this.labelDetaljiNar.TabIndex = 9;
+            this.labelDetaljiNar.Text = "DETALJI NARUDŽBE";
+            // 
+            // labelStavke
+            // 
+            this.labelStavke.AutoSize = true;
+            this.labelStavke.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStavke.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelStavke.Location = new System.Drawing.Point(164, 213);
+            this.labelStavke.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelStavke.Name = "labelStavke";
+            this.labelStavke.Size = new System.Drawing.Size(158, 25);
+            this.labelStavke.TabIndex = 13;
+            this.labelStavke.Text = "Stavke narudžbe:";
+            // 
+            // pictureBoxNarudzba
+            // 
+            this.pictureBoxNarudzba.Image = global::Funkcionalnost_prijave.Properties.Resources.tray;
+            this.pictureBoxNarudzba.Location = new System.Drawing.Point(16, 113);
+            this.pictureBoxNarudzba.Name = "pictureBoxNarudzba";
+            this.pictureBoxNarudzba.Size = new System.Drawing.Size(146, 129);
+            this.pictureBoxNarudzba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxNarudzba.TabIndex = 14;
+            this.pictureBoxNarudzba.TabStop = false;
             // 
             // FormPrikaziNarudzbu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 563);
-            this.Controls.Add(this.buttonPovratak);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
+            this.ClientSize = new System.Drawing.Size(707, 563);
+            this.Controls.Add(this.pictureBoxNarudzba);
+            this.Controls.Add(this.labelStavke);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.buttonIzdajRacun);
             this.Controls.Add(this.textBoxUkupno);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelUkupno);
             this.Controls.Add(this.dataGridViewNarudzba);
             this.Controls.Add(this.textBoxBrStola);
             this.Controls.Add(this.textBoxStatus);
             this.Controls.Add(this.textBoxBrNarudzbe);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelStatus);
+            this.Controls.Add(this.labelBrStola);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelBrnar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrikaziNarudzbu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prikaži narudžbu";
             this.Load += new System.EventHandler(this.FormPrikaziNarudzbu_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormPrikaziNarudzbu_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNarudzba)).EndInit();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNarudzba)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,17 +278,23 @@ namespace Funkcionalnost_prijave
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelBrnar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelBrStola;
+        private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.TextBox textBoxBrNarudzbe;
         private System.Windows.Forms.TextBox textBoxStatus;
         private System.Windows.Forms.TextBox textBoxBrStola;
         private System.Windows.Forms.DataGridView dataGridViewNarudzba;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelUkupno;
         private System.Windows.Forms.TextBox textBoxUkupno;
         private System.Windows.Forms.Button buttonIzdajRacun;
-        private System.Windows.Forms.Button buttonPovratak;
+        private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label labelBack;
+        private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.Label labelDetaljiNar;
+        private System.Windows.Forms.Label labelStavke;
+        private System.Windows.Forms.PictureBox pictureBoxNarudzba;
     }
 }

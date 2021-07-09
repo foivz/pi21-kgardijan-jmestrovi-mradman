@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model3StoreContainer" CdmEntityContainer="EntitiesBills">
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="Model3.Bill">
+        <MappingFragment StoreEntitySet="Bill">
+          <ScalarProperty Name="BrRacuna" ColumnName="BrRacuna" />
+          <ScalarProperty Name="Narudzba" ColumnName="Narudzba" />
+          <ScalarProperty Name="ImeZaposlenika" ColumnName="ImeZaposlenika" />
+          <ScalarProperty Name="Vrijeme" ColumnName="Vrijeme" />
+          <ScalarProperty Name="VrstaPlacanja" ColumnName="VrstaPlacanja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="Model3.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Narudzba" ColumnName="Narudzba" />
+          <ScalarProperty Name="NazivJela" ColumnName="NazivJela" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meals">
+      <EntityTypeMapping TypeName="Model3.Meal">
+        <MappingFragment StoreEntitySet="Meal">
+          <ScalarProperty Name="IDJela" ColumnName="IDJela" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Restoran" ColumnName="Restoran" />
+          <ScalarProperty Name="Vrsta" ColumnName="Vrsta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="Model3.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Zaposlenik" ColumnName="Zaposlenik" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BrStola" ColumnName="BrStola" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderStatus">
+      <EntityTypeMapping TypeName="Model3.OrderStatu">
+        <MappingFragment StoreEntitySet="OrderStatus">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductTypes">
+      <EntityTypeMapping TypeName="Model3.ProductType">
+        <MappingFragment StoreEntitySet="ProductType">
+          <ScalarProperty Name="VrstaJela" ColumnName="VrstaJela" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservations">
+      <EntityTypeMapping TypeName="Model3.Reservation">
+        <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="BrojRezervacije" ColumnName="BrojRezervacije" />
+          <ScalarProperty Name="ImeGosta" ColumnName="ImeGosta" />
+          <ScalarProperty Name="EmailGosta" ColumnName="EmailGosta" />
+          <ScalarProperty Name="BrojStola" ColumnName="BrojStola" />
+          <ScalarProperty Name="BrojOsoba" ColumnName="BrojOsoba" />
+          <ScalarProperty Name="DatumVrijeme" ColumnName="DatumVrijeme" />
+          <ScalarProperty Name="Restoran" ColumnName="Restoran" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restaurants">
+      <EntityTypeMapping TypeName="Model3.Restaurant">
+        <MappingFragment StoreEntitySet="Restaurant">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Owner_Email" ColumnName="Owner_Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model3.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Model3.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Restaurant" ColumnName="Restaurant" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Type">
+      <EntityTypeMapping TypeName="Model3.User_Type">
+        <MappingFragment StoreEntitySet="User_Type">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

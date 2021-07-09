@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,8 +22,16 @@ namespace Funkcionalnost_prijave
 
         private void FormPrijavljenZaposlenik_Load(object sender, EventArgs e)
         {
-            labelRestoran.Text = "Restoran" + NadiRestoran().Name;
+            labelRestoran.Text = "Restoran " + NadiRestoran().Name;
             labelKorisnik.Text = "Prijavljen: " + LogiranKorisnik.Name;
+        }
+
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Naslovnica");
         }
 
         private Restaurant NadiRestoran()
@@ -45,35 +54,54 @@ namespace Funkcionalnost_prijave
 
         private void buttonRezervacije_Click(object sender, EventArgs e)
         {
-            FormRezervacija form = new FormRezervacija(LogiranKorisnik);
-            this.Hide();
-            form.ShowDialog();
+            Hide();
+            using (var forma = new FormRezervacija(LogiranKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonNarudzbe_Click(object sender, EventArgs e)
         {
-            FormNarudzbe form = new FormNarudzbe(LogiranKorisnik);
-            this.Hide();
-            form.ShowDialog();
+            Hide();
+            using (var forma = new FormNarudzbe(LogiranKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonJelovnik_Click(object sender, EventArgs e)
         {
-            FormJelovnikZaposlenik form = new FormJelovnikZaposlenik(LogiranKorisnik);
-            this.Hide();
-            form.ShowDialog();
+            Hide();
+            using (var forma = new FormJelovnikZaposlenik(LogiranKorisnik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonOdjava_Click(object sender, EventArgs e)
         {
-            FormPrijava form = new FormPrijava();
-            this.Hide();
-            form.ShowDialog();
+            Hide();
+            using (var forma = new FormPrijava())
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
-        private void labelRestoran_Click(object sender, EventArgs e)
-        {
+      
 
+        private void FormPrijavljenZaposlenik_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

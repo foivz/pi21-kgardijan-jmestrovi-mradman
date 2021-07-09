@@ -39,23 +39,18 @@ namespace Funkcionalnost_prijave
 
         private void FormIzdavanjeRacuna_Load(object sender, EventArgs e)
         {
-            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmailGosta.Text) == "")
-            {
-                BrojRacuna = 0;
-                BrojRacuna = DohvatiBrRacuna();
-                textBoxBrRacuna.Text = BrojRacuna.ToString();
+          
 
-                VrijemeDatum = DateTime.Now;
-                textBoxVrijeme.Text = VrijemeDatum.ToString();
+            BrojRacuna = 0;
+            BrojRacuna = DohvatiBrRacuna();
+            textBoxBrRacuna.Text = BrojRacuna.ToString();
 
-                textBoxUkupno.Text = UkupnaCijena.ToString();
+            VrijemeDatum = DateTime.Now;
+            textBoxVrijeme.Text = VrijemeDatum.ToString();
 
-                comboBoxVrstaPlacanja.DataSource = ListaVrstiPlacanja;
-            }
-            else
-            {
-                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmailGosta.Text));
-            }
+            textBoxUkupno.Text = UkupnaCijena.ToString();
+
+            comboBoxVrstaPlacanja.DataSource = ListaVrstiPlacanja;
 
         }
 
@@ -75,36 +70,38 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void ButtonClose_Click(object sender, EventArgs e)
         {
-            FormPrijavljenZaposlenik form = new FormPrijavljenZaposlenik(Zaposlenik);
-            this.Hide();
-            form.ShowDialog();
+
+            Hide();
+            using (var forma = new FormNarudzbe(Zaposlenik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
 
         private void buttonIzdajRacun_Click(object sender, EventArgs e)
         {
-            QRCodeGenerator qrCode = new QRCodeGenerator();
-            QRCodeData data = qrCode.CreateQrCode(QRTekst(), QRCodeGenerator.ECCLevel.Q);
-            Kod = new QRCode(data);
-            pictureQRCode.Image = Kod.GetGraphic(5);
-            pictureQRCode.Image.Save("QR" + BrojRacuna + ".png", System.Drawing.Imaging.ImageFormat.Png);
-           
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmailGosta.Text) == "")
+            {
+                QRCodeGenerator qrCode = new QRCodeGenerator();
+                QRCodeData data = qrCode.CreateQrCode(QRTekst(), QRCodeGenerator.ECCLevel.Q);
+                Kod = new QRCode(data);
+                pictureQRCode.Image = Kod.GetGraphic(5);
+                pictureQRCode.Image.Save("QR" + BrojRacuna + ".png", System.Drawing.Imaging.ImageFormat.Png);
 
-            KreiranjeRacuna();
-            KreirajPDF();
-            PosaljiMail();
-            PromijeniStatusNarudzbe();
+
+                KreiranjeRacuna();
+                KreirajPDF();
+                PosaljiMail();
+                PromijeniStatusNarudzbe();
+            }
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriEmail(textBoxEmailGosta.Text));
+            }
         }
 
         private void PosaljiMail()
@@ -130,49 +127,77 @@ namespace Funkcionalnost_prijave
             Doc = new Document();
             string imeDatoteke = "Racun" + BrojRacuna + ".pdf";
             PdfWriter.GetInstance(Doc, new FileStream(imeDatoteke, FileMode.Create));
+
+            BaseFont bf1 = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font font1 = new iTextSharp.text.Font(bf1, 20, iTextSharp.text.Font.NORMAL);
+            BaseFont bf2 = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font font2 = new iTextSharp.text.Font(bf2, 15, iTextSharp.text.Font.NORMAL);
+
             Doc.Open();
 
             //popunjavanje osnovnih informacija
-            Paragraph p = new Paragraph("Racun broj: "+ BrojRacuna + "  je uspješno izdan u "+ VrijemeDatum );
+            Paragraph p = new Paragraph("Racun broj: " + BrojRacuna + "  je uspješno izdan u " + VrijemeDatum);
+            Phrase p3 = new Phrase(BrojRacuna);
+            p.Alignment = Element.ALIGN_CENTER;
             Doc.Add(p);
+            Doc.Add(p3);
+            p = new Paragraph(" ");
+            Doc.Add(p);
+
+            //Paragraph p1 = new Paragraph(new Chunk("Sample text", font1));
+            //Doc.Add(p1);
+
             p = new Paragraph("Izdao zaposlenik: " + Zaposlenik.Name);
+            p.Alignment = Element.ALIGN_RIGHT;
             Doc.Add(p);
-            p = new Paragraph("Broj narudzbe: " + OdabranaNarudzba.ID);
+            p = new Paragraph("Broj narudžbe: " + OdabranaNarudzba.ID);
+            p.Alignment = Element.ALIGN_RIGHT;
             Doc.Add(p);
-            p = new Paragraph("Vrsta placanja" + comboBoxVrstaPlacanja.Text);
+            p = new Paragraph("Vrsta placanja: " + comboBoxVrstaPlacanja.Text);
+            p.Alignment = Element.ALIGN_RIGHT;
             Doc.Add(p);
-            p = new Paragraph("");
+            p = new Paragraph(" ");
             Doc.Add(p);
-            p = new Paragraph("");
+            p = new Paragraph(" ");
             Doc.Add(p);
-            p = new Paragraph("Stavke racuna:");
+            p = new Paragraph("Stavke racuna");
+            Doc.Add(p);
+            p = new Paragraph("______________________________________________________________________________");
             Doc.Add(p);
 
             //dodavanje narucenih jela
             using (var context = new EntitiesBills())
             {
                 List list = new List(List.UNORDERED);
-       
+
                 foreach (var item in context.Carts)
                 {
-                    if(item.Narudzba == OdabranaNarudzba.ID)
+                    if (item.Narudzba == OdabranaNarudzba.ID)
                     {
-                        string jelo = item.NazivJela + " " + item.Cijena + "kn " + item.Kolicina +"komada" ; 
+                        string jelo = item.NazivJela + " " + item.Cijena + "kn " + item.Kolicina + "komad(a)";
                         list.Add(new ListItem(jelo));
                     }
                 }
                 Doc.Add(list);
             }
-            p = new Paragraph("Ukupno: " + UkupnaCijena);
+            p = new Paragraph("______________________________________________________________________________");
             Doc.Add(p);
-            p = new Paragraph("");
+            p = new Paragraph("Ukupno: " + UkupnaCijena + " kn");
+            p.Alignment = Element.ALIGN_LEFT;
             Doc.Add(p);
-            p = new Paragraph("");
+            p = new Paragraph(" ");
+            Doc.Add(p);
+            p = new Paragraph(" ");
             Doc.Add(p);
 
             //dodavanje QR Koda
-            string imagePath = "QR" + BrojRacuna+ ".png";
+            p = new Paragraph("QR kod za skeniranje. ");
+            p.Alignment = Element.ALIGN_CENTER;
+            Doc.Add(p);
+            string imagePath = "QR" + BrojRacuna + ".png";
             iTextSharp.text.Image QRKod = iTextSharp.text.Image.GetInstance(imagePath);
+            QRKod.ScaleAbsolute(160f, 160f);
+            QRKod.Alignment = Element.ALIGN_CENTER;
             Doc.Add(QRKod);
             Doc.Close();
 
@@ -221,23 +246,50 @@ namespace Funkcionalnost_prijave
 
         private string QRTekst()
         {
-            
-            string Kod = "Racun broj " + BrojRacuna + " je uspjesno izdan u " + textBoxVrijeme.Text +
-                ". Zaposlenik: " + Zaposlenik.Name +
-                ". Broj narudzbe: " + OdabranaNarudzba.ID +
-                ". Ukupna cijena: " + UkupnaCijena +
-                ". Vrsta placanja: " + comboBoxVrstaPlacanja.SelectedItem;
+            string imeRestorana = dohvatiImeRestorana();
+            string Kod = $"HRVHUB30\nHRK\n{int.Parse(textBoxUkupno.Text)*100} \n\n \n \n {imeRestorana} \n Julija Merlica 9 \n 42000 Varaždin \n HR1023900013290447659 \n HR00 \n\n COST \n Racun {BrojRacuna}";
             return Kod;
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private string dohvatiImeRestorana()
         {
-
+            using (var context = new EntitiesBills())
+            {
+                foreach (var item in context.Restaurants)
+                {
+                    if(item.ID== Zaposlenik.Restaurant)
+                    {
+                        return item.Name;
+                    }
+                }
+                return null;
+            }
         }
 
-        private void comboBoxVrstaPlacanja_SelectedIndexChanged(object sender, EventArgs e)
-        {
+       
 
+      
+
+        private void FormIzdavanjeRacuna_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Racuni");
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (var forma = new FormNarudzbe(Zaposlenik))
+            {
+                forma.ShowDialog();
+            }
+            Close();
         }
     }
 }

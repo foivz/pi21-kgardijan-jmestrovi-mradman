@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,8 @@ namespace Funkcionalnost_prijave
 {
     public partial class FormPrijavljenSuperadmin : Form
     {
-        Restaurant OdabraniRestoran { get; set; }
-        User KorisnikZaBrisanje { get; set; }
+        public Restaurant OdabraniRestoran { get; set; }
+        public User KorisnikZaBrisanje { get; set; }
         public FormPrijavljenSuperadmin()
         {
             InitializeComponent();
@@ -22,6 +23,13 @@ namespace Funkcionalnost_prijave
         private void FormPrijavljenSuperadmin_Load(object sender, EventArgs e)
         {
             OsvjeziRestorane();
+        }
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Naslovnica");
         }
 
         private List<Restaurant> DohvatiRestorane()
@@ -54,22 +62,25 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void buttonPregledajAdmine_Click(object sender, EventArgs e)
-        {
-            OsvjeziAdmine();
-        }
-
         private void buttonDodajRestoran_Click(object sender, EventArgs e)
         {
             int brojRestorana = dataGridViewRestorani.RowCount;
-            FormDodajRestoran form = new FormDodajRestoran(brojRestorana);
-            form.ShowDialog();
+            using (var forma = new FormDodajRestoran(brojRestorana))
+            {
+                forma.ShowDialog();
+            }
+            OsvjeziRestorane();
+            
         }
 
         private void buttonDodajAdmina_Click(object sender, EventArgs e)
         {
-            FormDodajAdmina form = new FormDodajAdmina(OdabraniRestoran);
-            form.ShowDialog();
+            
+            using (var forma = new FormDodajAdmina(OdabraniRestoran))
+            {
+                forma.ShowDialog();
+            }
+          
             OsvjeziAdmine();
         }
 
@@ -110,7 +121,7 @@ namespace Funkcionalnost_prijave
             dataGridViewAdmin.Columns["Restaurant"].Visible = false;
             dataGridViewAdmin.Columns["Type"].Visible = false;
             dataGridViewAdmin.Columns["Username"].HeaderText = "Korisničko ime";
-            dataGridViewAdmin.Columns["Password"].HeaderText = "Lozinka";
+            dataGridViewAdmin.Columns["Password"].Visible = false;
             dataGridViewAdmin.Columns["Name"].HeaderText = "Ime i prezime";
             dataGridViewAdmin.Columns["Shifts"].Visible = false;
             dataGridViewAdmin.Columns["Orders"].Visible = false;
@@ -145,9 +156,27 @@ namespace Funkcionalnost_prijave
 
         private void buttonOdjava_Click(object sender, EventArgs e)
         {
-            FormPrijava form = new FormPrijava();
-            this.Hide();
-            form.ShowDialog();
+            Hide();
+            using (var forma = new FormPrijava())
+            {
+                forma.ShowDialog();
+            }
+            Close();
+        }
+
+        private void dataGridViewRestorani_SelectionChanged(object sender, EventArgs e)
+        {
+            OsvjeziAdmine();
+        }
+
+        private void FormPrijavljenSuperadmin_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

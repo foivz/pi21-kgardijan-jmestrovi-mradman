@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,10 +26,7 @@ namespace Funkcionalnost_prijave
 
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
         private void comboBoxVrstaJela_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -145,45 +143,148 @@ namespace Funkcionalnost_prijave
 
         private void buttonDodaj_Click(object sender, EventArgs e)
         {
-            using (var context = new EntitiesOrder())
+            
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriBrojcanuVrijednost(textBoxKolicina.Text) == "")
             {
-                int idNovi = 0;
-                foreach (var item in context.Carts)
+                using (var context = new EntitiesOrder())
                 {
-                    if (idNovi < item.ID)
+                    int idNovi = 0;
+                    foreach (var item in context.Carts)
                     {
-                        idNovi = item.ID;
+                        if (idNovi < item.ID)
+                        {
+                            idNovi = item.ID;
+                        }
                     }
+
+                    Meal jelo = dataGridViewJela.CurrentRow.DataBoundItem as Meal;
+                    int narudzba = NovaNarudzbaID;
+                    int kolicina = int.Parse(textBoxKolicina.Text);
+
+                    Cart kosarica = new Cart
+                    {
+                        ID = idNovi + 1,
+                        Narudzba = narudzba,
+                        NazivJela = jelo.Naziv,
+                        Cijena = int.Parse(jelo.Cijena),
+                        Kolicina = kolicina
+
+                    };
+                    context.Carts.Add(kosarica);
+                    context.SaveChanges();
                 }
-
-                Meal jelo = dataGridViewJela.CurrentRow.DataBoundItem as Meal;
-                int narudzba = NovaNarudzbaID;
-                int kolicina = int.Parse(textBoxKolicina.Text);
-
-                Cart kosarica = new Cart
-                {
-                    ID = idNovi + 1,
-                    Narudzba = narudzba,
-                    NazivJela=jelo.Naziv,
-                    Cijena=int.Parse(jelo.Cijena),
-                    Kolicina=kolicina
-                   
-                };
-                context.Carts.Add(kosarica);
-                context.SaveChanges();
+                OsvjeziKosaricu();
             }
-            OsvjeziKosaricu();
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriBrojcanuVrijednost(textBoxKolicina.Text));
+            }
+           
         }
 
         private void buttonKreirajNarudzbu_Click(object sender, EventArgs e)
         {
+            if (BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirStola(textBoxBrStola.Text) =="")
+            {
+                using (var context = new EntitiesOrder())
+                {
+                    foreach (var item in context.Orders)
+                    {
+                        if (item.ID == NovaNarudzba.ID)
+                        {
+                            item.BrStola = textBoxBrStola.Text;
+                        }
+                    }
+                    context.SaveChanges();
+                }
+                Close();
+            }
+            else
+            {
+                MessageBox.Show(BibliotekeVanjske.ValidacijaUnosa.ProvjeriOdabirStola(textBoxBrStola.Text));
+            }
+           
+        }
+
+        private void buttonOdustani_Click(object sender, EventArgs e)
+        {
+            Order odabrana = NovaNarudzba;
             using (var context = new EntitiesOrder())
             {
-                foreach(var item in context.Orders)
+                foreach (var item in context.Carts)
                 {
-                    if (item.ID == NovaNarudzba.ID)
+                    if (item.Narudzba == odabrana.ID)
                     {
-                        item.BrStola = textBoxBrStola.Text;
+                        context.Carts.Remove(item);
+                    }
+                }
+                foreach (var item in context.Orders)
+                {
+                    if (item.ID == odabrana.ID)
+                    {
+                        context.Orders.Remove(item);
+                    }
+                }
+                context.SaveChanges();
+            }
+            Close();
+
+
+        }
+
+        private void FormDodajNarudzbu_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Pomoc();
+        }
+        private void Pomoc()
+        {
+            string help = Path.Combine(new Uri(Path.GetDirectoryName
+           (System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath, "help.chm");
+            helpProvider1.HelpNamespace = help;
+            Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Narudzbe");
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Order odabrana = NovaNarudzba;
+            using (var context = new EntitiesOrder())
+            {
+                foreach (var item in context.Carts)
+                {
+                    if (item.Narudzba == odabrana.ID)
+                    {
+                        context.Carts.Remove(item);
+                    }
+                }
+                foreach (var item in context.Orders)
+                {
+                    if (item.ID == odabrana.ID)
+                    {
+                        context.Orders.Remove(item);
+                    }
+                }
+                context.SaveChanges();
+            }
+            Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Order odabrana = NovaNarudzba;
+            using (var context = new EntitiesOrder())
+            {
+                foreach (var item in context.Carts)
+                {
+                    if (item.Narudzba == odabrana.ID)
+                    {
+                        context.Carts.Remove(item);
+                    }
+                }
+                foreach (var item in context.Orders)
+                {
+                    if (item.ID == odabrana.ID)
+                    {
+                        context.Orders.Remove(item);
                     }
                 }
                 context.SaveChanges();

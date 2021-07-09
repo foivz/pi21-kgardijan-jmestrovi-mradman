@@ -85,7 +85,7 @@ namespace BibliotekeVanjske
             string povratnaPoruka = "";
             if (broj.All(Char.IsDigit) == false)
             {
-                povratnaPoruka += "Ovo polje mora sadrzavati brojacnu vrijednost!\n";
+                povratnaPoruka += "Ovo polje mora sadrzavati brojcanu vrijednost!\n";
             }
             if (broj == "")
             {
@@ -94,6 +94,25 @@ namespace BibliotekeVanjske
             if (broj.Count() > 11)
             {
                 povratnaPoruka += "Brojcana vrijednost ne može imati više od 11 znakova!\n";
+            }
+            return povratnaPoruka;
+        }
+        public static string ProvjeriOdabirReda(string red)
+        {
+            string povratnaPoruka = "";
+            if (red =="")
+            {
+                povratnaPoruka = "Molimo odaberite redak u tablici";
+            }
+            return povratnaPoruka;
+        }
+
+        public static string ProvjeriOdabirStola(string stol)
+        {
+            string povratnaPoruka = "";
+            if (stol == "")
+            {
+                povratnaPoruka = "Molimo unesite stol!";
             }
             return povratnaPoruka;
         }
