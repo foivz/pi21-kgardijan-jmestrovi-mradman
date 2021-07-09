@@ -338,7 +338,6 @@ C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\o
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost_prijave.FormStatistika.resources
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost_prijave.FormUrediZaposlenika.resources
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost_prijave.FormZaposleniciPopis.resources
-C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost_prijave.MyReport.resources
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost_prijave.Properties.Resources.resources
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\RestoraniApk.csproj.GenerateResource.cache
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\RdlCompile.cache
@@ -349,3 +348,4 @@ C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\o
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost prijave.pdb
 C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\bin\Debug\WindowsServiceCS.pdb
 C:\Users\mestr\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost_prijave.FormMyReport.resources
+C:\Users\Mateo\Documents\pi21-kgardijan-jmestrovi-mradman\Software\RestoranAPK\obj\Debug\Funkcionalnost_prijave.FormMyReport.resources
