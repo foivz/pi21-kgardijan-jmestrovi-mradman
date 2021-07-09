@@ -63,7 +63,7 @@ namespace Funkcionalnost_prijave
             Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Zaposlenici");
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
         {
             Close();
         }

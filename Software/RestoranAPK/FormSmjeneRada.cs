@@ -93,10 +93,7 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void buttonPrva_Click(object sender, EventArgs e)
         {
@@ -134,20 +131,14 @@ namespace Funkcionalnost_prijave
             OsvjeziPrvuSmjenu();
         }
 
-        private void dataGridViewPrva_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void FormSmjeneRada_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             Pomoc();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+       
 
         private void labelPovratak_Click(object sender, EventArgs e)
         {
@@ -156,6 +147,11 @@ namespace Funkcionalnost_prijave
             {
                 forma.ShowDialog();
             }
+            Close();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
             Close();
         }
     }

@@ -70,16 +70,7 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void ButtonClose_Click(object sender, EventArgs e)
         {
 
@@ -275,15 +266,9 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void comboBoxVrstaPlacanja_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void FormIzdavanjeRacuna_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
@@ -297,7 +282,7 @@ namespace Funkcionalnost_prijave
             Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Racuni");
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
         {
             Hide();
             using (var forma = new FormNarudzbe(Zaposlenik))

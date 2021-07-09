@@ -84,17 +84,14 @@ namespace Funkcionalnost_prijave
             Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Prijava");
         }
 
-        private void FormPrijava_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void FormPrijava_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             Pomoc();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
         {
             Close();
         }

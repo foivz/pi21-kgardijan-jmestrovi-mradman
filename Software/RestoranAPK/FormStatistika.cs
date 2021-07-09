@@ -16,22 +16,15 @@ namespace Funkcionalnost_prijave
     {
         EntitiesStatistika entities = new EntitiesStatistika(); 
        
-        public User LogiraniKorniski { get; set; }
-        public List<string> ListaStatusa { get; set; }
-        public List<Order> ListaNarudzbi { get; set; }
+        public User LogiraniKorisnik { get; set; }
         public FormStatistika(User korisnik)
         {
             InitializeComponent();
-            LogiraniKorniski = korisnik;
+            LogiraniKorisnik = korisnik;
         }
 
 
-        //private void buttonPovratak2_Click(object sender, EventArgs e)
-        //{
-        //    FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorisnik);
-        //    this.Hide();
-        //    form.ShowDialog();
-        //}
+      
 
 
         private void FormStatistika_Load(object sender, EventArgs e)
@@ -52,32 +45,29 @@ namespace Funkcionalnost_prijave
 
         private void btnStat_Click(object sender, EventArgs e)
         {
-            MyReport report = new MyReport(orderBindingSource.Current as Order,LogiraniKorniski);
+            FormMyReport report = new FormMyReport(orderBindingSource.Current as Order,LogiraniKorisnik);
             report.ShowDialog();
         }
 
-        private void buttonPovratak2_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void FormStatistika_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             Pomoc();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
         {
-            Hide();
-            using (FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorniski))
-            {
-                form.ShowDialog();
-            }
             Close();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void labelBack_Click(object sender, EventArgs e)
         {
+            Hide();
+            using (FormPrijavljenAdmin form = new FormPrijavljenAdmin(LogiraniKorisnik))
+            {
+                form.ShowDialog();
+            }
             Close();
         }
     }

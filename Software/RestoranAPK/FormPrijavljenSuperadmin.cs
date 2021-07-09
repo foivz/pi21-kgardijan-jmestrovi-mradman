@@ -13,8 +13,8 @@ namespace Funkcionalnost_prijave
 {
     public partial class FormPrijavljenSuperadmin : Form
     {
-        Restaurant OdabraniRestoran { get; set; }
-        User KorisnikZaBrisanje { get; set; }
+        public Restaurant OdabraniRestoran { get; set; }
+        public User KorisnikZaBrisanje { get; set; }
         public FormPrijavljenSuperadmin()
         {
             InitializeComponent();
@@ -174,12 +174,7 @@ namespace Funkcionalnost_prijave
             Pomoc();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
         {
             Close();
         }

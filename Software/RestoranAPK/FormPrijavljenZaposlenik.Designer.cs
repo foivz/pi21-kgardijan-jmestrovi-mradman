@@ -37,10 +37,10 @@ namespace Funkcionalnost_prijave
             this.buttonOdjava = new System.Windows.Forms.Button();
             this.labelKorisnik = new System.Windows.Forms.Label();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.labelNaslovnica = new System.Windows.Forms.Label();
+            this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -63,12 +63,11 @@ namespace Funkcionalnost_prijave
             this.labelRestoran.Size = new System.Drawing.Size(154, 41);
             this.labelRestoran.TabIndex = 1;
             this.labelRestoran.Text = "Restoran: ";
-            this.labelRestoran.Click += new System.EventHandler(this.labelRestoran_Click);
             // 
             // buttonNarudzbe
             // 
             this.buttonNarudzbe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNarudzbe.Location = new System.Drawing.Point(620, 251);
+            this.buttonNarudzbe.Location = new System.Drawing.Point(623, 262);
             this.buttonNarudzbe.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNarudzbe.Name = "buttonNarudzbe";
             this.buttonNarudzbe.Size = new System.Drawing.Size(127, 89);
@@ -80,7 +79,7 @@ namespace Funkcionalnost_prijave
             // buttonRezervacije
             // 
             this.buttonRezervacije.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRezervacije.Location = new System.Drawing.Point(374, 251);
+            this.buttonRezervacije.Location = new System.Drawing.Point(373, 262);
             this.buttonRezervacije.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRezervacije.Name = "buttonRezervacije";
             this.buttonRezervacije.Size = new System.Drawing.Size(127, 89);
@@ -92,7 +91,7 @@ namespace Funkcionalnost_prijave
             // buttonJelovnik
             // 
             this.buttonJelovnik.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonJelovnik.Location = new System.Drawing.Point(153, 251);
+            this.buttonJelovnik.Location = new System.Drawing.Point(129, 262);
             this.buttonJelovnik.Margin = new System.Windows.Forms.Padding(4);
             this.buttonJelovnik.Name = "buttonJelovnik";
             this.buttonJelovnik.Size = new System.Drawing.Size(127, 89);
@@ -125,41 +124,41 @@ namespace Funkcionalnost_prijave
             this.labelKorisnik.TabIndex = 8;
             this.labelKorisnik.Text = "label2";
             // 
-            // panel1
+            // panelTop
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.buttonOdjava);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 100);
-            this.panel1.TabIndex = 9;
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panelTop.Controls.Add(this.labelClose);
+            this.panelTop.Controls.Add(this.labelNaslovnica);
+            this.panelTop.Controls.Add(this.buttonOdjava);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(933, 100);
+            this.panelTop.TabIndex = 9;
             // 
-            // label3
+            // labelClose
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(858, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 35);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelClose.Location = new System.Drawing.Point(858, 37);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(30, 35);
+            this.labelClose.TabIndex = 11;
+            this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
-            // label2
+            // labelNaslovnica
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(300, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(325, 65);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "NASLOVNICA";
+            this.labelNaslovnica.AutoSize = true;
+            this.labelNaslovnica.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNaslovnica.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelNaslovnica.Location = new System.Drawing.Point(300, 26);
+            this.labelNaslovnica.Name = "labelNaslovnica";
+            this.labelNaslovnica.Size = new System.Drawing.Size(325, 65);
+            this.labelNaslovnica.TabIndex = 10;
+            this.labelNaslovnica.Text = "NASLOVNICA";
             // 
             // FormPrijavljenZaposlenik
             // 
@@ -167,7 +166,7 @@ namespace Funkcionalnost_prijave
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(933, 530);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.labelKorisnik);
             this.Controls.Add(this.buttonJelovnik);
             this.Controls.Add(this.buttonRezervacije);
@@ -182,8 +181,8 @@ namespace Funkcionalnost_prijave
             this.Text = "Naslovnica";
             this.Load += new System.EventHandler(this.FormPrijavljenZaposlenik_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormPrijavljenZaposlenik_HelpRequested);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,8 +198,8 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.Button buttonOdjava;
         private System.Windows.Forms.Label labelKorisnik;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label labelNaslovnica;
+        private System.Windows.Forms.Label labelClose;
     }
 }

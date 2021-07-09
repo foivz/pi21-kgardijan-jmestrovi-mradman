@@ -63,10 +63,7 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
-        {
-           
-        }
+        
 
         private void buttonObriši_Click(object sender, EventArgs e)
         {
@@ -111,7 +108,12 @@ namespace Funkcionalnost_prijave
             Pomoc();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void labelBack_Click(object sender, EventArgs e)
         {
             if (LogiraniK.Type == "admin")
             {
@@ -131,11 +133,6 @@ namespace Funkcionalnost_prijave
                 }
                 Close();
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

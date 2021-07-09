@@ -1,7 +1,7 @@
 ﻿
 namespace Funkcionalnost_prijave
 {
-    partial class MyReport
+    partial class FormMyReport
     {
         /// <summary>
         /// Required designer variable.

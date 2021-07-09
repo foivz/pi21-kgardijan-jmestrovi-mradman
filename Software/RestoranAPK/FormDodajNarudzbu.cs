@@ -26,10 +26,7 @@ namespace Funkcionalnost_prijave
 
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
         private void comboBoxVrstaJela_SelectedIndexChanged(object sender, EventArgs e)
         {

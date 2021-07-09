@@ -32,7 +32,7 @@ namespace Funkcionalnost_prijave
             this.components = new System.ComponentModel.Container();
             this.dataGridViewJela = new System.Windows.Forms.DataGridView();
             this.comboBoxVrstaJela = new System.Windows.Forms.ComboBox();
-            this.Vrsta = new System.Windows.Forms.Label();
+            this.LabelVrsta = new System.Windows.Forms.Label();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonObrisi = new System.Windows.Forms.Button();
             this.DataGridViewMeal = new System.Windows.Forms.DataGridView();
@@ -47,17 +47,17 @@ namespace Funkcionalnost_prijave
             this.btnEksport = new System.Windows.Forms.Button();
             this.mealTableAdapter = new Funkcionalnost_prijave._PI21_54_DBDataSetTableAdapters.MealTableAdapter();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.labelBack = new System.Windows.Forms.Label();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.labelJelovnik = new System.Windows.Forms.Label();
+            this.pictureBoxJelovnik = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewMeal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mealBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_54_DBDataSet)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxJelovnik)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewJela
@@ -82,17 +82,17 @@ namespace Funkcionalnost_prijave
             this.comboBoxVrstaJela.TabIndex = 2;
             this.comboBoxVrstaJela.SelectedIndexChanged += new System.EventHandler(this.comboBoxVrstaJela_SelectedIndexChanged);
             // 
-            // Vrsta
+            // LabelVrsta
             // 
-            this.Vrsta.AutoSize = true;
-            this.Vrsta.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vrsta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Vrsta.Location = new System.Drawing.Point(229, 136);
-            this.Vrsta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Vrsta.Name = "Vrsta";
-            this.Vrsta.Size = new System.Drawing.Size(60, 25);
-            this.Vrsta.TabIndex = 3;
-            this.Vrsta.Text = "Vrsta:";
+            this.LabelVrsta.AutoSize = true;
+            this.LabelVrsta.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelVrsta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LabelVrsta.Location = new System.Drawing.Point(229, 136);
+            this.LabelVrsta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelVrsta.Name = "LabelVrsta";
+            this.LabelVrsta.Size = new System.Drawing.Size(60, 25);
+            this.LabelVrsta.TabIndex = 3;
+            this.LabelVrsta.Text = "Vrsta:";
             // 
             // buttonDodaj
             // 
@@ -211,63 +211,63 @@ namespace Funkcionalnost_prijave
             // 
             this.mealTableAdapter.ClearBeforeFill = true;
             // 
-            // panel1
+            // panelTop
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.DataGridViewMeal);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 100);
-            this.panel1.TabIndex = 10;
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panelTop.Controls.Add(this.labelBack);
+            this.panelTop.Controls.Add(this.labelClose);
+            this.panelTop.Controls.Add(this.labelJelovnik);
+            this.panelTop.Controls.Add(this.DataGridViewMeal);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(933, 100);
+            this.panelTop.TabIndex = 10;
             // 
-            // label2
+            // labelBack
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(858, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 35);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "X";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labelBack.AutoSize = true;
+            this.labelBack.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelBack.Location = new System.Drawing.Point(46, 32);
+            this.labelBack.Name = "labelBack";
+            this.labelBack.Size = new System.Drawing.Size(32, 35);
+            this.labelBack.TabIndex = 11;
+            this.labelBack.Text = "<";
+            this.labelBack.Click += new System.EventHandler(this.labelBack_Click);
             // 
-            // label1
+            // labelClose
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(315, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 65);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "JELOVNIK";
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelClose.Location = new System.Drawing.Point(858, 32);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(30, 35);
+            this.labelClose.TabIndex = 10;
+            this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
-            // label3
+            // labelJelovnik
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(46, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 35);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "<";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.labelJelovnik.AutoSize = true;
+            this.labelJelovnik.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJelovnik.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelJelovnik.Location = new System.Drawing.Point(315, 19);
+            this.labelJelovnik.Name = "labelJelovnik";
+            this.labelJelovnik.Size = new System.Drawing.Size(241, 65);
+            this.labelJelovnik.TabIndex = 9;
+            this.labelJelovnik.Text = "JELOVNIK";
             // 
-            // pictureBox1
+            // pictureBoxJelovnik
             // 
-            this.pictureBox1.Image = global::Funkcionalnost_prijave.Properties.Resources.menu;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 121);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxJelovnik.Image = global::Funkcionalnost_prijave.Properties.Resources.menu;
+            this.pictureBoxJelovnik.Location = new System.Drawing.Point(12, 121);
+            this.pictureBoxJelovnik.Name = "pictureBoxJelovnik";
+            this.pictureBoxJelovnik.Size = new System.Drawing.Size(193, 151);
+            this.pictureBoxJelovnik.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxJelovnik.TabIndex = 11;
+            this.pictureBoxJelovnik.TabStop = false;
             // 
             // FormJelovnikAdmin
             // 
@@ -275,12 +275,12 @@ namespace Funkcionalnost_prijave
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(933, 530);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBoxJelovnik);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.btnEksport);
             this.Controls.Add(this.buttonObrisi);
             this.Controls.Add(this.buttonDodaj);
-            this.Controls.Add(this.Vrsta);
+            this.Controls.Add(this.LabelVrsta);
             this.Controls.Add(this.comboBoxVrstaJela);
             this.Controls.Add(this.dataGridViewJela);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -295,9 +295,9 @@ namespace Funkcionalnost_prijave
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewMeal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mealBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_54_DBDataSet)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxJelovnik)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +306,7 @@ namespace Funkcionalnost_prijave
         #endregion
         private System.Windows.Forms.DataGridView dataGridViewJela;
         private System.Windows.Forms.ComboBox comboBoxVrstaJela;
-        private System.Windows.Forms.Label Vrsta;
+        private System.Windows.Forms.Label LabelVrsta;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonObrisi;
         private System.Windows.Forms.DataGridView DataGridViewMeal;
@@ -321,10 +321,10 @@ namespace Funkcionalnost_prijave
         private System.Windows.Forms.DataGridViewTextBoxColumn restoranDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrstaDataGridViewTextBoxColumn;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.Label labelJelovnik;
+        private System.Windows.Forms.Label labelBack;
+        private System.Windows.Forms.PictureBox pictureBoxJelovnik;
     }
 }

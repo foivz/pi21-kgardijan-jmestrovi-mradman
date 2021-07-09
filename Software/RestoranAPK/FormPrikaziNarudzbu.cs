@@ -74,29 +74,25 @@ namespace Funkcionalnost_prijave
             Close();
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
-        {
-           
-            
-        }
+       
 
         private void FormPrikaziNarudzbu_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             Pomoc();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void labelBack_Click(object sender, EventArgs e)
         {
             Hide();
             using (var forma = new FormNarudzbe(LogiraniKorisnik))
             {
                 forma.ShowDialog();
             }
-            Close();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
             Close();
         }
     }

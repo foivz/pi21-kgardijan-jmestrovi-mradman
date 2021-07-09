@@ -92,17 +92,14 @@ namespace Funkcionalnost_prijave
             Close();
         }
 
-        private void labelRestoran_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void FormPrijavljenZaposlenik_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             Pomoc();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
         {
             Close();
         }

@@ -29,47 +29,47 @@ namespace Funkcionalnost_prijave
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelPrva = new System.Windows.Forms.Label();
+            this.labelDruga = new System.Windows.Forms.Label();
             this.dataGridViewPrva = new System.Windows.Forms.DataGridView();
             this.dataGridViewDruga = new System.Windows.Forms.DataGridView();
             this.buttonPrva = new System.Windows.Forms.Button();
             this.buttonDruga = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panelTop = new System.Windows.Forms.Panel();
             this.labelPovratak = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.labelSmjene = new System.Windows.Forms.Label();
+            this.pictureBoxSmjene = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDruga)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSmjene)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelPrva
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(200, 103);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Prva smjena:";
+            this.labelPrva.AutoSize = true;
+            this.labelPrva.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrva.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelPrva.Location = new System.Drawing.Point(200, 103);
+            this.labelPrva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPrva.Name = "labelPrva";
+            this.labelPrva.Size = new System.Drawing.Size(122, 25);
+            this.labelPrva.TabIndex = 0;
+            this.labelPrva.Text = "Prva smjena:";
             // 
-            // label2
+            // labelDruga
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(596, 103);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Druga smjena:";
+            this.labelDruga.AutoSize = true;
+            this.labelDruga.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDruga.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelDruga.Location = new System.Drawing.Point(596, 103);
+            this.labelDruga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDruga.Name = "labelDruga";
+            this.labelDruga.Size = new System.Drawing.Size(136, 25);
+            this.labelDruga.TabIndex = 1;
+            this.labelDruga.Text = "Druga smjena:";
             // 
             // dataGridViewPrva
             // 
@@ -82,7 +82,6 @@ namespace Funkcionalnost_prijave
             this.dataGridViewPrva.RowTemplate.Height = 24;
             this.dataGridViewPrva.Size = new System.Drawing.Size(247, 310);
             this.dataGridViewPrva.TabIndex = 2;
-            this.dataGridViewPrva.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPrva_CellContentClick);
             // 
             // dataGridViewDruga
             // 
@@ -124,40 +123,17 @@ namespace Funkcionalnost_prijave
             // 
             this.helpProvider1.HelpNamespace = "";
             // 
-            // panel1
+            // panelTop
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.labelPovratak);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 100);
-            this.panel1.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(858, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 35);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(303, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(344, 65);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "SMJENE RADA";
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panelTop.Controls.Add(this.labelPovratak);
+            this.panelTop.Controls.Add(this.labelClose);
+            this.panelTop.Controls.Add(this.labelSmjene);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(933, 100);
+            this.panelTop.TabIndex = 10;
             // 
             // labelPovratak
             // 
@@ -171,15 +147,38 @@ namespace Funkcionalnost_prijave
             this.labelPovratak.Text = "<";
             this.labelPovratak.Click += new System.EventHandler(this.labelPovratak_Click);
             // 
-            // pictureBox1
+            // labelClose
             // 
-            this.pictureBox1.Image = global::Funkcionalnost_prijave.Properties.Resources.shift;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 134);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelClose.Location = new System.Drawing.Point(858, 32);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(30, 35);
+            this.labelClose.TabIndex = 10;
+            this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
+            // 
+            // labelSmjene
+            // 
+            this.labelSmjene.AutoSize = true;
+            this.labelSmjene.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSmjene.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelSmjene.Location = new System.Drawing.Point(303, 26);
+            this.labelSmjene.Name = "labelSmjene";
+            this.labelSmjene.Size = new System.Drawing.Size(344, 65);
+            this.labelSmjene.TabIndex = 9;
+            this.labelSmjene.Text = "SMJENE RADA";
+            // 
+            // pictureBoxSmjene
+            // 
+            this.pictureBoxSmjene.Image = global::Funkcionalnost_prijave.Properties.Resources.shift;
+            this.pictureBoxSmjene.Location = new System.Drawing.Point(12, 134);
+            this.pictureBoxSmjene.Name = "pictureBoxSmjene";
+            this.pictureBoxSmjene.Size = new System.Drawing.Size(156, 150);
+            this.pictureBoxSmjene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSmjene.TabIndex = 11;
+            this.pictureBoxSmjene.TabStop = false;
             // 
             // FormSmjeneRada
             // 
@@ -187,14 +186,14 @@ namespace Funkcionalnost_prijave
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(933, 530);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBoxSmjene);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.buttonDruga);
             this.Controls.Add(this.buttonPrva);
             this.Controls.Add(this.dataGridViewDruga);
             this.Controls.Add(this.dataGridViewPrva);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelDruga);
+            this.Controls.Add(this.labelPrva);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -205,9 +204,9 @@ namespace Funkcionalnost_prijave
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormSmjeneRada_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDruga)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSmjene)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,17 +214,17 @@ namespace Funkcionalnost_prijave
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelPrva;
+        private System.Windows.Forms.Label labelDruga;
         private System.Windows.Forms.DataGridView dataGridViewPrva;
         private System.Windows.Forms.DataGridView dataGridViewDruga;
         private System.Windows.Forms.Button buttonPrva;
         private System.Windows.Forms.Button buttonDruga;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.Label labelSmjene;
         private System.Windows.Forms.Label labelPovratak;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxSmjene;
     }
 }

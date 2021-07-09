@@ -125,15 +125,7 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
-        {
-            Hide();
-            using (var forma = new FormPrijavljenZaposlenik(LogiranKorisnik))
-            {
-                forma.ShowDialog();
-            }
-            Close();
-        }
+       
 
         private void buttonPromijeniStatus_Click(object sender, EventArgs e)
         {
@@ -206,24 +198,18 @@ namespace Funkcionalnost_prijave
             Pomoc();
         }
 
-        private void dataGridViewNarudzbe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void labelBack_Click(object sender, EventArgs e)
         {
             Hide();
             using (var forma = new FormPrijavljenZaposlenik(LogiranKorisnik))
             {
                 forma.ShowDialog();
             }
-            Close();
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
             Close();
         }
     }

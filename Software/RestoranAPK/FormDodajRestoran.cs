@@ -13,7 +13,7 @@ namespace Funkcionalnost_prijave
 {
     public partial class FormDodajRestoran : Form
     {
-        int BrojRestorana { get; set; }
+        public int BrojRestorana { get; set; }
         public int id { get; set; }
         public FormDodajRestoran(int broj)
         {
@@ -63,10 +63,7 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void FormDodajRestoran_Load(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void FormDodajRestoran_HelpRequested(object sender, HelpEventArgs hlpevent)
         {

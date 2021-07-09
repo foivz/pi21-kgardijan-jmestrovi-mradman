@@ -14,14 +14,13 @@ using System.Windows.Forms;
 
 namespace Funkcionalnost_prijave
 {
-    public partial class MyReport : Form
+    public partial class FormMyReport : Form
     {
-        EntitiesStatistika entities = new EntitiesStatistika();
         private Order order;
         public User LogiranKorisnik { get; set; }
 
     
-        public MyReport(Order order, User kor)
+        public FormMyReport(Order order, User kor)
         {
             InitializeComponent();
             this.order = order;

@@ -421,11 +421,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelStatistika.edmx</DependentUpon>
     </Compile>
-    <Compile Include="MyReport.cs">
+    <Compile Include="FormMyReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyReport.Designer.cs">
-      <DependentUpon>MyReport.cs</DependentUpon>
+    <Compile Include="FormMyReport.Designer.cs">
+      <DependentUpon>FormMyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
       <DependentUpon>ModelStatistika.tt</DependentUpon>
@@ -524,8 +524,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Izvjestaj.rdlc" />
     <EmbeddedResource Include="Izvjestaj2.rdlc" />
-    <EmbeddedResource Include="MyReport.resx">
-      <DependentUpon>MyReport.cs</DependentUpon>
+    <EmbeddedResource Include="FormMyReport.resx">
+      <DependentUpon>FormMyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

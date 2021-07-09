@@ -29,44 +29,44 @@ namespace Funkcionalnost_prijave
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelImer = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
             this.textBoxImeRestorana = new System.Windows.Forms.TextBox();
             this.textBoxEmailVlasnika = new System.Windows.Forms.TextBox();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonOdustani = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.labelRestoran = new System.Windows.Forms.Label();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.pictureBoxRestoran = new System.Windows.Forms.PictureBox();
+            this.panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRestoran)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelImer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(29, 200);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ime restorana:";
+            this.labelImer.AutoSize = true;
+            this.labelImer.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelImer.Location = new System.Drawing.Point(29, 200);
+            this.labelImer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelImer.Name = "labelImer";
+            this.labelImer.Size = new System.Drawing.Size(136, 25);
+            this.labelImer.TabIndex = 0;
+            this.labelImer.Text = "Ime restorana:";
             // 
-            // label2
+            // labelEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(29, 310);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "E-mail vlasnika:";
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelEmail.Location = new System.Drawing.Point(29, 310);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(146, 25);
+            this.labelEmail.TabIndex = 1;
+            this.labelEmail.Text = "E-mail vlasnika:";
             // 
             // textBoxImeRestorana
             // 
@@ -108,49 +108,49 @@ namespace Funkcionalnost_prijave
             this.buttonOdustani.UseVisualStyleBackColor = true;
             this.buttonOdustani.Click += new System.EventHandler(this.buttonOdustani_Click);
             // 
-            // panel1
+            // panelTop
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 100);
-            this.panel1.TabIndex = 6;
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panelTop.Controls.Add(this.labelRestoran);
+            this.panelTop.Controls.Add(this.labelClose);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(369, 100);
+            this.panelTop.TabIndex = 6;
             // 
-            // label3
+            // labelRestoran
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(327, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 35);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.labelRestoran.AutoSize = true;
+            this.labelRestoran.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRestoran.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelRestoran.Location = new System.Drawing.Point(50, 28);
+            this.labelRestoran.Name = "labelRestoran";
+            this.labelRestoran.Size = new System.Drawing.Size(243, 45);
+            this.labelRestoran.TabIndex = 11;
+            this.labelRestoran.Text = "Dodaj restoran";
             // 
-            // label4
+            // labelClose
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(50, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(249, 46);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Dodaj restoran";
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelClose.Location = new System.Drawing.Point(327, 36);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(30, 35);
+            this.labelClose.TabIndex = 10;
+            this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.label3_Click);
             // 
-            // pictureBox1
+            // pictureBoxRestoran
             // 
-            this.pictureBox1.Image = global::Funkcionalnost_prijave.Properties.Resources.dodaj_res;
-            this.pictureBox1.Location = new System.Drawing.Point(109, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxRestoran.Image = global::Funkcionalnost_prijave.Properties.Resources.dodaj_res;
+            this.pictureBoxRestoran.Location = new System.Drawing.Point(109, 106);
+            this.pictureBoxRestoran.Name = "pictureBoxRestoran";
+            this.pictureBoxRestoran.Size = new System.Drawing.Size(150, 96);
+            this.pictureBoxRestoran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxRestoran.TabIndex = 7;
+            this.pictureBoxRestoran.TabStop = false;
             // 
             // FormDodajRestoran
             // 
@@ -158,25 +158,24 @@ namespace Funkcionalnost_prijave
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(369, 497);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBoxRestoran);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.buttonOdustani);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.textBoxEmailVlasnika);
             this.Controls.Add(this.textBoxImeRestorana);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.labelImer);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDodajRestoran";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj restoran";
-            this.Load += new System.EventHandler(this.FormDodajRestoran_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormDodajRestoran_HelpRequested);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRestoran)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,16 +183,16 @@ namespace Funkcionalnost_prijave
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelImer;
+        private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox textBoxImeRestorana;
         private System.Windows.Forms.TextBox textBoxEmailVlasnika;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonOdustani;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.Label labelRestoran;
+        private System.Windows.Forms.PictureBox pictureBoxRestoran;
     }
 }

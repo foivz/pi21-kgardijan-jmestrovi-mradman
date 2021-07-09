@@ -333,12 +333,16 @@ namespace Funkcionalnost_prijave
             Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Naslovnica");
         }
 
-        private void label2_Click(object sender, EventArgs e)
+       
+
+     
+
+        private void labelClose_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void labelBack_Click(object sender, EventArgs e)
         {
             Hide();
             using (var forma = new FormPrijavljenAdmin(LogiranKorisnik))

@@ -50,18 +50,6 @@ namespace Funkcionalnost_prijave
 
         }
 
-        private void buttonPovratak_Click(object sender, EventArgs e)
-        {
-            Hide();
-            using (var forma = new FormPrijavljenAdmin(LogiranK))
-            {
-                forma.ShowDialog();
-            }
-            Close();
-        }
-
-    
-
         private List<User> NadiZaposlenike()
         {
             List<User> popisZaposlenika = new List<User>();
@@ -79,10 +67,7 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void dataGridViewPopisZaposlenika_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void buttonDodajZaposlenika_Click(object sender, EventArgs e)
         {
@@ -183,10 +168,7 @@ namespace Funkcionalnost_prijave
             Pomoc();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+       
 
         private void labelPovratak_Click(object sender, EventArgs e)
         {
@@ -197,5 +179,12 @@ namespace Funkcionalnost_prijave
             }
             Close();
         }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+       
     }
 }

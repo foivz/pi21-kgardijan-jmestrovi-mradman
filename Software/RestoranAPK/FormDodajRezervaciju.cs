@@ -22,10 +22,7 @@ namespace Funkcionalnost_prijave
             LogiranKorisnik = korisnik;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+   
 
         private void buttonOdustani_Click(object sender, EventArgs e)
         {
@@ -128,15 +125,7 @@ namespace Funkcionalnost_prijave
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormDodajRezervaciju_Load(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void FormDodajRezervaciju_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
@@ -150,7 +139,7 @@ namespace Funkcionalnost_prijave
             Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Rezervacije");
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
         {
             Close();
         }

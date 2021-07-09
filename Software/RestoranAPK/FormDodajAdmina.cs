@@ -89,10 +89,6 @@ namespace Funkcionalnost_prijave
           
         }
 
-        private void FormDodajAdmina_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonDodaj_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
@@ -107,7 +103,11 @@ namespace Funkcionalnost_prijave
             Help.ShowHelp(this, help, HelpNavigator.KeywordIndex, "Naslovnica");
         }
 
-        private void label5_Click(object sender, EventArgs e)
+    
+
+
+
+        private void labelClose_Click(object sender, EventArgs e)
         {
             Close();
         }

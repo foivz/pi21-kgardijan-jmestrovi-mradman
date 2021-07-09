@@ -29,55 +29,55 @@ namespace Funkcionalnost_prijave
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelIme = new System.Windows.Forms.Label();
+            this.labelKorLoz = new System.Windows.Forms.Label();
+            this.labelKorIme = new System.Windows.Forms.Label();
             this.textBoxImePrezime = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxLozinka = new System.Windows.Forms.TextBox();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonOdustani = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.labelDodajZap = new System.Windows.Forms.Label();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelIme
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(66, 256);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ime i prezime:";
+            this.labelIme.AutoSize = true;
+            this.labelIme.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelIme.Location = new System.Drawing.Point(66, 256);
+            this.labelIme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelIme.Name = "labelIme";
+            this.labelIme.Size = new System.Drawing.Size(134, 25);
+            this.labelIme.TabIndex = 0;
+            this.labelIme.Text = "Ime i prezime:";
             // 
-            // label2
+            // labelKorLoz
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(66, 424);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Lozinka:";
+            this.labelKorLoz.AutoSize = true;
+            this.labelKorLoz.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelKorLoz.Location = new System.Drawing.Point(66, 424);
+            this.labelKorLoz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelKorLoz.Name = "labelKorLoz";
+            this.labelKorLoz.Size = new System.Drawing.Size(82, 25);
+            this.labelKorLoz.TabIndex = 1;
+            this.labelKorLoz.Text = "Lozinka:";
             // 
-            // label3
+            // labelKorIme
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(66, 339);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Korisničko ime:";
+            this.labelKorIme.AutoSize = true;
+            this.labelKorIme.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelKorIme.Location = new System.Drawing.Point(66, 339);
+            this.labelKorIme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelKorIme.Name = "labelKorIme";
+            this.labelKorIme.Size = new System.Drawing.Size(143, 25);
+            this.labelKorIme.TabIndex = 2;
+            this.labelKorIme.Text = "Korisničko ime:";
             // 
             // textBoxImePrezime
             // 
@@ -125,50 +125,50 @@ namespace Funkcionalnost_prijave
             this.buttonOdustani.UseVisualStyleBackColor = true;
             this.buttonOdustani.Click += new System.EventHandler(this.buttonOdustani_Click);
             // 
-            // panel1
+            // panelTop
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 139);
-            this.panel1.TabIndex = 9;
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.panelTop.Controls.Add(this.labelDodajZap);
+            this.panelTop.Controls.Add(this.labelClose);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(369, 139);
+            this.panelTop.TabIndex = 9;
             // 
-            // label4
+            // labelDodajZap
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(12, 47);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(301, 46);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Dodaj zaposlenika";
+            this.labelDodajZap.AutoSize = true;
+            this.labelDodajZap.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDodajZap.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelDodajZap.Location = new System.Drawing.Point(12, 47);
+            this.labelDodajZap.Name = "labelDodajZap";
+            this.labelDodajZap.Size = new System.Drawing.Size(294, 45);
+            this.labelDodajZap.TabIndex = 11;
+            this.labelDodajZap.Text = "Dodaj zaposlenika";
             // 
-            // label5
+            // labelClose
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(327, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 35);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "X";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelClose.Location = new System.Drawing.Point(327, 55);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(30, 35);
+            this.labelClose.TabIndex = 10;
+            this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
-            // pictureBox1
+            // pictureBoxUser
             // 
-            this.pictureBox1.Image = global::Funkcionalnost_prijave.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(85, 146);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 107);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxUser.Image = global::Funkcionalnost_prijave.Properties.Resources.user;
+            this.pictureBoxUser.Location = new System.Drawing.Point(85, 146);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(173, 107);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUser.TabIndex = 10;
+            this.pictureBoxUser.TabStop = false;
             // 
             // FormDodajZaposlenika
             // 
@@ -176,27 +176,26 @@ namespace Funkcionalnost_prijave
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(165)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(369, 577);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBoxUser);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.buttonOdustani);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.textBoxLozinka);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxImePrezime);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelKorIme);
+            this.Controls.Add(this.labelKorLoz);
+            this.Controls.Add(this.labelIme);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "FormDodajZaposlenika";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj zaposlenika";
-            this.Load += new System.EventHandler(this.FormDodajZaposlenika_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FormDodajZaposlenika_HelpRequested);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,18 +203,18 @@ namespace Funkcionalnost_prijave
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelIme;
+        private System.Windows.Forms.Label labelKorLoz;
+        private System.Windows.Forms.Label labelKorIme;
         private System.Windows.Forms.TextBox textBoxImePrezime;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxLozinka;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonOdustani;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label labelDodajZap;
+        private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.PictureBox pictureBoxUser;
     }
 }
